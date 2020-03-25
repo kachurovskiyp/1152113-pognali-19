@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел Качуровский](https://up.htmlacademy.ru/adaptive/19/user/1152113).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Тюлихова](https://htmlacademy.ru/profile/id523263). 
 
 ---
 
