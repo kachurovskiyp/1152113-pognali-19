@@ -9,7 +9,7 @@
       <a class="header__logo">
         <img src="https://via.placeholder.com/100x20" width="100" height="20" alt="Логотип сайта 'Погнали'">
       </a>
-      <button type="button" class="header__menu-button"></button>
+      <button type="button" class="header__menu-button" aria-label="Меню"></button>
       <p class="header__tagline">В путешествие с крутыми попутчиками!</p>
       <a href="tel:+88005558628" class="header__call-us"><p class="visually-hidden">Позвоните нам</p></a>
       <a href="#" class="header__feedback"><p class="visually-hidden">Напишите нам</p></a>
@@ -20,15 +20,15 @@
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <p class="reviews__article">«Лучшее приложение, что я видел в жизни!»</p>
-        <p class="reviews-description">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</p>
+        <p class="reviews__description">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
       </section>
       <section class="steps">
         <h2 class="vusually-hidden">Как найти попутчика</h2>
         <ul class="steps__list">
-          <li class="steps__step-one">Выберите направление</li>
-          <li class="steps__step-two">Изучите идеи путешественников</li>
-          <li class="steps__step-three">Находите тех, кто похож на вас</li>
-          <li class="steps__step-four">Путешествуйте вместе!</li>
+          <li class="steps__step steps__step--one">Выберите направление</li>
+          <li class="steps__step steps__step--two">Изучите идеи путешественников</li>
+          <li class="steps__step steps__step--three">Находите тех, кто похож на вас</li>
+          <li class="steps__step steps__step--four">Путешествуйте вместе!</li>
         </ul>
       </section>
       <section class="info">
@@ -41,23 +41,29 @@
         <p class="direction__article">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <article class="country">
           <img class="country__image" src="https://via.placeholder.com/270x120" width="270" height="120" alt="Лазурный берег Таиланда">
-          <h3 class="country__title">Таиланд</h3>
-          <p class="country__tagline">Джунгли зовут!</p>
-          <span class="country__visits">18321</span>
+          <a href="#" class="country__link">
+            <h3 class="country__title">Таиланд</h3>
+            <p class="country__tagline">Джунгли зовут!</p>
+            <span class="country__visits">18321</span>
+          </a>
         </article>
         <article class="country">
           <img class="country__image" src="https://via.placeholder.com/270x120" width="270" height="120" alt="Улицы Парижа">
-          <h3 class="country__title">Франция</h3>
-          <p class="country__tagline">Трэ бьен, манифик!</p>
-          <span class="country__visits">12518</span>
+          <a href="#" class="country__link">
+            <h3 class="country__title">Франция</h3>
+            <p class="country__tagline">Трэ бьен, манифик!</p>
+            <span class="country__visits">12518</span>
+          </a>
         </article>
         <article class="country">
           <img class="country__image" src="https://via.placeholder.com/270x120" width="270" height="120" alt="старинная архитектура Праги">
-          <h3 class="country__title">Чехия</h3>
-          <p class="country__tagline">Закоулки старой Европы</p>
-          <span class="country__visits">5326</span>
+          <a href="#" class="country__link">
+            <h3 class="country__title">Чехия</h3>
+            <p class="country__tagline">Закоулки старой Европы</p>
+            <span class="country__visits">5326</span>
+          </a>
         </article>
-        <a href="#" class="show-all country__show-all"></a>
+        <a href="#" class="button">Показать все</a>
       </section>
       <section class="travelers">
         <h2 class="travelers__title">Попутчики</h2>
@@ -66,12 +72,12 @@
         <article class="user-card">
           <img class="user-card__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
           <p class="user-card__level">99 level</p>
-          <ul class="user-card__countries">
-            <li class="user-card__country user-card__country--sri-lanka"><span class="visually-hidden">Шри-ланка</span></li>
-            <li class="user-card__country user-card__country--thailand"><span class="visually-hidden">Таиланд</span></li>
-            <li class="user-card__country user-card__country--seychelles"><span class="visually-hidden">Сейшелы</span></li>
+          <ul class="countries">
+            <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Шри-ланки"></li>
+            <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Таиланда"></li>
+            <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Сейшел"></li>
           </ul>
-          <h3 class="user-card__name">Таня Фирсова</h3>
+          <a href="#" class="user-card__user-link"><h3 class="user-card__name">Таня Фирсова</h3></a>
           <ul class="user-card__tags-list"> <!-- символ # добавлю псевдоэлеметом -->
             <li class="user-card__tag">ЗОЖ</li>
             <li class="user-card__tag">ПП</li>
@@ -80,21 +86,21 @@
             <li class="user-card__tag">авокадо</li>
             <li class="user-card__tag">смузи</li>
           </ul>
-          <ul class="user-card__transport-list">
-            <li class="user-card__transport user-card__transport--plane"><span class="visually-hidden">Самолет</span></li>
-            <li class="user-card__transport user-card__transport--bus"><span class="visually-hidden">Автобус</span></li>
-            <li class="user-card__transport user-card__transport--bicykle"><span class="visually-hidden">Велосипед</span></li>
-            <li class="user-card__transport user-card__transport--afoot"><span class="visually-hidden">Пешком</span></li>
+          <ul class="transport-list">
+            <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
+            <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
+            <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
           </ul>
         </article>
         <article class="user-card">
           <img class="user-card__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
           <p class="user-card__level">80 level</p>
-          <ul class="user-card__countries">
-            <li class="user-card__country user-card__country--belgium"><span class="visually-hidden">Бельгия</span></li>
-            <li class="user-card__country user-card__country--czech"><span class="visually-hidden">Чехия</span></li>
+          <ul class="countries">
+            <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Бельгии"></li>
+            <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Чехии"></li>
           </ul>
-          <h3 class="user-card__name">Петя Демин</h3>
+          <a href="#" class="user-card__user-link"><h3 class="user-card__name">Петя Демин</h3></a>
           <ul class="user-card__tags-list"> <!-- символ # добавлю псевдоэлеметом -->
             <li class="user-card__tag">бургер</li>
             <li class="user-card__tag">бар</li>
@@ -102,29 +108,28 @@
             <li class="user-card__tag">концерт</li>
             <li class="user-card__tag">крафт</li>
           </ul>
-          <ul class="user-card__transport-list">
-            <li class="user-card__transport user-card__transport--plane"><span class="visually-hidden">Самолет</span></li>
-            <li class="user-card__transport user-card__transport--bus"><span class="visually-hidden">Автобус</span></li>
-            <li class="user-card__transport user-card__transport--bicykle"><span class="visually-hidden">Велосипед</span></li>
-            <li class="user-card__transport user-card__transport--afoot"><span class="visually-hidden">Пешком</span></li>
+          <ul class="transport-list">
+            <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
+            <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
+            <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
           </ul>
         </article>
-        <a href="#" class="show-all user-card__show-all"></a>
+        <a href="#" class="button">Показать всех</a>
       </section>
       <section class="price">
         <h2 class="visually-hidden">Наши цены</h2>
         <p class="price__tagline">Добавьте свой профиль</p>
-        <div class="price__rates"></div>
         <dl class="price__price-list">
-          <div class="price__item price__item--one">
+          <div class="price__item">
             <dt>Базовое размещение</dt>
             <dd>Бесплатно</dd>
           </div>
-          <div class="price__item price__item--one">
+          <div class="price__item">
             <dt>Вывод на первых позициях</dt>
             <dd>99 руб./мес</dd>
           </div>
-          <div class="price__item price__item--one">
+          <div class="price__item">
             <dt>Кастомный цвет карточки</dt>
             <dd>59 руб./мес</dd>
           </div>
@@ -134,24 +139,24 @@
     </main>
     <footer class="footer">
       <p class="footer__tagline">Погнали?</p>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a href="#" class="footer__social-link footer__social-link--fb" target="_blank">
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--fb" target="_blank">
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
-        <li class="footer__social-item">
-          <a href="#" class="footer__social-link footer__social-link--vk" target="_blank">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--vk" target="_blank">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        <li class="footer__social-item">
-          <a href="#" class="footer__social-link footer__social-link--instagram" target="_blank">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </li>
       </ul>
-      <p class="footer__copyright">Разработано <a href="https://htmlacademy.ru/" target="_blank"><span class="visually-hidden">HTML Academy</span></a></p>
+      <p class="footer__copyright">Разработано <a href="https://up.htmlacademy.ru/adaptive/19" target="_blank"><span class="visually-hidden">HTML Academy</span></a></p>
     </footer>
   </body>
 </html>
