@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+<body>
+  <header class="catalog-header">
+    <a class="catalog-header__logo" href="index.html">
+      <img src="https://via.placeholder.com/100x20" width="100" height="20" alt="Логотип сайта 'Погнали'">
+    </a>
+    <button type="button" class="catalog-header__menu-button" aria-label="Меню"></button>
+    <p class="catalog-header__tagline">Попутчики</p>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Каталог попутчиков</h1>
+    <section class="filtet-country">
+      <h2 class="filtet-country__title">Фильтрация по странам</h2>
+      <button class="filtet-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
+    </section>
+    <section class="filter">
+      <h2 class="filter__title">Подберите идеального попутчика</h2>
+      <form class="filter__form" action="echo/htmlacademy.ru">
+        <fieldset class="fiter__set">
+          <button class="fiter__title-button" type="button">Хобби</button>
+        </fieldset>
+        <fieldset class="fiter__set">
+          <button class="fiter__title-button" type="button">Музыка</button>
+          <ul class="filter__list">
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="rok" id="rok">
+              <label class="filter__checkbox-label" for="rok">Тяжелый рок</label>
+            </li>
+            <li>
+              <input class="filter__chekbox" type="checkbox" name="rap" id="rap">
+              <label class="filter__checkbox-label" for="rok">Русский рэп</label>
+            </li>
+            <li>
+              <input class="filter__chekbox" type="checkbox" name="dance" id="dance">
+              <label class="filter__checkbox-label" for="dance">Евроденс</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="fiter__set">
+          <button class="fiter__title-button" type="button">Еда</button>
+        </fieldset>
+        <fieldset class="fiter__set">
+          <button class="fiter__title-button" type="button">Транспорт</button>
+          <ul class="transport-list transport-list--filter">
+            <li class="transport-list__item transport-list__item--plane-filter"><span class="visually-hidden">Самолет</span></li>
+            <li class="transport-list__item transport-list__item--bus-filter"><span class="visually-hidden">Автобус</span></li>
+            <li class="transport-list__item transport-list__item--bicykle-filter"><span class="visually-hidden">Велосипед</span></li>
+            <li class="transport-list__item transport-list__item--afoot-filter"><span class="visually-hidden">Пешком</span></li>
+          </ul>
+        </fieldset>
+        <fieldset class="fiter__set">
+          <button class="fiter__title-button" type="button">Левел</button>
+          <label for="level-min" class="visually-hidden">Уровень от:</label>
+          <input class="filter__level-min" type="text" id="level-min" value="30">
+          <label for="level-max" class="visually-hidden">Уровень до:</label>
+          <input class="filter__level-max" type="text" id="level-max" value="100">
+          <div class="range">
+            <div class="range__skale">
+              <div class="range__min" aria-label="Минимальная граница уровня">-</div>
+              <div class="range__max" aria-label="Максимальная граница уровня">+</div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="filter_submit-button" type="submit">Показать</button>
+       </form>
+    </section>
+    <section class="users-list">
+      <h2 class="visually-hidden">Список пользователей</h2>
+      <article class="user-card catalog-usercard">
+        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Таня Фирсова</h3></a>
+        <button type="button" class="user-card__like"></button>
+        <p class="user-card_like-count">1,5 М</p>
+        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
+          <li class="user-card__tag">ЗОЖ</li>
+          <li class="user-card__tag">ПП</li>
+          <li class="user-card__tag">Фитнес</li>
+          <li class="user-card__tag">пляж</li>
+          <li class="user-card__tag">авокадо</li>
+          <li class="user-card__tag">смузи</li>
+        </ul>
+        <p class="user-card__set-separator">хочет посетить:</p>
+        <ul class="countries catalog-countries">
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Шри-ланки"> Шри-ланка</li>
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Таиланда"> Таиланд</li>
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Сейшел"> Сейшелы</li>
+        </ul>
+        <p class="user-card__set-separator">транспорт:</p>
+        <ul class="transport-list">
+          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
+          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
+          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
+          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        </ul>
+        <p class="user-card__level user-card__level--catalog">левел 99</p>
+        <a href="#" class="user-card__call-link">Позвать!</a>
+      </article>
+      <article class="user-card catalog-usercard">
+        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Петя Демин</h3></a>
+        <button type="button" class="user-card__like"></button>
+        <p class="user-card_like-count">1500</p>
+        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
+          <li class="user-card__tag">бургер</li>
+            <li class="user-card__tag">бар</li>
+            <li class="user-card__tag">футбол</li>
+            <li class="user-card__tag">концерт</li>
+            <li class="user-card__tag">крафт</li>
+        </ul>
+        <p class="user-card__set-separator">хочет посетить:</p>
+        <ul class="countries catalog-countries">
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Бельгии"> Бельгия</li>
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Чехии"> Чехия</li>
+        </ul>
+        <p class="user-card__set-separator">транспорт:</p>
+        <ul class="transport-list">
+          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
+          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
+          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
+          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        </ul>
+        <p class="user-card__level user-card__level--catalog">левел 80</p>
+        <a href="#" class="user-card__call-link">Позвать!</a>
+      </article>
+      <article class="user-card catalog-usercard">
+        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Марк Смолов</h3></a>
+        <button type="button" class="user-card__like"></button>
+        <p class="user-card_like-count">170</p>
+        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
+          <li class="user-card__tag">рэп</li>
+            <li class="user-card__tag">тату</li>
+            <li class="user-card__tag">хайпбист</li>
+            <li class="user-card__tag">кроссовки</li>
+            <li class="user-card__tag">суприм</li>
+        </ul>
+        <p class="user-card__set-separator">хочет посетить:</p>
+        <ul class="countries catalog-countries">
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг США"> США</li>
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Австралии"> Австралия</li>
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Доминика"> Доминика</li>
+        </ul>
+        <p class="user-card__set-separator">транспорт:</p>
+        <ul class="transport-list">
+          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
+          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
+          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
+          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        </ul>
+        <p class="user-card__level user-card__level--catalog">левел 25</p>
+        <a href="#" class="user-card__call-link">Позвать!</a>
+      </article>
+      <article class="user-card catalog-usercard">
+        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Лариса Роговая</h3></a>
+        <button type="button" class="user-card__like"></button>
+        <p class="user-card_like-count">23</p>
+        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
+          <li class="user-card__tag">образование</li>
+            <li class="user-card__tag">карьера</li>
+            <li class="user-card__tag">учеба</li>
+            <li class="user-card__tag">линкендин</li>
+        </ul>
+        <p class="user-card__set-separator">хочет посетить:</p>
+        <ul class="countries catalog-countries">
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Великобритании"> Великобритания</li>
+          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Германии"> Германия</li>
+        </ul>
+        <p class="user-card__set-separator">транспорт:</p>
+        <ul class="transport-list">
+          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
+          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
+          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
+          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        </ul>
+        <p class="user-card__level user-card__level--catalog">левел 50</p>
+        <a href="#" class="user-card__call-link">Позвать!</a>
+      </article>
+      <a href="#" class="users-list__show-more">Показать еще</a>
+      <a href="#" class="users-list__prew" aria-label="Предидущая страница">Пред</a>
+      <a href="#" class="users-list__next" aria-label="Следующая страница">След</a>
+    </section>
+    <footer class="footer">
+      <p class="footer__tagline">Погнали?</p>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--fb" target="_blank">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--vk" target="_blank">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copyright">Разработано <a href="https://up.htmlacademy.ru/adaptive/19" target="_blank"><span class="visually-hidden">HTML Academy</span></a></p>
+    </footer>
+</body>
+</html>
