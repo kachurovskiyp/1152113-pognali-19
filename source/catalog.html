@@ -14,9 +14,187 @@
   </header>
   <main>
     <h1 class="visually-hidden">Каталог попутчиков</h1>
-    <section class="filtet-country">
-      <h2 class="filtet-country__title">Фильтрация по странам</h2>
-      <button class="filtet-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
+    <section class="filter-country">
+      <h2 class="filter-country__title">Фильтрация по странам</h2>
+      <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
+      <div class="choise-country">
+        <ul class="choise-country__land-list">
+          <li class="choise-country__land-item">
+            <input type="checkbox" name="europe" id="land-europe" class="visually-hidden">
+            <label for="land-europe">Европа</label>
+          </li>
+          <li class="choise-country__land-item">
+            <input type="checkbox" name="asia" id="land-asia" class="visually-hidden">
+            <label for="land-asia">Азия</label>
+          </li>
+          <li class="choise-country__land-item">
+            <input type="checkbox" name="america" id="land-america" class="visually-hidden">
+            <label for="land-america">Америка</label>
+          </li>
+          <li class="choise-country__land-item">
+            <input type="checkbox" name="islands" id="land-islands" class="visually-hidden">
+            <label for="land-islands">Острова</label>
+          </li>
+        </ul>
+        <table class="letter-table">
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-a" class="visully-hidden">
+              <label for="letter-a">а</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-b" class="visully-hidden">
+              <label for="letter-b">б</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-c" class="visully-hidden">
+              <label for="letter-c">в</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-g" class="visully-hidden">
+              <label for="letter-g">г</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-d" class="visully-hidden">
+              <label for="letter-d">д</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-e" class="visully-hidden">
+              <label for="letter-e">е</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-z" class="visully-hidden">
+              <label for="letter-z">з</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-i" class="visully-hidden">
+              <label for="letter-i">и</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-k" class="visully-hidden">
+              <label for="letter-k">к</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-l" class="visully-hidden">
+              <label for="letter-l">л</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-m" class="visully-hidden">
+              <label for="letter-m">м</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-n" class="visully-hidden">
+              <label for="letter-n">н</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-o" class="visully-hidden">
+              <label for="letter-o">о</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-p" class="visully-hidden">
+              <label for="letter-p">п</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-r" class="visully-hidden">
+              <label for="letter-r">р</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-s" class="visully-hidden">
+              <label for="letter-s">с</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-t" class="visully-hidden">
+              <label for="letter-t">т</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-y" class="visully-hidden">
+              <label for="letter-y">у</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-f" class="visully-hidden">
+              <label for="letter-f">ф</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-x" class="visully-hidden">
+              <label for="letter-x">х</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-ch" class="visully-hidden">
+              <label for="letter-ch">ч</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-sh" class="visully-hidden">
+              <label for="letter-sh">ш</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-ee" class="visully-hidden">
+              <label for="letter-ee">э</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-j" class="visully-hidden">
+              <label for="letter-j">ю</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-ja" class="visully-hidden">
+              <label for="letter-ja">я</label>
+            </td>
+          </tr>
+        </table>
+        <ul class="country-list">
+          <li class="country-list__country-item">
+            <input type="checkbox" name="australia" id="australia" class="visually-hidden">
+            <label for="australia">Австралия</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="austria" id="austria" class="visually-hidden">
+            <label for="austria">Австрия</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="azerbaijan" id="azerbaijan" class="visually-hidden">
+            <label for="azerbaijan">Азербайджан</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="albania" id="albania" class="visually-hidden">
+            <label for="albania">Албания</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="algeria" id="algeria" class="visually-hidden">
+            <label for="algeria">Алжир</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="angola" id="angola" class="visually-hidden">
+            <label for="angola">Ангола</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="andorra" id="andorra" class="visually-hidden">
+            <label for="andorra">Андора</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="antigua" id="antigua" class="visually-hidden">
+            <label for="antigua">Антигуа и Барбуда</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="argentina" id="argentina" class="visually-hidden">
+            <label for="argentina">Аргентина</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="armenia" id="armenia" class="visually-hidden">
+            <label for="armenia">Армения</label>
+          </li>
+          <li class="country-list__country-item">
+            <input type="checkbox" name="afghanistan" id="afghanistan" class="visually-hidden">
+            <label for="afghanistan">Афганистан</label>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="filter">
       <h2 class="filter__title">Подберите идеального попутчика</h2>
@@ -47,10 +225,22 @@
         <fieldset class="fiter__set">
           <button class="fiter__title-button" type="button">Транспорт</button>
           <ul class="transport-list transport-list--filter">
-            <li class="transport-list__item transport-list__item--plane-filter"><span class="visually-hidden">Самолет</span></li>
-            <li class="transport-list__item transport-list__item--bus-filter"><span class="visually-hidden">Автобус</span></li>
-            <li class="transport-list__item transport-list__item--bicykle-filter"><span class="visually-hidden">Велосипед</span></li>
-            <li class="transport-list__item transport-list__item--afoot-filter"><span class="visually-hidden">Пешком</span></li>
+            <li class="transport-list__item transport-list__item--plane-filter">
+              <input type="checkbox" name="plane" id="plane" class="visually-hidden">
+              <label for="plane" class="transport-list__label transport-list__label--checked">Самолет</label>
+            </li>
+            <li class="transport-list__item transport-list__item--bus-filter">
+              <input type="checkbox" name="bus" id="bus" class="visually-hidden">
+              <label for="bus" class="transport-list__label transport-list__label--checked">Автобус</label>
+            </li>
+            <li class="transport-list__item transport-list__item--bicykle-filter">
+              <input type="checkbox" name="bicykle" id="bicykle" class="visually-hidden">
+              <label for="bicykle" class="transport-list__label">Велосипед</label>
+            </li>
+            <li class="transport-list__item transport-list__item--afoot-filter">
+              <input type="checkbox" name="afoot" id="afoot" class="visually-hidden">
+              <label for="afoot" class="transport-list__label transport-list__label--checked">Пешком</label>
+            </li>
           </ul>
         </fieldset>
         <fieldset class="fiter__set">
@@ -61,8 +251,8 @@
           <input class="filter__level-max" type="text" id="level-max" value="100">
           <div class="range">
             <div class="range__skale">
-              <div class="range__min" aria-label="Минимальная граница уровня">-</div>
-              <div class="range__max" aria-label="Максимальная граница уровня">+</div>
+              <div class="range__min"><p class="visually-hidden">Минимальная граница уровня</p></div>
+              <div class="range__max"><p class="visually-hidden">Максимальная граница уровня</p></div>
             </div>
           </div>
         </fieldset>
@@ -74,15 +264,15 @@
       <article class="user-card catalog-usercard">
         <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
         <a href="#" class="user-card__user-link"><h3 class="user-card__name">Таня Фирсова</h3></a>
-        <button type="button" class="user-card__like"></button>
-        <p class="user-card_like-count">1,5 М</p>
+        <button type="button" class="user-card__like user-card__like--liked"></button>
+        <p class="user-card__like-count">1,5 М</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag">ЗОЖ</li>
-          <li class="user-card__tag">ПП</li>
-          <li class="user-card__tag">Фитнес</li>
-          <li class="user-card__tag">пляж</li>
-          <li class="user-card__tag">авокадо</li>
-          <li class="user-card__tag">смузи</li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">ЗОЖ</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">ПП</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">Фитнес</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">пляж</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">авокадо</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">смузи</a></li>
         </ul>
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
@@ -106,11 +296,11 @@
         <button type="button" class="user-card__like"></button>
         <p class="user-card_like-count">1500</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag">бургер</li>
-            <li class="user-card__tag">бар</li>
-            <li class="user-card__tag">футбол</li>
-            <li class="user-card__tag">концерт</li>
-            <li class="user-card__tag">крафт</li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">бургер</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">бар</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">футбол</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">концерт</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">крафт</a></li>
         </ul>
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
@@ -133,11 +323,11 @@
         <button type="button" class="user-card__like"></button>
         <p class="user-card_like-count">170</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag">рэп</li>
-            <li class="user-card__tag">тату</li>
-            <li class="user-card__tag">хайпбист</li>
-            <li class="user-card__tag">кроссовки</li>
-            <li class="user-card__tag">суприм</li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">рэп</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">тату</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">хайпбист</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">кроссовки</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">суприм</a></li>
         </ul>
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
@@ -161,10 +351,10 @@
         <button type="button" class="user-card__like"></button>
         <p class="user-card_like-count">23</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag">образование</li>
-            <li class="user-card__tag">карьера</li>
-            <li class="user-card__tag">учеба</li>
-            <li class="user-card__tag">линкендин</li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link">образование</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">карьера</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">учеба</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link">линкендин</a></li>
         </ul>
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
@@ -185,6 +375,7 @@
       <a href="#" class="users-list__prew" aria-label="Предидущая страница">Пред</a>
       <a href="#" class="users-list__next" aria-label="Следующая страница">След</a>
     </section>
+  </main>
     <footer class="footer">
       <p class="footer__tagline">Погнали?</p>
       <ul class="social-list">
