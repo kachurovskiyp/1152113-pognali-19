@@ -10,6 +10,35 @@
         <img src="https://via.placeholder.com/100x20" width="100" height="20" alt="Логотип сайта 'Погнали'">
       </a>
       <button type="button" class="header__menu-button" aria-label="Меню"></button>
+
+      <section class="mobile-menu">
+        <ul class="mobile-menu__item-list">
+          <li class="mobile-menu__item"><a href="#">О сервисе</a></li>
+          <li class="mobile-menu__item"><a href="form.html">Направления</a></li>
+          <li class="mobile-menu__item"><a href="catalog.html">Попутчики</a></li>
+        </ul>
+        <a href="#" class="button mobile-menu__authorization">Авторизация</a>
+        <a class="mobile-menu__tel" href="tel:+88005558628">8 800 555-86-28</a>
+        <a class="mobile-menu__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--fb" target="_blank">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--vk" target="_blank">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <p class="header__tagline">В путешествие с крутыми попутчиками!</p>
       <a href="tel:+88005558628" class="header__call-us"><p class="visually-hidden">Позвоните нам</p></a>
       <a href="#" class="header__feedback"><p class="visually-hidden">Напишите нам</p></a>
@@ -145,7 +174,29 @@
             <dd>59 руб./мес</dd>
           </div>
         </dl>
-        <a href="#" class="price__business-price">Показать тарифы для бизнеса</a>
+        <a href="#" class="price__business-price-link">Показать тарифы для бизнеса</a>
+        <div class="business-price">
+          <h2 class="business-price__title">Бизнес-тарифы</h2>
+          <dl class="bussines-price__price-list">
+            <div class="bussines-price__price-item">
+              <dt>Реклама у блоггера</dt>
+              <dd>300 000 руб./пост</dd>
+            </div>
+            <div class="bussines-price__price-item">
+              <dt>Накрутка подписчиков</dt>
+              <dd>от 1 руб./шт.</dd>
+            </div>
+            <div class="bussines-price__price-item">
+              <dt>Лайки от ботов</dt>
+              <dd>от 20 коп./лайк</dd>
+            </div>
+            <div class="bussines-price__price-item">
+              <dt>Ваш продакт-плейсмент</dt>
+              <dd>Индивидуально</dd>
+            </div>
+          </dl>
+          <a href="#" class="bussines-price__close">Закрыть окно</a>
+        </div>
       </section>
     </main>
 

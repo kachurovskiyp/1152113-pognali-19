@@ -10,6 +10,35 @@
       <img src="https://via.placeholder.com/100x20" width="100" height="20" alt="Логотип сайта 'Погнали'">
     </a>
     <button type="button" class="catalog-header__menu-button" aria-label="Меню"></button>
+
+    <section class="mobile-menu">
+      <ul class="mobile-menu__item-list">
+        <li class="mobile-menu__item"><a href="#">О сервисе</a></li>
+        <li class="mobile-menu__item"><a href="form.html">Направления</a></li>
+        <li class="mobile-menu__item"><a href="catalog.html">Попутчики</a></li>
+      </ul>
+      <a href="#" class="button mobile-menu__authorization">Авторизация</a>
+      <a class="mobile-menu__tel" href="tel:+88005558628">8 800 555-86-28</a>
+      <a class="mobile-menu__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--fb" target="_blank">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--vk" target="_blank">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
     <p class="catalog-header__tagline">Попутчики</p>
   </header>
 
@@ -21,19 +50,19 @@
       <div class="choise-country">
         <ul class="choise-country__land-list">
           <li class="choise-country__land-item">
-            <input type="checkbox" name="europe" id="land-europe" class="visually-hidden">
+            <input type="radio" name="land" id="land-europe" class="visually-hidden">
             <label for="land-europe">Европа</label>
           </li>
           <li class="choise-country__land-item">
-            <input type="checkbox" name="asia" id="land-asia" class="visually-hidden">
+            <input type="radio" name="land" id="land-asia" class="visually-hidden">
             <label for="land-asia">Азия</label>
           </li>
           <li class="choise-country__land-item">
-            <input type="checkbox" name="america" id="land-america" class="visually-hidden">
+            <input type="radio" name="land" id="land-america" class="visually-hidden">
             <label for="land-america">Америка</label>
           </li>
           <li class="choise-country__land-item">
-            <input type="checkbox" name="islands" id="land-islands" class="visually-hidden">
+            <input type="radio" name="land" id="land-islands" class="visually-hidden">
             <label for="land-islands">Острова</label>
           </li>
         </ul>
