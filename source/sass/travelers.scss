@@ -1,0 +1,17 @@
+.travelers {
+  padding: 50px;
+  background:
+    url("../img/smolov-back-desktop@1x.png") no-repeat 200px 20px,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat 0 150px $dark-blue;
+  color: #ffffff;
+}
+
+.travelers__article {
+  @include font-light;
+  @include font-size(16px, 22px);
+}
+
+.travelers__tagline {
+  @include font-bold;
+  @include font-size(16px, 22px);
+}

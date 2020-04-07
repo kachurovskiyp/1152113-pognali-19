@@ -38,3 +38,20 @@ body {
   width: 1px;
   overflow: hidden;
 }
+
+.block-title {
+  @include font-bold($color-mango);
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.button {
+  @include font-bold(#1d2e5b);
+  @include font-size(18px, 18px);
+  display: block;
+  width: 270px;
+  height: 62px;
+  padding: 24px;
+  background-color: #ffd74b;
+  border-radius: 10px;
+}

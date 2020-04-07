@@ -1,0 +1,27 @@
+.transport-list {
+  @include clear-list;
+}
+
+.transport-list__item {
+  @include round-block(30px, 30px);
+}
+
+.transport-list__item--plane {
+  background: url("../img/plane.svg") no-repeat center center;
+  background-size: 70%;
+}
+
+.transport-list__item--bus {
+  background: url("../img/bus.svg") no-repeat center center;
+  background-size: 70%;
+}
+
+.transport-list__item--bicykle {
+  background: url("../img/bike.svg") no-repeat center center;
+  background-size: 80%;
+}
+
+.transport-list__item--afoot {
+  background: url("../img/run.svg") no-repeat center center;
+  background-size: 80%;
+}

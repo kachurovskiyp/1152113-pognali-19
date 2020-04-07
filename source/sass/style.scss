@@ -1,2 +1,22 @@
-@import "global-style.scss";
+/* global styles */
+@import "normalize.scss";
 @import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global-style.scss";
+
+/* blocks style */
+@import "header.scss";
+@import "reviews.scss";
+@import "steps.scss";
+@import "info.scss";
+@import "directions.scss";
+@import "country.scss";
+@import "travelers.scss";
+@import "user-card.scss";
+@import "countries.scss";
+@import "transport-list.scss";
+@import "price.scss";
+@import "business-price.scss";
+@import "footer.scss";
+@import "social-list.scss";

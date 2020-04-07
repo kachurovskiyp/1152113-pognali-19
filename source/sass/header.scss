@@ -1,0 +1,47 @@
+.header {
+  padding: 25px;
+  padding-bottom: 0;
+
+  background:
+    url("../img/traveller-illustration-mobile@1x.png") no-repeat right bottom,
+    url("../img/globe-back-mobile@1x.jpg") no-repeat left center #161c36;
+
+  @include font-bold;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.header__tagline {
+  text-align: center;
+}
+
+.header__call-us {
+  @include round-block(40px, 40px);
+  display: block;
+  background: url("../img/topmenu-phone.svg") no-repeat center center #ff8d30;
+  background-size: 50%;
+}
+
+.header__feedback {
+  @include round-block(40px, 40px);
+  display: block;
+  background: url("../img/topmenu-mail.svg") no-repeat center center #ffbd30;
+  background-size: 50%;
+}
+
+.header__authorization {
+  display: inline-block;
+  width: 190px;
+  height: 40px;
+  background-color: #ffd74b;
+  border-radius: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #161c35;
+}

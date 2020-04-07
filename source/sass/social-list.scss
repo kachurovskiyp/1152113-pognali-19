@@ -1,0 +1,24 @@
+.social-list {
+  @include clear-list;
+}
+
+.social-list__link {
+  @include round-block(30px, 30px);
+  display: block;
+  background-color: #ffd74b;
+}
+
+.social-list__link--fb {
+  background: #ffd74b url("../img/facebook.svg") no-repeat center center;
+  background-size: 40%;
+}
+
+.social-list__link--vk {
+  background: #ffd74b url("../img/vk.svg") no-repeat center center;
+  background-size: 70%;
+}
+
+.social-list__link--instagram {
+  background: #ffd74b url("../img/instagram.svg") no-repeat center center;
+  background-size: 70%;
+}

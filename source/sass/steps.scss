@@ -1,0 +1,34 @@
+.steps {
+  padding: 0 25px;
+  background-color: #192144;
+}
+
+.steps__list {
+  @include clear-list;
+  @include font-bold(#161c35);
+  font-size: 18px;
+  line-height: 18px;
+  padding-bottom: 30px;
+}
+
+.steps__step {
+  padding: 25px;
+}
+
+.steps__step:first-child {
+  @include round-top-corners(10px);
+  background-color: #ff8d30;
+}
+
+.steps__step:nth-child(2) {
+  background-color: #ffa530;
+}
+
+.steps__step:nth-child(3) {
+  background-color: #ffbd30;
+}
+
+.steps__step:last-child {
+  @include round-bottom-corners(10px);
+  background-color: #ffd74b;
+}
