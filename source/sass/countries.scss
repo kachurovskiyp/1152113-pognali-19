@@ -1,3 +1,6 @@
 .countries {
   @include clear-list;
+  @include font-medium(#1d2e5b);
+  @include font-size(15px, 18px);
+  text-transform: uppercase;
 }

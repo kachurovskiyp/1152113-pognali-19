@@ -1,0 +1,24 @@
+.filter-country {
+  background-color: #e2e5f2;
+  padding: 20px;
+}
+
+.filter-country__title {
+  @include font-size(16px, 22px);
+  color: $dark-blue;
+  text-transform: uppercase;
+}
+
+.filter-country__close {
+  @include font-bold(#161c35);
+  @include font-size(16.5px, 29.5px);
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  display: block;
+  width: 270px;
+  height: 40px;
+  background-color: #d6daed;
+  border-radius: 20px;
+}

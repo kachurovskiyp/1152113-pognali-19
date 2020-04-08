@@ -3,43 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="catalog-header">
+<body class="catalog-page">
+  <header class="catalog-header inner-page-header">
     <a class="catalog-header__logo" href="index.html">
-      <img src="https://via.placeholder.com/100x20" width="100" height="20" alt="Логотип сайта 'Погнали'">
+      <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сайта 'Погнали'">
     </a>
     <button type="button" class="catalog-header__menu-button" aria-label="Меню"></button>
 
     <section class="mobile-menu">
       <ul class="mobile-menu__item-list">
-        <li class="mobile-menu__item"><a href="#">О сервисе</a></li>
-        <li class="mobile-menu__item"><a href="form.html">Направления</a></li>
-        <li class="mobile-menu__item"><a href="catalog.html">Попутчики</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="catalog.html">Попутчики</a></li>
       </ul>
       <a href="#" class="button mobile-menu__authorization">Авторизация</a>
       <a class="mobile-menu__tel" href="tel:+88005558628">8 800 555-86-28</a>
       <a class="mobile-menu__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       <ul class="social-list">
         <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--fb" target="_blank">
+          <a href="#" class="social-list__link social-list__link--fb mobile-menu__social-item" target="_blank">
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--vk" target="_blank">
+          <a href="#" class="social-list__link social-list__link--vk mobile-menu__social-item" target="_blank">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
+          <a href="#" class="social-list__link social-list__link--instagram mobile-menu__social-item" target="_blank">
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </li>
       </ul>
     </section>
 
-    <p class="catalog-header__tagline">Попутчики</p>
+    <p class="catalog-header__tagline page-title">Попутчики</p>
   </header>
 
   <main>
@@ -50,136 +51,136 @@
       <div class="choise-country">
         <ul class="choise-country__land-list">
           <li class="choise-country__land-item">
-            <input type="radio" name="land" id="land-europe" class="visually-hidden">
-            <label for="land-europe">Европа</label>
+            <input type="radio" name="land" id="land-europe" class="visually-hidden" checked>
+            <label for="land-europe" class="choise-country__land-label">Европа</label>
           </li>
           <li class="choise-country__land-item">
             <input type="radio" name="land" id="land-asia" class="visually-hidden">
-            <label for="land-asia">Азия</label>
+            <label for="land-asia" class="choise-country__land-label">Азия</label>
           </li>
           <li class="choise-country__land-item">
             <input type="radio" name="land" id="land-america" class="visually-hidden">
-            <label for="land-america">Америка</label>
+            <label for="land-america" class="choise-country__land-label">Америка</label>
           </li>
           <li class="choise-country__land-item">
             <input type="radio" name="land" id="land-islands" class="visually-hidden">
-            <label for="land-islands">Острова</label>
+            <label for="land-islands" class="choise-country__land-label">Острова</label>
           </li>
         </ul>
 
         <table class="letter-table">
           <tr>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-a" class="visully-hidden">
-              <label for="letter-a">а</label>
+              <input type="radio" name="letter" id="letter-a" class="visually-hidden" checked>
+              <label class="letter-table__label" for="letter-a">а</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-b" class="visully-hidden">
-              <label for="letter-b">б</label>
+              <input type="radio" name="letter" id="letter-b" class="visually-hidden">
+              <label class="letter-table__label" for="letter-b">б</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-c" class="visully-hidden">
-              <label for="letter-c">в</label>
+              <input type="radio" name="letter" id="letter-c" class="visually-hidden">
+              <label class="letter-table__label" for="letter-c">в</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-g" class="visully-hidden">
-              <label for="letter-g">г</label>
+              <input type="radio" name="letter" id="letter-g" class="visually-hidden">
+              <label class="letter-table__label" for="letter-g">г</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-d" class="visully-hidden">
-              <label for="letter-d">д</label>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-e" class="visully-hidden">
-              <label for="letter-e">е</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-z" class="visully-hidden">
-              <label for="letter-z">з</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-i" class="visully-hidden">
-              <label for="letter-i">и</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-k" class="visully-hidden">
-              <label for="letter-k">к</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-l" class="visully-hidden">
-              <label for="letter-l">л</label>
+              <input type="radio" name="letter" id="letter-d" class="visually-hidden">
+              <label class="letter-table__label" for="letter-d">д</label>
             </td>
           </tr>
 
           <tr>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-m" class="visully-hidden">
-              <label for="letter-m">м</label>
+              <input type="radio" name="letter" id="letter-e" class="visually-hidden">
+              <label class="letter-table__label" for="letter-e">е</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-n" class="visully-hidden">
-              <label for="letter-n">н</label>
+              <input type="radio" name="letter" id="letter-z" class="visually-hidden">
+              <label class="letter-table__label" for="letter-z">з</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-o" class="visully-hidden">
-              <label for="letter-o">о</label>
+              <input type="radio" name="letter" id="letter-i" class="visually-hidden">
+              <label class="letter-table__label" for="letter-i">и</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-p" class="visully-hidden">
-              <label for="letter-p">п</label>
+              <input type="radio" name="letter" id="letter-k" class="visually-hidden">
+              <label class="letter-table__label" for="letter-k">к</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-r" class="visully-hidden">
-              <label for="letter-r">р</label>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-s" class="visully-hidden">
-              <label for="letter-s">с</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-t" class="visully-hidden">
-              <label for="letter-t">т</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-y" class="visully-hidden">
-              <label for="letter-y">у</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-f" class="visully-hidden">
-              <label for="letter-f">ф</label>
-            </td>
-            <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-x" class="visully-hidden">
-              <label for="letter-x">х</label>
+              <input type="radio" name="letter" id="letter-l" class="visually-hidden">
+              <label class="letter-table__label" for="letter-l">л</label>
             </td>
           </tr>
 
           <tr>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-ch" class="visully-hidden">
-              <label for="letter-ch">ч</label>
+              <input type="radio" name="letter" id="letter-m" class="visually-hidden">
+              <label class="letter-table__label" for="letter-m">м</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-sh" class="visully-hidden">
-              <label for="letter-sh">ш</label>
+              <input type="radio" name="letter" id="letter-n" class="visually-hidden">
+              <label class="letter-table__label" for="letter-n">н</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-ee" class="visully-hidden">
-              <label for="letter-ee">э</label>
+              <input type="radio" name="letter" id="letter-o" class="visually-hidden">
+              <label class="letter-table__label" for="letter-o">о</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-j" class="visully-hidden">
-              <label for="letter-j">ю</label>
+              <input type="radio" name="letter" id="letter-p" class="visually-hidden">
+              <label class="letter-table__label" for="letter-p">п</label>
             </td>
             <td class="letter-table__letter">
-              <input type="radio" name="letter" id="letter-ja" class="visully-hidden">
-              <label for="letter-ja">я</label>
+              <input type="radio" name="letter" id="letter-r" class="visually-hidden">
+              <label class="letter-table__label" for="letter-r">р</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-s" class="visually-hidden">
+              <label class="letter-table__label" for="letter-s">с</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-t" class="visually-hidden">
+              <label class="letter-table__label" for="letter-t">т</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-y" class="visually-hidden">
+              <label class="letter-table__label" for="letter-y">у</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-f" class="visually-hidden">
+              <label class="letter-table__label" for="letter-f">ф</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-x" class="visually-hidden">
+              <label class="letter-table__label" for="letter-x">х</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-ch" class="visually-hidden">
+              <label class="letter-table__label" for="letter-ch">ч</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-sh" class="visually-hidden">
+              <label class="letter-table__label" for="letter-sh">ш</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-ee" class="visually-hidden">
+              <label class="letter-table__label" for="letter-ee">э</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-j" class="visually-hidden">
+              <label class="letter-table__label" for="letter-j">ю</label>
+            </td>
+            <td class="letter-table__letter">
+              <input type="radio" name="letter" id="letter-ja" class="visually-hidden">
+              <label class="letter-table__label" for="letter-ja">я</label>
             </td>
           </tr>
         </table>
@@ -187,50 +188,51 @@
         <ul class="country-list">
           <li class="country-list__country-item">
             <input type="checkbox" name="australia" id="australia" class="visually-hidden">
-            <label for="australia">Австралия</label>
+            <label class="country-list__label" for="australia">Австралия</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="austria" id="austria" class="visually-hidden">
-            <label for="austria">Австрия</label>
+            <label class="country-list__label" for="austria">Австрия</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="azerbaijan" id="azerbaijan" class="visually-hidden">
-            <label for="azerbaijan">Азербайджан</label>
+            <label class="country-list__label" for="azerbaijan">Азербайджан</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="albania" id="albania" class="visually-hidden">
-            <label for="albania">Албания</label>
+            <label class="country-list__label" for="albania">Албания</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="algeria" id="algeria" class="visually-hidden">
-            <label for="algeria">Алжир</label>
+            <label class="country-list__label" for="algeria">Алжир</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="angola" id="angola" class="visually-hidden">
-            <label for="angola">Ангола</label>
+            <label class="country-list__label" for="angola">Ангола</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="andorra" id="andorra" class="visually-hidden">
-            <label for="andorra">Андора</label>
+            <label class="country-list__label" for="andorra">Андора</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="antigua" id="antigua" class="visually-hidden">
-            <label for="antigua">Антигуа и Барбуда</label>
+            <label class="country-list__label" for="antigua">Антигуа и Барбуда</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="argentina" id="argentina" class="visually-hidden">
-            <label for="argentina">Аргентина</label>
+            <label class="country-list__label" for="argentina">Аргентина</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="armenia" id="armenia" class="visually-hidden">
-            <label for="armenia">Армения</label>
+            <label class="country-list__label" for="armenia">Армения</label>
           </li>
           <li class="country-list__country-item">
             <input type="checkbox" name="afghanistan" id="afghanistan" class="visually-hidden">
-            <label for="afghanistan">Афганистан</label>
+            <label class="country-list__label" for="afghanistan">Афганистан</label>
           </li>
         </ul>
       </div>
+      <a href="#" class="filter-country__close">Свернуть</a>
     </section>
 
     <section class="filter">
@@ -249,7 +251,7 @@
             </li>
             <li>
               <input class="filter__chekbox" type="checkbox" name="rap" id="rap">
-              <label class="filter__checkbox-label" for="rok">Русский рэп</label>
+              <label class="filter__checkbox-label" for="rap">Русский рэп</label>
             </li>
             <li>
               <input class="filter__chekbox" type="checkbox" name="dance" id="dance">
@@ -264,21 +266,21 @@
         <fieldset class="fiter__set">
           <button class="fiter__title-button" type="button">Транспорт</button>
           <ul class="transport-list transport-list--filter">
-            <li class="transport-list__item transport-list__item--plane-filter">
+            <li class="transport-list__item">
               <input type="checkbox" name="plane" id="plane" class="visually-hidden">
-              <label for="plane" class="transport-list__label transport-list__label--checked">Самолет</label>
+              <label for="plane" class="transport-list__label transport-list__label--plane-filter transport-list__label--checked"><span class="visually-hidden">Самолет</span></label>
             </li>
             <li class="transport-list__item transport-list__item--bus-filter">
               <input type="checkbox" name="bus" id="bus" class="visually-hidden">
-              <label for="bus" class="transport-list__label transport-list__label--checked">Автобус</label>
+              <label for="bus" class="transport-list__label transport-list__label--bus-filter transport-list__label--checked"><span class="visually-hidden">Автобус</span></label>
             </li>
             <li class="transport-list__item transport-list__item--bicykle-filter">
               <input type="checkbox" name="bicykle" id="bicykle" class="visually-hidden">
-              <label for="bicykle" class="transport-list__label">Велосипед</label>
+              <label for="bicykle" class="transport-list__label transport-list__label--bicykle-filter"><span class="visually-hidden">Велосипед</span></label>
             </li>
             <li class="transport-list__item transport-list__item--afoot-filter">
               <input type="checkbox" name="afoot" id="afoot" class="visually-hidden">
-              <label for="afoot" class="transport-list__label transport-list__label--checked">Пешком</label>
+              <label for="afoot" class="transport-list__label transport-list__label--afoot-filter transport-list__label--checked"><span class="visually-hidden">Пешком</span></label>
             </li>
           </ul>
         </fieldset>
@@ -296,31 +298,32 @@
             </div>
           </div>
         </fieldset>
-        <button class="filter_submit-button" type="submit">Показать</button>
+        <button class="filter__submit-button" type="submit">Показать</button>
       </form>
     </section>
 
     <section class="users-list">
       <h2 class="visually-hidden">Список пользователей</h2>
+
       <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <img class="user-card__image user-card__image--catalog" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
         <a href="#" class="user-card__user-link"><h3 class="user-card__name">Таня Фирсова</h3></a>
         <button type="button" class="user-card__like user-card__like--liked"></button>
         <p class="user-card__like-count">1,5 М</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">ЗОЖ</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">ПП</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">Фитнес</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">пляж</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">авокадо</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">смузи</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">ЗОЖ</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">ПП</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">Фитнес</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">пляж</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">авокадо</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">смузи</a></li>
         </ul>
 
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Шри-ланки"> Шри-ланка</li>
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Таиланда"> Таиланд</li>
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Сейшел"> Сейшелы</li>
+          <li class="countries__item"><img src="img/sri-lanka.png" width="35" height="25" alt="флаг Шри-ланки">Шри-ланка</li>
+          <li class="countries__item"><img src="img/thailand.png" width="35" height="25" alt="флаг Таиланда">Таиланд</li>
+          <li class="countries__item"><img src="img/seychelles.png" width="35" height="25" alt="флаг Сейшел">Сейшелы</li>
         </ul>
 
         <p class="user-card__set-separator">транспорт:</p>
@@ -330,26 +333,26 @@
           <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
           <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
         </ul>
-        <p class="user-card__level user-card__level--catalog">левел 99</p>
-        <a href="#" class="user-card__call-link">Позвать!</a>
+        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">99</span></p>
+        <a href="#" class="button user-card__call-link">Позвать!</a>
       </article>
 
       <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <img class="user-card__image user-card__image--catalog" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
         <a href="#" class="user-card__user-link"><h3 class="user-card__name">Петя Демин</h3></a>
         <button type="button" class="user-card__like"></button>
         <p class="user-card_like-count">1500</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
           <li class="user-card__tag"><a href="#" class="user-card__tag-link">бургер</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">бар</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">футбол</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">концерт</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">крафт</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">бар</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">футбол</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">концерт</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">крафт</a></li>
         </ul>
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Бельгии"> Бельгия</li>
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Чехии"> Чехия</li>
+          <li class="countries__item"><img src="img/belgium.png" width="35" height="25" alt="флаг Бельгии">Бельгия</li>
+          <li class="countries__item"><img src="img/czech.png" width="35" height="25" alt="флаг Чехии">Чехия</li>
         </ul>
 
         <p class="user-card__set-separator">транспорт:</p>
@@ -360,28 +363,28 @@
           <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
         </ul>
 
-        <p class="user-card__level user-card__level--catalog">левел 80</p>
-        <a href="#" class="user-card__call-link">Позвать!</a>
+        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">80</span></p>
+        <a href="#" class="button user-card__call-link">Позвать!</a>
       </article>
 
       <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <img class="user-card__image user-card__image--catalog" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
         <a href="#" class="user-card__user-link"><h3 class="user-card__name">Марк Смолов</h3></a>
         <button type="button" class="user-card__like"></button>
         <p class="user-card_like-count">170</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">рэп</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">тату</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">хайпбист</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">кроссовки</a></li>
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">суприм</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">рэп</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">тату</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">хайпбист</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">кроссовки</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">суприм</a></li>
         </ul>
 
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг США"> США</li>
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Австралии"> Австралия</li>
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Доминика"> Доминика</li>
+          <li class="countries__item"><img src="img/usa.png" width="35" height="25" alt="флаг США">США</li>
+          <li class="countries__item"><img src="img/australia.png" width="35" height="25" alt="флаг Австралии">Австралия</li>
+          <li class="countries__item"><img src="img/dominica.png" width="35" height="25" alt="флаг Доминика"> Доминика</li>
         </ul>
 
         <p class="user-card__set-separator">транспорт:</p>
@@ -391,26 +394,27 @@
           <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
           <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
         </ul>
-        <p class="user-card__level user-card__level--catalog">левел 25</p>
-        <a href="#" class="user-card__call-link">Позвать!</a>
+        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">25</span></p>
+        <a href="#" class="button user-card__call-link">Позвать!</a>
       </article>
 
       <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Фото пользователя">
+        <img class="user-card__image user-card__image--catalog" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
         <a href="#" class="user-card__user-link"><h3 class="user-card__name">Лариса Роговая</h3></a>
         <button type="button" class="user-card__like"></button>
         <p class="user-card_like-count">23</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
           <li class="user-card__tag"><a href="#" class="user-card__tag-link">образование</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">карьера</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">учеба</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link">линкендин</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">карьера</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">учеба</a></li>
+            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">линкендин</a></li>
         </ul>
 
         <p class="user-card__set-separator">хочет посетить:</p>
         <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Великобритании"> Великобритания</li>
-          <li class="countries__item"><img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Германии"> Германия</li>
+          <li class="countries__item">
+            <img src="img/uk.png" width="35" height="25" alt="флаг Великобритании">Великобритания</li>
+          <li class="countries__item"><img src="img/germany.png" width="35" height="25" alt="флаг Германии">Германия</li>
         </ul>
 
         <p class="user-card__set-separator">транспорт:</p>
@@ -421,8 +425,8 @@
           <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
         </ul>
 
-        <p class="user-card__level user-card__level--catalog">левел 50</p>
-        <a href="#" class="user-card__call-link">Позвать!</a>
+        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">50</span></p>
+        <a href="#" class="button user-card__call-link">Позвать!</a>
       </article>
       <a href="#" class="users-list__show-more">Показать еще</a>
       <a href="#" class="users-list__prew" aria-label="Предидущая страница">Пред</a>
@@ -430,8 +434,10 @@
     </section>
   </main>
 
-    <footer class="footer">
-      <p class="footer__tagline">Погнали?</p>
+    <footer class="footer footer--inner-page">
+      <a href="index.html" aria-label="ссылка на главную страницу сайта">
+        <img src="img/logo-mobile-blue@1x.png" width="100" height="19"  alt="Логотип сайта">
+      </a>
       <ul class="social-list">
         <li class="social-list__item">
           <a href="#" class="social-list__link social-list__link--fb" target="_blank">

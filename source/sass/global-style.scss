@@ -45,6 +45,11 @@ body {
   line-height: 24px;
 }
 
+.page-title {
+  @include font-bold;
+  @include font-size(36px, 40px);
+}
+
 .button {
   @include font-bold(#1d2e5b);
   @include font-size(18px, 18px);
@@ -54,4 +59,14 @@ body {
   padding: 24px;
   background-color: #ffd74b;
   border-radius: 10px;
+}
+
+.inner-page-header {
+  @include round-bottom-corners(20px);
+  background-color: $dark-blue-two;
+  min-height: 143px;
+}
+
+.catalog-page {
+  background-color: #edeff6;
 }

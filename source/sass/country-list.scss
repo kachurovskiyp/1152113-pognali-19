@@ -1,0 +1,8 @@
+.country-list {
+  @include clear-list;
+}
+
+.country-list__label {
+  @include font(#444444);
+  @include font-size(16px, 22px);
+}

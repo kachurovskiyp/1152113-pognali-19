@@ -1,0 +1,60 @@
+.filter {
+  margin: 20px;
+  padding: 25px;
+  background-color: #ffd74b;
+  border-radius: 15px;
+}
+
+.filter__title {
+  @include font-bold(#1d2e5b);
+  @include font-size(22.5px, 22.5px);
+}
+
+.fiter__set {
+  width: 100%;
+  border: none;
+  border: {
+    top: 1px solid #f3c72b;
+    bottom: 1px solid #f3c72b;
+  }
+}
+
+.fiter__title-button {
+  @include font-bold(#1d2e5b);
+  @include font-size(16px, 18px);
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+}
+
+.filter__list {
+  @include clear-list;
+}
+
+.filter__checkbox-label {
+  @include font(#444444);
+  @include font-size(15px, 15px);
+}
+
+.filter__level-min,
+.filter__level-max {
+  border: 1px solid #cbced9;
+  border-radius: 5px;
+  width: 111px;
+  height: 35px;
+  text-align: center;
+}
+
+.filter__submit-button {
+  @include font-bold($dark-blue-two);
+  @include font-size(17px, 30px);
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  width: 230px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+}

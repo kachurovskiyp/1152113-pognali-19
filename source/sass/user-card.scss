@@ -8,6 +8,11 @@
   @include round-top-corners(10px);
 }
 
+.user-card__image--catalog {
+  @include round-block(70px, 70xp);
+  float: left;
+}
+
 .user-card__level {
   @include font;
   @include font-size(14px, 14px);
@@ -29,4 +34,49 @@
   @include clear-list;
   @include font(#444444);
   @include font-size(16px, 18px);
+}
+
+.user-card__like {
+  @include round-block(31px, 31px);
+  float: left;
+  background: url("../img/heart.svg") no-repeat center center #edeff6;
+  background-size: 50%;
+  border: none;
+}
+
+.user-card__like--liked {
+  background: url("../img/heart-active.svg") no-repeat center center #f9eaea;
+  background-size: 50%;
+}
+
+.user-card__set-separator {
+  @include font(#444444);
+  @include font-size(15px, 18px);
+}
+
+.user-card__tag-link--catalog {
+  @include font(#444444);
+  @include font-size(15px, 18px);
+}
+
+.user-card__level--catalog {
+  @include font(#444444);
+  background-color: transparent;
+}
+
+.user-card__level-number--catalog {
+  @include font-bold(#1d2e5b);
+  @include font-size(24px, 18px);
+}
+
+.user-card__call-link {
+  @include font-bold($dark-blue-two);
+  @include font-size(17px, 30px);
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  width: 230px;
+  height: 40px;
+  border-radius: 20px;
 }
