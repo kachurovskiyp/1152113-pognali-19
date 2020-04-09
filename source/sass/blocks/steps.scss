@@ -1,11 +1,11 @@
 .steps {
   padding: 0 25px;
-  background-color: #192144;
+  background-color: $dark-blue;
 }
 
 .steps__list {
   @include clear-list;
-  @include font-bold(#161c35);
+  @include font-bold($dark-blue-two);
   font-size: 18px;
   line-height: 18px;
   padding-bottom: 30px;
@@ -17,18 +17,18 @@
 
 .steps__step:first-child {
   @include round-top-corners(10px);
-  background-color: #ff8d30;
+  background-color: $color-mango;
 }
 
 .steps__step:nth-child(2) {
-  background-color: #ffa530;
+  background-color: $color-light-mango;
 }
 
 .steps__step:nth-child(3) {
-  background-color: #ffbd30;
+  background-color: $dark-yellow;
 }
 
 .steps__step:last-child {
   @include round-bottom-corners(10px);
-  background-color: #ffd74b;
+  background-color: $yellow;
 }

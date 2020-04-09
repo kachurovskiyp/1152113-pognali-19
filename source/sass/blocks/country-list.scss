@@ -3,6 +3,6 @@
 }
 
 .country-list__label {
-  @include font(#444444);
+  @include font($grey);
   @include font-size(16px, 22px);
 }

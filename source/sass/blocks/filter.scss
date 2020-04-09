@@ -1,26 +1,24 @@
 .filter {
   margin: 20px;
   padding: 25px;
-  background-color: #ffd74b;
+  background-color: $yellow;
   border-radius: 15px;
 }
 
 .filter__title {
-  @include font-bold(#1d2e5b);
+  @include font-bold($dark-blue-three);
   @include font-size(22.5px, 22.5px);
 }
 
-.fiter__set {
+.filter__set {
   width: 100%;
   border: none;
-  border: {
-    top: 1px solid #f3c72b;
-    bottom: 1px solid #f3c72b;
-  }
+  border-top: 1px solid $yellow-two;
+  border-bottom: 1px solid $yellow-two;
 }
 
-.fiter__title-button {
-  @include font-bold(#1d2e5b);
+.filter__title-button {
+  @include font-bold($dark-blue-three);
   @include font-size(16px, 18px);
   background-color: transparent;
   border: none;
@@ -32,13 +30,13 @@
 }
 
 .filter__checkbox-label {
-  @include font(#444444);
+  @include font($grey);
   @include font-size(15px, 15px);
 }
 
 .filter__level-min,
 .filter__level-max {
-  border: 1px solid #cbced9;
+  border: 1px solid $light-grey;
   border-radius: 5px;
   width: 111px;
   height: 35px;
@@ -48,13 +46,11 @@
 .filter__submit-button {
   @include font-bold($dark-blue-two);
   @include font-size(17px, 30px);
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  text-align: center;
+  text-transform: uppercase;
   width: 230px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: $absolute-white;
   border: none;
   border-radius: 20px;
 }

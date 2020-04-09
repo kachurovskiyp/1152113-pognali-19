@@ -1,9 +1,10 @@
 .price {
   padding: 30px;
+  background-color: $white-three;
 }
 
 .price__price-list {
-  @include font-light(#444444);
+  @include font-light($grey);
   @include font-size(16px, 22px);
 }
 

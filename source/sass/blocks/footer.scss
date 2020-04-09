@@ -1,11 +1,11 @@
 .footer__copyright {
-  @include font(#444444);
+  @include font($grey);
   @include font-size(16px, 22px);
 }
 
 .footer--inner-page {
   @include round-top-corners(30px);
-  background-color: #ffffff;
+  background-color: $absolute-white;
   margin-top: 40px;
   padding: 50px;
 }

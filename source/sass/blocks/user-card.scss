@@ -1,7 +1,7 @@
 .user-card {
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: $absolute-white;
 }
 
 .user-card__image {
@@ -17,7 +17,7 @@
   @include font;
   @include font-size(14px, 14px);
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: $black-opacity;
 }
 
 .user-card__level-number {
@@ -26,46 +26,46 @@
 }
 
 .user-card__name {
-  @include font-bold(#1d2e5b);
+  @include font-bold($dark-blue-three);
   @include font-size(21px, 21px);
 }
 
 .user-card__tags-list {
   @include clear-list;
-  @include font(#444444);
+  @include font($grey);
   @include font-size(16px, 18px);
 }
 
 .user-card__like {
   @include round-block(31px, 31px);
   float: left;
-  background: url("../img/heart.svg") no-repeat center center #edeff6;
+  background: url("../img/heart.svg") no-repeat center center $white-three;
   background-size: 50%;
   border: none;
 }
 
 .user-card__like--liked {
-  background: url("../img/heart-active.svg") no-repeat center center #f9eaea;
+  background: url("../img/heart-active.svg") no-repeat center center $white-grey;
   background-size: 50%;
 }
 
 .user-card__set-separator {
-  @include font(#444444);
+  @include font($grey);
   @include font-size(15px, 18px);
 }
 
 .user-card__tag-link--catalog {
-  @include font(#444444);
+  @include font($grey);
   @include font-size(15px, 18px);
 }
 
 .user-card__level--catalog {
-  @include font(#444444);
+  @include font($grey);
   background-color: transparent;
 }
 
 .user-card__level-number--catalog {
-  @include font-bold(#1d2e5b);
+  @include font-bold($dark-blue-three);
   @include font-size(24px, 18px);
 }
 

@@ -1,0 +1,5 @@
+.block-title {
+  @include font-bold($color-mango);
+  font-size: 24px;
+  line-height: 24px;
+}

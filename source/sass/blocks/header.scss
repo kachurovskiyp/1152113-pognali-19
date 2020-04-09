@@ -4,7 +4,7 @@
 
   background:
     url("../img/traveller-illustration-mobile@1x.png") no-repeat right bottom,
-    url("../img/globe-back-mobile@1x.jpg") no-repeat left center #161c36;
+    url("../img/globe-back-mobile@1x.jpg") no-repeat left center $dark-blue-two;
 
   @include font-bold;
   font-size: 36px;
@@ -18,26 +18,26 @@
 .header__call-us {
   @include round-block(40px, 40px);
   display: block;
-  background: url("../img/topmenu-phone.svg") no-repeat center center #ff8d30;
+  background: url("../img/topmenu-phone.svg") no-repeat center center $color-mango;
   background-size: 50%;
 }
 
 .header__feedback {
   @include round-block(40px, 40px);
   display: block;
-  background: url("../img/topmenu-mail.svg") no-repeat center center #ffbd30;
+  background: url("../img/topmenu-mail.svg") no-repeat center center $dark-yellow;
   background-size: 50%;
 }
 
 .header__authorization {
+  @include font-size(17px, 30px);
   display: inline-block;
-  width: 190px;
-  height: 40px;
-  background-color: #ffd74b;
-  border-radius: 20px;
+  padding: 5px 40px;
+  background-color: $yellow;
+  border-radius: 25px;
 
   text-align: center;
   text-transform: uppercase;
   font-size: 17px;
-  color: #161c35;
+  color: $dark-blue-two;
 }

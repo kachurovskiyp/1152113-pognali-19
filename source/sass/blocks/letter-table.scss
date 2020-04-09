@@ -1,10 +1,8 @@
 .letter-table {
-  @include font-medium(#1d2e5b);
+  @include font-medium($dark-blue-three);
   @include font-size(14px, 18px);
-  text: {
-    transform: uppercase;
-    align: center;
-  }
+  text-transform: uppercase;
+  text-align: center;
   border-collapse: collapse;
 }
 
@@ -12,11 +10,11 @@
   display: block;
   width: 45px;
   height: 45px;
-  background-color: #ffffff;
+  background-color: $absolute-white;
   padding-top: 12px;
 }
 
 input[type="radio"]:checked + .letter-table__label {
-  background-color: #1d2e5b;
-  color: #ffffff;
+  background-color: $dark-blue-three;
+  color: $absolute-white;
 }

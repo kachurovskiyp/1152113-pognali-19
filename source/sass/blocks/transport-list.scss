@@ -32,21 +32,21 @@
 }
 
 .transport-list__label--plane-filter {
-  background: url("../img/plane.svg") no-repeat center center #ffffff;
+  background: url("../img/plane.svg") no-repeat center center $absolute-white;
   background-size: 50%;
 }
 
 .transport-list__label--bus-filter {
-  background: url("../img/bus.svg") no-repeat center center #ffffff;
+  background: url("../img/bus.svg") no-repeat center center $absolute-white;
   background-size: 50%;
 }
 
 .transport-list__label--bicykle-filter {
-  background: url("../img/bike.svg") no-repeat center center #ffffff;
+  background: url("../img/bike.svg") no-repeat center center $absolute-white;
   background-size: 60%;
 }
 
 .transport-list__label--afoot-filter {
-  background: url("../img/run.svg") no-repeat center center #ffffff;
+  background: url("../img/run.svg") no-repeat center center $absolute-white;
   background-size: 60%;
 }

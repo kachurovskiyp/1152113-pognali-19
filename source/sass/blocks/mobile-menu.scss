@@ -1,7 +1,7 @@
 
 .mobile-menu {
   display: none;
-  background-color: #ffffff;
+  background-color: $absolute-white;
   padding: 65px;
 }
 
@@ -12,19 +12,15 @@
 .mobile-menu__item-link {
   @include font-medium($dark-blue);
   @include font-size(30px, 36px);
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .mobile-menu__authorization {
-  @include font-medium(#161c35);
+  @include font-medium($dark-blue-two);
   @include font-size(17px, 30px);
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  text-align: center;
+  text-transform: uppercase;
   border-radius: 30px;
 }
 

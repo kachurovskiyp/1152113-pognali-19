@@ -1,5 +1,5 @@
 .filter-country {
-  background-color: #e2e5f2;
+  background-color: $white;
   padding: 20px;
 }
 
@@ -10,15 +10,13 @@
 }
 
 .filter-country__close {
-  @include font-bold(#161c35);
+  @include font-bold($dark-blue-two);
   @include font-size(16.5px, 29.5px);
-  text: {
-    align: center;
-    transform: uppercase;
-  }
+  text-align: center;
+  text-transform: uppercase;
   display: block;
   width: 270px;
   height: 40px;
-  background-color: #d6daed;
+  background-color: $white-two;
   border-radius: 20px;
 }
