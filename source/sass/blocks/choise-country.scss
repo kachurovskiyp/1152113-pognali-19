@@ -1,0 +1,17 @@
+.choise-country {
+  padding: 20px;
+}
+
+.choise-country__land-list {
+  @include clear-list;
+}
+
+.choise-country__land-label {
+  @include font-bold($dark-blue-opacity);
+  @include font-size(16px, 22px);
+  text-transform: uppercase;
+}
+
+input[type="radio"]:checked + .choise-country__land-label {
+  color: $dark-blue;
+}

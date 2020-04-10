@@ -1,0 +1,121 @@
+.add-plan {
+  @include round-top-corners(20px);
+  padding: 20px 15px;
+  background-color: $light-blue;
+}
+
+.add-plan__title {
+  @include font-bold($dark-blue-three);
+  @include font-size(24px, 24px);
+}
+
+.add-plan__step {
+  @include font($grey);
+  @include font-size(16px, 22px);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: $absolute-white;
+}
+
+.add-plan__step-number {
+  @include font-bold($dark-blue-three);
+  @include font-size(20px, 20px);
+  margin: 0;
+}
+
+.add-plan__step-title {
+  @include font-bold($dark-blue-three);
+  @include font-size(20px, 20px);
+  margin: 0;
+}
+
+.add-plan__label {
+  @include font-medium($dark-blue-three);
+  @include font-size;
+  text-transform: uppercase;
+}
+
+.add-plan__input-description {
+  @include font-medium($dark-slate-blue);
+  @include font-size;
+}
+
+.add-plan__travelers-number,
+.add-plan__travel-duration {
+  @include font-medium($dark-blue-three);
+  @include font-size(13.5px, 15px);
+  padding: 7px 0;
+  text-align: center;
+  border: 1px solid $light-grey;
+  border-radius: 2px;
+}
+
+.add-plan__children-allow-label {
+  @include font-size(15px, 15px);
+}
+
+.add-plan__next-step {
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.add-plan__choose-country {
+  @include font-medium($dark-blue-three);
+  @include font-size(18px, 14px);
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
+
+.add-plan__country-flag {
+  padding: 10px;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
+
+.add-plan__country-flag--step3 {
+  border: none;
+}
+
+.add-plan__country-plan {
+  @include font($grey);
+  @include font-size(16px, 22px);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
+
+.add-plan__choose-country-popup {
+  display: none;
+}
+
+.add-plan__add-button {
+  @include font-medium($dark-blue-three);
+  @include font-size(18px, 14px);
+  padding: 15px 75px 15px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: $white-three;
+  text-transform: uppercase;
+}
+
+.add-plan__prew-step {
+  background-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.add-plan__submit {
+  @include font-size(18px, 30px);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+}

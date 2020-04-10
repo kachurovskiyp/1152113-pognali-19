@@ -1,0 +1,58 @@
+@mixin font($color: #ffffff) {
+  font: {
+    weight: 400;
+    style: normal;
+  }
+  color: $color;
+}
+
+@mixin font-bold($color: #ffffff) {
+  font: {
+    weight: 700;
+    style: normal;
+  }
+  color: $color;
+}
+
+@mixin font-light($color: #ffffff) {
+  font: {
+    weight: 200;
+    style: normal;
+  }
+  color: $color;
+}
+
+@mixin font-medium($color: #ffffff) {
+  font: {
+    weight: 500;
+    style: normal;
+  }
+  color: $color;
+}
+
+@mixin font-size($fs: 16px, $lh: 16px) {
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin round-block($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+@mixin round-top-corners($value) {
+  border-top-left-radius: $value;
+  border-top-right-radius: $value;
+}
+
+@mixin round-bottom-corners($value) {
+  border-bottom-left-radius: $value;
+  border-bottom-right-radius: $value;
+}
+
+@mixin clear-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

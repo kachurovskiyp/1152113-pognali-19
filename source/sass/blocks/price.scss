@@ -1,0 +1,14 @@
+.price {
+  padding: 30px;
+  background-color: $white-three;
+}
+
+.price__price-list {
+  @include font-light($grey);
+  @include font-size(16px, 22px);
+}
+
+.price__business-price-link {
+  @include font-bold($dark-blue);
+  @include font-size(16px, 16px);
+}

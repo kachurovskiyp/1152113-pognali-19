@@ -1,0 +1,22 @@
+.level {
+  @include font;
+  @include font-size(14px, 14px);
+
+  background-color: $black-opacity;
+}
+
+.level--directions {
+  @include font-size(18px, 22px);
+  @include font($grey);
+  background-color: transparent;
+}
+
+.level__number {
+  @include font-bold;
+  @include font-size(24px, 24px);
+}
+
+.level__number--directions {
+  @include font-bold($dark-blue-two);
+  @include font-size(38px, 38px);
+}

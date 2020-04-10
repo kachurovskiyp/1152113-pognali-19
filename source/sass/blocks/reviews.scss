@@ -1,0 +1,14 @@
+.reviews {
+  padding: 45px;
+  background-color: $dark-blue-two;
+}
+
+.reviews__article {
+  @include font-light;
+  @include font-size(16px, 22px);
+}
+
+.reviews__description {
+  @include font-bold;
+  @include font-size(16px, 22px);
+}

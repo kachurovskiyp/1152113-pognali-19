@@ -1,0 +1,8 @@
+.button {
+  @include font-bold($dark-blue-three);
+  @include font-size(18px, 18px);
+  display: block;
+  padding: 20px;
+  background-color: $yellow;
+  border-radius: 10px;
+}

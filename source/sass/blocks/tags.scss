@@ -1,0 +1,6 @@
+.tags__title {
+  @include font-bold($dark-blue-three);
+  @include font-size(16px, 18px);
+  @include clear-list;
+  text-transform: uppercase;
+}

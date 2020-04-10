@@ -1,0 +1,70 @@
+.user-card {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: $absolute-white;
+}
+
+.user-card__image {
+  @include round-top-corners(10px);
+}
+
+.user-card__image--catalog {
+  @include round-block(70px, 70xp);
+  float: left;
+}
+
+.user-card__name {
+  @include font-bold($dark-blue-three);
+  @include font-size(21px, 21px);
+}
+
+.user-card__tags-list {
+  @include clear-list;
+  @include font($grey);
+  @include font-size(16px, 18px);
+}
+
+.user-card__like {
+  @include round-block(31px, 31px);
+  float: left;
+  background: url("../img/heart.svg") no-repeat center center $white-three;
+  background-size: 50%;
+  border: none;
+}
+
+.user-card__like--liked {
+  background: url("../img/heart-active.svg") no-repeat center center $white-grey;
+  background-size: 50%;
+}
+
+.user-card__set-separator {
+  @include font($grey);
+  @include font-size(15px, 18px);
+}
+
+.user-card__tag-link--catalog {
+  @include font($grey);
+  @include font-size(15px, 18px);
+}
+
+.user-card__level--catalog {
+  @include font($grey);
+  background-color: transparent;
+}
+
+.user-card__level-number--catalog {
+  @include font-bold($dark-blue-three);
+  @include font-size(24px, 18px);
+}
+
+.user-card__call-link {
+  @include font-bold($dark-blue-two);
+  @include font-size(17px, 30px);
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  width: 230px;
+  height: 40px;
+  border-radius: 20px;
+}

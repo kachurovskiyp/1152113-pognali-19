@@ -1,0 +1,56 @@
+.filter {
+  margin: 20px;
+  padding: 25px;
+  background-color: $yellow;
+  border-radius: 15px;
+}
+
+.filter__title {
+  @include font-bold($dark-blue-three);
+  @include font-size(22.5px, 22.5px);
+}
+
+.filter__set {
+  width: 100%;
+  border: none;
+  border-top: 1px solid $yellow-two;
+  border-bottom: 1px solid $yellow-two;
+}
+
+.filter__title-button {
+  @include font-bold($dark-blue-three);
+  @include font-size(16px, 18px);
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+}
+
+.filter__list {
+  @include clear-list;
+}
+
+.filter__checkbox-label {
+  @include font($grey);
+  @include font-size(15px, 15px);
+}
+
+.filter__level-min,
+.filter__level-max {
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+  width: 111px;
+  height: 35px;
+  text-align: center;
+}
+
+.filter__submit-button {
+  @include font-bold($dark-blue-two);
+  @include font-size(17px, 30px);
+  text-align: center;
+  text-transform: uppercase;
+  width: 230px;
+  height: 40px;
+  background-color: $absolute-white;
+  border: none;
+  border-radius: 20px;
+}

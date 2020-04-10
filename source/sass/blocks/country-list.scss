@@ -1,0 +1,8 @@
+.country-list {
+  @include clear-list;
+}
+
+.country-list__label {
+  @include font($grey);
+  @include font-size(16px, 22px);
+}

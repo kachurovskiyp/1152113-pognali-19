@@ -1,0 +1,21 @@
+.country__image {
+  @include round-top-corners(10px);
+}
+
+.country__title {
+  @include font-bold($dark-blue-two);
+  @include font-size(21px, 21px);
+  margin: 0;
+}
+
+.country__tagline {
+  @include font-medium($grey);
+  @include font-size(16px, 18px);
+  opacity: 0.3;
+}
+
+.country__visits {
+  @include font-medium($grey);
+  @include font-size(16px, 30px);
+  opacity: 0.3;
+}
