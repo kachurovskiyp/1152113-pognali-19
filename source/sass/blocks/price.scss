@@ -1,4 +1,5 @@
 .price {
+  @include round-bottom-corners(25px);
   padding: 30px;
   background-color: $white-three;
 }

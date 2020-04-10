@@ -1,0 +1,22 @@
+.registration {
+  @include font($absolute-white);
+  @include font-size(16px, 22px);
+  padding: 25px;
+  text-align: center;
+  background-color: $dark-blue;
+}
+
+.registration__link {
+  color: $yellow;
+  text-decoration: underline;
+}
+
+.registration_email-input {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.registration_email-input::placeholder {
+  @include font-bold($greyish-brown);
+}
