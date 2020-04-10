@@ -1,0 +1,44 @@
+.my-plans {
+  @include round-top-corners(25px);
+  padding: 15px 20px;
+  background-color: $white-three;
+}
+
+.my-plans__title {
+  @include font-bold($dark-blue-three);
+  @include font-size(24px, 24px);
+}
+
+.my-plans__item {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: $absolute-white;
+}
+
+.my-plans__direction {
+  @include font-bold($dark-blue-three);
+  @include font-size;
+}
+
+.my-plans__travelers {
+  @include font-medium($dark-blue-three);
+  @include font-size(14px, 14px);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.my-plans__date {
+  @include font-medium($dark-blue-three);
+  @include font-size(14px, 14px);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.my-plans__change-link {
+  @include font-medium($black-opacity);
+  @include font-size(14px, 18px);
+  text-transform: uppercase;
+}

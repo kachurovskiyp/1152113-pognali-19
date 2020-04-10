@@ -7,3 +7,21 @@
   @include font-light($grey);
   @include font-size(16px, 22px);
 }
+
+.directions__user-image {
+  @include round-block(100px, 100px);
+}
+
+.directions__change-image {
+  @include font-bold($dark-blue-two);
+  @include font-size(17px, 30px);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  background-color: $pale-grey-two;
+  border-radius: 20px;
+}
+
+.directions__wrapper {
+  padding: 40px;
+}

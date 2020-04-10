@@ -13,18 +13,6 @@
   float: left;
 }
 
-.user-card__level {
-  @include font;
-  @include font-size(14px, 14px);
-
-  background-color: $black-opacity;
-}
-
-.user-card__level-number {
-  @include font-bold;
-  @include font-size(24px, 24px);
-}
-
 .user-card__name {
   @include font-bold($dark-blue-three);
   @include font-size(21px, 21px);

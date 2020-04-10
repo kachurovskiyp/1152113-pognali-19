@@ -14,6 +14,8 @@
 /* blocks style */
 @import "blocks/header.scss";
 @import "blocks/social-list.scss";
+@import "blocks/level.scss";
+@import "blocks/tags.scss";
 @import "blocks/mobile-menu.scss";
 @import "blocks/reviews.scss";
 @import "blocks/steps.scss";
@@ -33,3 +35,6 @@
 @import "blocks/country-list.scss";
 @import "blocks/filter.scss";
 @import "blocks/users-list.scss";
+@import "blocks/my-plans.scss";
+@import "blocks/add-plan.scss";
+@import "blocks/calendar.scss";
