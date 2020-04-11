@@ -1,0 +1,44 @@
+.contacts {
+  @include font($absolute-white);
+  @include font-size(16px, 22px);
+  @include round-bottom-corners(25px);
+  padding-bottom: 20px;
+  background-color: $yellow;
+}
+
+.contacts__wrapper {
+  @include round-bottom-corners(25px);
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: $dark-blue;
+}
+
+.contacts__tagline {
+  margin: 0;
+  text-align: center;
+}
+
+.contacts__tel,
+.contacts__email {
+  @include font-bold($yellow);
+  @include font-size(16px, 22px);
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  @include font-bold($dark-blue);
+  @include font-size(16px, 22px);
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.contacts__map-link {
+  @include font-bold($dark-blue-three);
+  @include font-size(18px, 18px);
+  padding: 15px;
+  margin: 10px 20px;
+  display: block;
+  border: 2px solid $dark-blue;
+  border-radius: 7px;
+  text-align: center;
+}
