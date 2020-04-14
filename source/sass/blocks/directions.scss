@@ -1,4 +1,5 @@
 .directions {
+  @include round-bottom-corners(20px);
   padding: 50px;
   background-color: $white-three;
 }
@@ -24,4 +25,32 @@
 
 .directions__wrapper {
   padding: 40px;
+}
+
+.direction__show-all {
+  max-width: 270px;
+  margin: 0 auto;
+}
+
+@media (min-width: 630px) {
+
+  .directions {
+    background: url(../../img/flags-back@1x.png) no-repeat 92% 70px;
+    background-size: 230px;
+    position: relative;
+    z-index: 1;
+    background-color: $white-three;
+  }
+
+  .directions__article {
+    padding-right: 300px;
+    margin-bottom: 100px;
+  }
+
+  .direction__show-all {
+    max-width: 100%;
+    padding-left: 5%;
+    box-shadow: 0 -50px 30px  $absolute-white;
+    /* <сдвиг по x> <сдвиг по y> <радиус размытия> <растяжение> <цвет>; */
+  }
 }

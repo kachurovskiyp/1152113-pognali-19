@@ -2,7 +2,7 @@
   @include font;
   @include font-size(14px, 14px);
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 10px;
   width: 60px;
   height: 60px;
@@ -27,4 +27,21 @@
 .level__number--directions {
   @include font-bold($dark-blue-two);
   @include font-size(38px, 38px);
+}
+
+.level__scale-image{
+  transform: scale(1.7) translate(12px,12px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 60px;
+  height: 60px;
+
+  &--99{
+    stroke-dasharray: 170,170;
+  }
+
+  &--80{
+    stroke-dasharray: 150,150;
+  }
 }

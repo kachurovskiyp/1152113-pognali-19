@@ -1,5 +1,6 @@
 .travelers {
   @include round-bottom-corners(25px);
+  margin-top: -20px;
   padding: 50px;
   background:
     url("../img/smolov-back-desktop@1x.png") no-repeat 200px 20px,
@@ -15,4 +16,16 @@
 .travelers__tagline {
   @include font-bold;
   @include font-size(16px, 22px);
+}
+
+@media (min-width: 630px) {
+  .travelers__head-wrap {
+    width: 400px;
+  }
+
+  .travelers__main-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

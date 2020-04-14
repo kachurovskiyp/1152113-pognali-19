@@ -2,8 +2,8 @@
   @include round-top-corners(30px);
   margin-top: -30px;
   min-height: 240px;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
 .footer__logo {
@@ -21,4 +21,26 @@
   background-color: $absolute-white;
   margin-top: 40px;
   padding: 50px;
+}
+
+.footer__logo--tablet {
+  display: none;
+}
+
+@media (min-width: 630px) {
+
+  .footer {
+    padding: 30px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer__logo--tablet {
+    display: block;
+  }
 }

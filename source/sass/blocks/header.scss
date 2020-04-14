@@ -76,14 +76,15 @@
 
 @media (min-width: 630px) {
   .header {
-  min-height: 1000px;
+  min-height: 800px;
   background:
-    url("../img/traveller-illustration-tablet@1x.png") no-repeat center center,
+    url("../img/traveller-illustration-tablet@1x.png") no-repeat 350px bottom,
     url("../img/globe-back-tablet@1x.jpg") no-repeat 100% 100% #182044;
 
   background-size:
     50%,
     150%;
+  z-index: -1;
   }
 
   .header__logo {

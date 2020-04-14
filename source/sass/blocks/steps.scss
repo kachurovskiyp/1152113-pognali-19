@@ -32,3 +32,34 @@
   @include round-bottom-corners(10px);
   background-color: $yellow;
 }
+
+@media (min-width: 630px) {
+
+  .steps__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -140px;
+    z-index: 1;
+  }
+
+  .steps__step {
+    width: 44%;
+    min-height: 140px;
+  }
+
+  .steps__step:first-child,
+  .steps__step:nth-child(2) {
+    @include round-top-corners(15px);
+  }
+
+  .steps__step:nth-child(2n){
+    margin-left: -25px;
+  }
+
+  .steps__step:last-child,
+  .steps__step:nth-last-child(-n+2) {
+    @include round-bottom-corners(15px);
+  }
+}

@@ -44,7 +44,29 @@
   right: 40px;
 }
 
-.counrty__show-all {
-  max-width: 270px;
-  margin: 0 auto;
+@media (min-width: 630px) {
+  .country {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 2;
+
+  }
+
+  .country__image {
+    border-radius: unset;
+    @include round-rightside-corners(15px);
+  }
+
+  .country__link {
+    flex-grow: 1;
+    margin: 0;
+    margin-right: -70px;
+    border-radius: unset;
+    @include round-leftside-corners(15px);
+  }
+
+  .country__visits {
+    position: static;
+  }
 }

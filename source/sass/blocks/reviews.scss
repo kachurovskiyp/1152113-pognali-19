@@ -12,3 +12,14 @@
   @include font-bold;
   @include font-size(16px, 22px);
 }
+
+@media (min-width: 630px) {
+  .reviews {
+    width: 290px;
+    min-height: 210px;
+    background-color: transparent;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+  }
+}
