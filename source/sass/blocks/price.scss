@@ -12,4 +12,18 @@
 .price__business-price-link {
   @include font-bold($dark-blue);
   @include font-size(16px, 16px);
+  display: block;
+  text-align: center;
+}
+
+.price__tagline {
+  padding-right: 55px;
+}
+
+.price__item {
+  padding: 20px 50px 20px 10px;
+}
+
+.price__number {
+  margin: 0;
 }
