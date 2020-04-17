@@ -15,7 +15,7 @@
   @include font-size(16px, 22px);
 }
 
-.info__about{
+.info__about {
   display: none;
 }
 
@@ -23,11 +23,12 @@
   .info {
     min-height: 500px;
     padding-right: 380px;
-    background: url("../img/about-tablet@1x.png") no-repeat 400px center $dark-blue;
-    background-size: 40%;
+    background: url("../img/about-tablet@1x.png") no-repeat 90% center $dark-blue;
+    background-size: 300px;
   }
 
   .info__about {
     display: block;
+    max-width: 275px;
   }
 }

@@ -74,17 +74,16 @@
   margin: 0 auto;
 }
 
-@media (min-width: 630px) {
+@media (min-width: $tablet-width) {
   .header {
-  min-height: 800px;
-  background:
-    url("../img/traveller-illustration-tablet@1x.png") no-repeat 350px bottom,
-    url("../img/globe-back-tablet@1x.jpg") no-repeat 100% 100% #182044;
+    min-height: 800px;
+    background:
+      url("../img/traveller-illustration-tablet@1x.png") no-repeat 350px bottom,
+      url("../img/globe-back-tablet@1x.jpg") no-repeat 100% 100% #182044;
 
-  background-size:
-    50%,
-    150%;
-  z-index: -1;
+    background-size:
+      50%,
+      150%;
   }
 
   .header__logo {
@@ -114,5 +113,45 @@
 
   .header__tagline {
     margin: 50px 25% 0 25%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__feedback,
+  .header__call-us {
+    display: block;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__contact-wrapper {
+    position: static;
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .header__nav-wrapper {
+    width: auto;
+  }
+
+  .header__tagline {
+    @include font-size(60px, 70px);
+    width: 400px;
+    position: absolute;
+    top: 150px;
+    left: -230px;
+    text-align: left;
+  }
+
+  .header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background:
+      url("../img/traveller-illustration-desktop@1x.png") no-repeat 450px bottom,
+      url("../img/globe-back-tablet@1x.jpg") no-repeat 100% 100% #182044;
   }
 }

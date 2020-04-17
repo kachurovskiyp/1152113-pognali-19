@@ -1,11 +1,9 @@
 .map {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   margin-top: -40px;
 }
 
 .map__image {
-  position: relative;
-  z-index: -1;
   display: block;
 }
