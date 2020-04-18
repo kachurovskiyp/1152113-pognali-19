@@ -2,6 +2,8 @@
   @include round-bottom-corners(25px);
   padding: 30px;
   background-color: $white-three;
+  position: relative;
+  z-index: 2;
 }
 
 .price__price-list {
