@@ -236,21 +236,27 @@
     <form class="registration">
       <h2 class="visually-hidden">Регистрация</h2>
       <p class="registration__tagline block-title">Заинтересовались?</p>
-      <p class="registration__article">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#" class="registration__link">авторизуйтесь</a>.</p>
+      <p class="registration__article">Зарегистрируйтесь, это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее <a href="#" class="registration__link">авторизуйтесь</a>.</p>
       <label for="user-email" class="visually-hidden">Введите свой электронный адрес</label>
-      <input class="registration_email-input" type="text" id="user-email" placeholder="E-mail">
-      <button type="submit" class="button registration__continue" aria-label="Продолжить регистрацию"></button>
+      <div class="registration__input-wrapper">
+        <input class="registration_email-input" type="text" id="user-email" placeholder="E-mail">
+        <button type="submit" class="button registration__continue" aria-label="Продолжить регистрацию"><span class="registration__continue-tagline">Регистрация</span></button>
+      </div>
     </form>
 
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__tagline">Остались вопросы? Мы с радостью на них ответим!</p>
-        <a class="contacts__tel" href="tel:+88005558628">8 800 555-86-28</a>
-        <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <p class="contacts__tagline">Остались вопросы? <br> Мы с радостью на них ответим!</p>
+        <div class="conctacts__container">
+          <a class="contacts__tel" href="tel:+88005558628">8 800 555-86-28</a>
+          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
       </div>
-      <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
-      <a class="contacts__map-link" href="#">Проложить маршрут</a>
+      <div class="contacts__bottom-wrapper">
+        <address class="contacts__address">ул. Большая <br> Конюшенная, 19/8</address>
+        <a class="contacts__map-link" href="#">Проложить маршрут</a>
+      </div>
     </section>
 
     <div class="map">
