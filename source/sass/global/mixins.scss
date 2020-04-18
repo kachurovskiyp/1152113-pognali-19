@@ -51,6 +51,16 @@
   border-bottom-right-radius: $value;
 }
 
+@mixin round-rightside-corners($value) {
+  border-top-right-radius: $value;
+  border-bottom-right-radius: $value;
+}
+
+@mixin round-leftside-corners($value) {
+  border-top-left-radius: $value;
+  border-bottom-left-radius: $value;
+}
+
 @mixin clear-list {
   margin: 0;
   padding: 0;

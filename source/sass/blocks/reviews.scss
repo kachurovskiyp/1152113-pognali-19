@@ -12,3 +12,23 @@
   @include font-bold;
   @include font-size(16px, 22px);
 }
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    width: 290px;
+    min-height: 210px;
+    background-color: transparent;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    left: auto;
+    top: 160px;
+    right: 60px;
+  }
+}

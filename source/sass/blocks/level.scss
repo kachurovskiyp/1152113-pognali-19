@@ -1,7 +1,14 @@
 .level {
   @include font;
   @include font-size(14px, 14px);
-
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 50%;
   background-color: $black-opacity;
 }
 
@@ -14,9 +21,27 @@
 .level__number {
   @include font-bold;
   @include font-size(24px, 24px);
+  display: block;
 }
 
 .level__number--directions {
   @include font-bold($dark-blue-two);
   @include font-size(38px, 38px);
+}
+
+.level__scale-image {
+  transform: scale(1.7) translate(12px, 12px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 60px;
+  height: 60px;
+
+  &--99 {
+    stroke-dasharray: 170, 170;
+  }
+
+  &--80 {
+    stroke-dasharray: 150, 150;
+  }
 }

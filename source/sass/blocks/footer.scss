@@ -1,3 +1,17 @@
+.footer {
+  @include round-top-corners(30px);
+  margin-top: -30px;
+  min-height: 240px;
+  position: relative;
+  z-index: 2;
+  background-color: $absolute-white;
+}
+
+.footer__logo {
+  display: block;
+  text-align: center;
+}
+
 .footer__copyright {
   @include font($grey);
   @include font-size(16px, 22px);
@@ -8,4 +22,25 @@
   background-color: $absolute-white;
   margin-top: 40px;
   padding: 50px;
+}
+
+.footer__logo--tablet {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding: 30px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer__logo--tablet {
+    display: block;
+  }
 }

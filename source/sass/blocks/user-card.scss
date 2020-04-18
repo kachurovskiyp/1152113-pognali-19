@@ -1,7 +1,9 @@
 .user-card {
-  padding: 20px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
   background-color: $absolute-white;
+  position: relative;
+  border-radius: 15px;
 }
 
 .user-card__image {
@@ -16,12 +18,23 @@
 .user-card__name {
   @include font-bold($dark-blue-three);
   @include font-size(21px, 21px);
+  margin: 10px 0;
+  text-align: center;
 }
 
 .user-card__tags-list {
   @include clear-list;
   @include font($grey);
   @include font-size(16px, 18px);
+  max-width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card__tag {
+  margin-right: 5px;
 }
 
 .user-card__like {
@@ -67,4 +80,10 @@
   width: 230px;
   height: 40px;
   border-radius: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-card {
+    width: 48%;
+  }
 }

@@ -14,3 +14,23 @@
   @include font-bold;
   @include font-size(16px, 22px);
 }
+
+.info__about {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .info {
+    min-height: 500px;
+    padding-right: 380px;
+    background: url("../img/about-tablet@1x.png") no-repeat 90% center $dark-blue;
+    background-size: 300px;
+    padding-top: 160px;
+    margin-top: -140px;
+  }
+
+  .info__about {
+    display: block;
+    max-width: 275px;
+  }
+}
