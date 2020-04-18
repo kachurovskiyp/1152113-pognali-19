@@ -48,7 +48,7 @@
   right: 40px;
 }
 
-@media (min-width: 630px) {
+@media (min-width: $tablet-width) {
   .country {
     width: 100%;
     display: flex;

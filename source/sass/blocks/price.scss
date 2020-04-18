@@ -28,7 +28,7 @@
   margin: 0;
 }
 
-@media (min-width: 630px) {
+@media (min-width: $tablet-width) {
   .price__tagline {
     text-align: center;
   }

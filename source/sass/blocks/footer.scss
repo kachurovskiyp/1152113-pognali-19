@@ -4,6 +4,7 @@
   min-height: 240px;
   position: relative;
   z-index: 2;
+  background-color: $absolute-white;
 }
 
 .footer__logo {
@@ -27,7 +28,7 @@
   display: none;
 }
 
-@media (min-width: 630px) {
+@media (min-width: $tablet-width) {
   .footer {
     padding: 30px;
     min-height: 100px;
