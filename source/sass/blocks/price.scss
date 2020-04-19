@@ -1,6 +1,6 @@
 .price {
   @include round-bottom-corners(25px);
-  padding: 30px;
+  padding: 50px;
   background-color: $white-three;
   position: relative;
   z-index: 2;
@@ -19,11 +19,60 @@
 }
 
 .price__tagline {
-  padding-right: 55px;
+  position: relative;
+  padding-right: 170px;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: url("../../img/rates@1x.png") no-repeat center center;
+    background-size: 100%;
+  }
 }
 
 .price__item {
   padding: 20px 50px 20px 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: $grey-white;
+  }
+
+  &::after {
+    @include font;
+    @include font-size(16px, 14px);
+    @include round-block(34px, 34px);
+    padding-top: 9px;
+    content: "1";
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    text-align: center;
+    background-color: $color-light-mango;
+  }
+
+  &:nth-child(2)::after {
+    content: "2";
+    background-color: $dark-yellow;
+  }
+
+  &:nth-child(3)::after {
+    content: "3";
+    background-color: $yellow;
+  }
 }
 
 .price__number {
@@ -32,14 +81,35 @@
 
 @media (min-width: $tablet-width) {
   .price__tagline {
+    @include font-size(45px, 45px);
+    padding-right: 0;
     text-align: center;
+    margin-bottom: 70px;
+
+    &::after {
+      top: 295px;
+      background-size: 70%;
+      z-index: 1;
+    }
   }
 
   .price__item {
+    @include font-size(28px, 33px);
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0;
+    padding-left: 45px;
+
+    &::after {
+      @include font-size(28px, 28px);
+      padding-top: 15px;
+      right: auto;
+      top: 0;
+      left: -25px;
+      width: 60px;
+      height: 60px;
+    }
   }
 
   .price__desription {
@@ -47,8 +117,9 @@
   }
 
   .price__number {
+    position: relative;
     min-width: 150px;
-    padding: 15px 20px;
+    padding: 15px 10px;
     background-color: $white;
   }
 
@@ -56,7 +127,31 @@
     @include round-top-corners(10px);
   }
 
+  .price__price-list {
+    margin-bottom: 50px;
+  }
+
   .price__business-price-link {
     text-align: left;
+    padding-left: 45px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+      @include round-block(60px, 60px);
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top: -25px;
+      left: -23px;
+      background: $white url("../../img/business-blue.svg") no-repeat center center;
+      background-size: 25%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price {
+    padding: 100px 150px;
   }
 }

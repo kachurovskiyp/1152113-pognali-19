@@ -13,6 +13,17 @@
 
 .steps__step {
   padding: 25px;
+  position: relative;
+
+  &::after {
+    @include font-bold($absolute-white);
+    @include font-size(18px, 18px);
+    content: "1";
+    position: absolute;
+    z-index: 2;
+    top: 23px;
+    right: 23px;
+  }
 }
 
 .steps__step:first-child {
@@ -22,15 +33,27 @@
 
 .steps__step:nth-child(2) {
   background-color: $color-light-mango;
+
+  &::after {
+    content: "2";
+  }
 }
 
 .steps__step:nth-child(3) {
   background-color: $dark-yellow;
+
+  &::after {
+    content: "3";
+  }
 }
 
 .steps__step:last-child {
   @include round-bottom-corners(10px);
   background-color: $yellow;
+
+  &::after {
+    content: "4";
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -50,8 +73,18 @@
   }
 
   .steps__step {
+    @include font-size(24px, 24px);
     width: 44%;
     min-height: 140px;
+    padding-right: 25px;
+
+    &::after {
+      @include font-size(30px, 30px);
+      top: auto;
+      right: auto;
+      bottom: 10px;
+      left: 20px;
+    }
   }
 
   .steps__step:first-child,
@@ -85,5 +118,12 @@
     margin-left: -25px;
     border-radius: 15px;
     min-height: 110px;
+    padding-right: 90px;
+
+    &::after {
+      left: auto;
+      top: 20px;
+      right: 50px;
+    }
   }
 }

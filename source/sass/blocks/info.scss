@@ -29,8 +29,39 @@
     margin-top: -140px;
   }
 
+  .info__title {
+    @include font-size(45px, 45px);
+  }
+
+  .info__article {
+    @include font-size(28px, 33px);
+  }
+
+  .info__tagline {
+    @include font-size(21px, 25px);
+  }
+
   .info__about {
     display: block;
     max-width: 275px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info {
+    min-height: 750px;
+    margin-top: 0;
+    padding: 200px 120px;
+  }
+
+  .info__article {
+    max-width: 610px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .info__tagline {
+    max-width: 410px;
+    margin-bottom: 70px;
   }
 }

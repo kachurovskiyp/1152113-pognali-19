@@ -23,6 +23,30 @@
   margin-top: -20px;
   background-color: $absolute-white;
   border-radius: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 24px;
+    position: absolute;
+    left: 25px;
+    top: -12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--thailand::after {
+    background-image: url("../../img/thailand.png");
+  }
+
+  &--france::after {
+    background-image: url("../../img/france.png");
+  }
+
+  &--czech::after {
+    background-image: url("../../img/czech.png");
+  }
 }
 
 .country__title {
@@ -54,11 +78,11 @@
     display: flex;
     flex-direction: row-reverse;
     z-index: 2;
+    border-radius: 15px;
   }
 
   .country__image {
     @include round-rightside-corners(15px);
-    border-radius: unset;
   }
 
   .country__link {
@@ -66,7 +90,15 @@
     flex-grow: 1;
     margin: 0;
     margin-right: -70px;
-    border-radius: unset;
+
+    &::after {
+      width: 70px;
+      height: 47px;
+      background-size: 100%;
+      top: 20px;
+      left: auto;
+      right: -35px;
+    }
   }
 
   .country__visits {

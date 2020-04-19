@@ -18,8 +18,23 @@
 .user-card__name {
   @include font-bold($dark-blue-three);
   @include font-size(21px, 21px);
+  position: relative;
   margin: 10px 0;
   text-align: center;
+
+  &::before {
+    @include round-block(5px, 5px);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 100px;
+    background-color: $light-red;
+  }
+
+  &--online::before {
+    background-color: $green;
+  }
 }
 
 .user-card__tags-list {
@@ -35,6 +50,10 @@
 
 .user-card__tag {
   margin-right: 5px;
+}
+
+.user-card__tag-link::before {
+  content: "#";
 }
 
 .user-card__like {
