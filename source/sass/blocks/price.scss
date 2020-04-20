@@ -1,6 +1,6 @@
 .price {
   @include round-bottom-corners(25px);
-  padding: 50px;
+  padding: 40px;
   background-color: $white-three;
   position: relative;
   z-index: 2;
@@ -9,6 +9,8 @@
 .price__price-list {
   @include font-light($grey);
   @include font-size(16px, 22px);
+  padding-top: 20px;
+  margin-bottom: 42px;
 }
 
 .price__business-price-link {
@@ -20,23 +22,23 @@
 
 .price__tagline {
   position: relative;
-  padding-right: 170px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding: 10px 100px 0 10px;
 
   &::after {
     content: "";
     width: 99px;
     height: 99px;
     position: absolute;
-    top: -10px;
-    right: 0;
+    top: -3px;
+    right: -14px;
     background: url("../../img/rates@1x.png") no-repeat center center;
     background-size: 100%;
   }
 }
 
 .price__item {
-  padding: 20px 50px 20px 10px;
+  padding: 21px 45px 0 9px;
   position: relative;
 
   &::before {
@@ -58,8 +60,8 @@
     content: "1";
     display: block;
     position: absolute;
-    top: 10px;
-    right: 0;
+    top: 13px;
+    right: -14px;
     text-align: center;
     background-color: $color-light-mango;
   }

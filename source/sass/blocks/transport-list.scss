@@ -1,6 +1,6 @@
 .transport-list {
   @include clear-list;
-  margin-top: 20px;
+  margin-top: 13px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,6 +8,7 @@
 
 .transport-list__item {
   @include round-block(30px, 30px);
+  margin-left: 5px;
 }
 
 .transport-list__label {

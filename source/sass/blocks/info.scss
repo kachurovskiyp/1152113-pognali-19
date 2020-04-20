@@ -1,5 +1,5 @@
 .info {
-  padding: 35px 45px 60px 45px;
+  padding: 20px 58px 60px 49px;
   background: url("../img/about-mobile@1x.png") no-repeat center top $dark-blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -8,11 +8,13 @@
 .info__article {
   @include font-light;
   @include font-size(16px, 22px);
+  margin-bottom: 19px;
 }
 
 .info__tagline {
   @include font-bold;
   @include font-size(16px, 22px);
+  margin-bottom: 22px;
 }
 
 .info__about {

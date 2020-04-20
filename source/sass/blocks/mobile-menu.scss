@@ -1,12 +1,56 @@
 
 .mobile-menu {
   display: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 570px;
+  width: 100%;
   background-color: $absolute-white;
-  padding: 65px;
+  padding: 25px;
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 39px;
+  right: 23px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: -3px;
+    width: 25px;
+    height: 3px;
+    background-color: #cccccc;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .mobile-menu__item-list {
   @include clear-list;
+  margin-top: 56px;
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.mobile-menu__item {
+  margin-bottom: -3px;
 }
 
 .mobile-menu__item-link {
@@ -17,8 +61,13 @@
 }
 
 .mobile-menu__authorization {
-  @include font-medium($dark-blue-two);
+  @include font-bold($dark-blue-two);
   @include font-size(17px, 30px);
+  display: block;
+  padding: 11px;
+  padding-left: 7px;
+  margin-bottom: 62px;
+  background-color: $yellow;
   text-align: center;
   text-transform: uppercase;
   border-radius: 30px;
@@ -26,9 +75,15 @@
 
 .mobile-menu__tel,
 .mobile-menu__email {
-  @include font-medium($dark-blue);
+  @include font-bold($dark-blue);
   @include font-size(16px, 22px);
+  display: block;
   text-transform: uppercase;
+  padding-left: 61px;
+}
+
+.mobile-menu__tel {
+  margin-bottom: 23px;
 }
 
 .mobile-menu__social-item {

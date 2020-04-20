@@ -8,6 +8,6 @@
   margin-top: -20px;
 }
 
-.countries__item {
-  margin-left: 15px;
+.countries__item:nth-child(2n) {
+  margin: 0 20px;
 }

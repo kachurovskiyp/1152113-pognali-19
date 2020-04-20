@@ -1,8 +1,8 @@
 .directions {
-  @include round-bottom-corners(20px);
+  @include round-bottom-corners(29px);
   position: relative;
   z-index: 1;
-  padding: 50px;
+  padding: 10px;
   background-color: $white-three;
 }
 
@@ -27,11 +27,14 @@
 
 .directions__wrapper {
   padding: 40px;
+  padding-bottom: 45px;
 }
 
 .direction__show-all {
   max-width: 270px;
   margin: 0 auto;
+  margin-bottom: 22px;
+  padding-left: 23px;
 }
 
 @media (min-width: $tablet-width) {

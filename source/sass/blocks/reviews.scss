@@ -6,11 +6,16 @@
 .reviews__article {
   @include font-light;
   @include font-size(16px, 22px);
+  margin-top: 10px;
+  padding-left: 5px;
 }
 
 .reviews__description {
   @include font-bold;
   @include font-size(16px, 22px);
+  margin-top: 19px;
+  padding-left: 5px;
+  padding-right: 40px;
 }
 
 @media (min-width: $tablet-width) {

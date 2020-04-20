@@ -5,7 +5,7 @@
   min-height: 480px;
 
   background:
-    url("../img/traveller-illustration-mobile@1x.png") no-repeat 55% bottom,
+    url("../img/traveller-illustration-mobile@1x.png") no-repeat 61% 235px,
     url("../img/globe-back-mobile@1x.jpg") no-repeat left center $dark-blue-two;
 
   background-size:
@@ -48,6 +48,7 @@
 .header__tagline {
   text-align: center;
   z-index: 1;
+  padding: 0 10px;
 }
 
 .header__call-us {
@@ -79,7 +80,7 @@
 
 .header__contact-wrapper {
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: 0;
   width: 100%;
   display: flex;
