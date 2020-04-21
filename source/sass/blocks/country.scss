@@ -76,6 +76,7 @@
 @media (min-width: $tablet-width) {
   .country {
     width: 100%;
+    margin-bottom: 11px;
     display: flex;
     flex-direction: row-reverse;
     z-index: 2;
@@ -86,11 +87,20 @@
     @include round-rightside-corners(15px);
   }
 
+  .country__title {
+    @include font-size(24px, 24px);
+  }
+
+  .country__tagline {
+    @include font-size(20px, 18px);
+  }
+
   .country__link {
     @include round-leftside-corners(15px);
     flex-grow: 1;
     margin: 0;
-    margin-right: -70px;
+    margin-right: -85px;
+    padding: 29px 10px 16px 30px;
 
     &::after {
       width: 70px;
@@ -103,6 +113,10 @@
   }
 
   .country__visits {
+    @include font-size(20px, 30px);
     position: static;
+    display: block;
+    margin-top: 17px;
+    padding-left: 29px;
   }
 }

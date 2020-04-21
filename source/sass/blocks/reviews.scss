@@ -24,9 +24,19 @@
     min-height: 210px;
     background-color: transparent;
     position: absolute;
-    top: 300px;
-    left: 50px;
+    top: 427px;
+    left: 54px;
     z-index: 2;
+    padding: 0;
+  }
+
+  .reviews__article {
+    @include font-size(28px, 33px);
+  }
+
+  .reviews__description {
+    @include font-size(21px, 25px);
+    margin-top: 45px;
   }
 }
 
@@ -35,5 +45,9 @@
     left: auto;
     top: 160px;
     right: 60px;
+  }
+
+  .reviews__article {
+    margin-top: 59px;
   }
 }

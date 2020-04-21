@@ -55,3 +55,9 @@
   background: url("../img/run.svg") no-repeat center center $absolute-white;
   background-size: 60%;
 }
+
+@media (min-width: $tablet-width) {
+  .transport-list {
+    margin-bottom: 5px;
+  }
+}

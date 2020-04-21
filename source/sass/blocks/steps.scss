@@ -60,7 +60,7 @@
 @media (min-width: $tablet-width) {
   .steps {
     background-color: transparent;
-    margin-top: -140px;
+    margin-top: -165px;
     position: relative;
     z-index: 1;
   }
@@ -69,37 +69,36 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 0;
   }
 
   .steps__step {
     @include font-size(24px, 24px);
-    width: 44%;
+    width: 50%;
     min-height: 140px;
-    padding-right: 25px;
+    padding: 29px 25px 25px 33px;
 
     &::after {
       @include font-size(30px, 30px);
       top: auto;
       right: auto;
-      bottom: 10px;
-      left: 20px;
+      bottom: 24px;
+      left: 31px;
     }
-  }
 
-  .steps__step:first-child,
-  .steps__step:nth-child(2) {
-    @include round-top-corners(15px);
-  }
+    &:first-child,
+    &:nth-child(2) {
+      @include round-top-corners(20px);
+    }
 
-  .steps__step:nth-child(2n) {
-    margin-left: -25px;
-  }
+    &:last-child,
+    &:nth-last-child(-n+2) {
+      @include round-bottom-corners(20px);
+    }
 
-  .steps__step:last-child,
-  .steps__step:nth-last-child(-n+2) {
-    @include round-bottom-corners(15px);
+    &:nth-child(2n) {
+      margin-left: -15px;
+    }
   }
 }
 
@@ -107,7 +106,8 @@
   .steps {
     position: relative;
     z-index: 2;
-    margin-top: -240px;
+    margin-top: -229px;
+    margin-left: 34px;
   }
 
   .steps__list {
@@ -115,11 +115,23 @@
   }
 
   .steps__step {
-    width: 22%;
+    width: 25.8%;
     margin-left: -25px;
     border-radius: 15px;
     min-height: 110px;
-    padding-right: 90px;
+
+    &:nth-child(2n) {
+      margin-left: -25px;
+      padding-left: 19px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      padding-left: 58px;
+    }
 
     &::after {
       left: auto;

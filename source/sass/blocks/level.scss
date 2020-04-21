@@ -58,3 +58,10 @@
     stroke-dasharray: 150, 150;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .level {
+    top: 24px;
+    left: 20px;
+  }
+}

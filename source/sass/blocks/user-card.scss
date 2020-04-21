@@ -110,6 +110,41 @@
 
 @media (min-width: $tablet-width) {
   .user-card {
-    width: 48%;
+    width: 42.5%;
+    margin-right: 7%;
+  }
+
+  .user-card__user-link {
+    display: block;
+  }
+
+  .user-card__name {
+    @include font-bold($dark-blue);
+    @include font-size(24px, 24px);
+    padding-top: 3px;
+    margin-bottom: 20px;
+
+    &::before {
+      top: 22px;
+      left: 48px;
+    }
+  }
+
+  .user-card__tags-list {
+    @include font-size(20px, 24px);
+    max-width: unset;
+    padding: 0 10px;
+    margin-bottom: 24px;
+  }
+
+  .user-card__tag {
+    margin-left: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-card {
+    width: 37.5%;
+    margin-right: 8%;
   }
 }

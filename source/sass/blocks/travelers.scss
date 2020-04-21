@@ -7,6 +7,8 @@
     url("../img/smolov-back-desktop@1x.png") no-repeat 200px 20px,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat 0 150px $dark-blue;
   color: $absolute-white;
+  position: relative;
+  z-index: 2;
 }
 
 .travelers__title {
@@ -36,8 +38,15 @@
 }
 
 @media (min-width: $tablet-width) {
+  .travelers {
+    padding: 35px;
+    padding-top: 123px;
+  }
+
   .travelers__head-wrap {
-    width: 400px;
+    width: 460px;
+    margin: 0;
+    padding: 0;
   }
 
   .travelers__title {
@@ -46,34 +55,47 @@
 
   .travelers__article {
     @include font-size(28px, 33px);
+    padding: 31px 0 0 25px;
   }
 
   .travelers__tagline {
     @include font-size(21px, 25px);
+    margin-top: 40px;
   }
 
   .travelers__main-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-left: 24px;
   }
 
   .travelers__show-all {
-    margin: 40px 0;
+    @include font-size(24px, 24px);
+    width: 88%;
+    margin: 71px 0 54px 25px;
+    padding: 28px 32px;
+    border-radius: 15px;
+
+    &::after {
+      right: 24px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .travelers {
     position: relative;
-    min-height: 760px;
-    padding-left: 150px;
+    min-height: 790px;
+    padding-left: 104px;
+    padding-top: 100px;
+    z-index: 1;
   }
 
   .travelers__main-wrap {
     position: absolute;
-    top: 16%;
-    right: 10%;
+    top: 19%;
+    right: -5%;
   }
 
   .travelers__title {
@@ -88,8 +110,10 @@
     @include font-size(21px, 25px);
   }
 
-  .travelers_show-all {
+  .travelers__show-all {
     display: inline-block;
-    min-width: 270px;
+    min-width: unset;
+    width: 22%;
+    margin-top: 28px;
   }
 }

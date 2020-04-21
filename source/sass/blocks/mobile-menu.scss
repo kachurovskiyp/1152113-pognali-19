@@ -93,20 +93,47 @@
 @media (min-width: $desktop-width) {
   .mobile-menu {
     display: block;
-    background-color: transparent;
+    position: static;
+    width: auto;
+    min-height: unset;
     padding: 0;
     flex-grow: 1;
+    background-color: transparent;
+  }
+
+  .mobile-menu__logo {
+    display: none;
   }
 
   .mobile-menu__item-list {
+    @include font-medium;
+    @include font-size(20px, 30px);
     display: flex;
     flex-wrap: wrap;
-    padding-left: 120px;
+    margin: unset;
+    padding-left: 173px;
+    padding-top: 10px;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 2px;
+      position: absolute;
+      left: 298px;
+      top: 74px;
+      display: block;
+      background-color: $absolute-white;
+      z-index: 2;
+    }
   }
 
   .mobile-menu__item-link {
     @include font-medium;
     @include font-size(20px, 30px);
     margin-right: 30px;
+  }
+
+  .mobile-menu__close {
+    display: none;
   }
 }
