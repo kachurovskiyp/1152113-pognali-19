@@ -144,7 +144,11 @@
 
 @media (min-width: $desktop-width) {
   .user-card {
-    width: 37.5%;
-    margin-right: 8%;
+    width: 41.5%;
+    margin-right: 67px;
+  }
+
+  .user-card:last-child {
+    margin-right: 0;
   }
 }
