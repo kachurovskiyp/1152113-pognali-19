@@ -84,21 +84,19 @@
 @media (min-width: $tablet-width) {
   .price {
     margin-top: -30px;
-    padding: unset;
-    padding-top: 89px;
-    padding-bottom: 58px;
+    padding: 89px 0 58px 15px;
   }
 
   .price__tagline {
     @include font-size(45px, 45px);
     padding-right: 0;
     text-align: center;
-    margin-left: -40px;
+    margin-left: -25px;
     margin-bottom: 70px;
 
     &::after {
       top: 348px;
-      right: 99px;
+      right: 83px;
       background-size: 95%;
       z-index: 3;
     }
@@ -128,9 +126,9 @@
 
   .price__number {
     position: relative;
-    width: 198px;
-    padding: 18px 34px;
-    margin-top: -7px;
+    width: 197px;
+    padding: 18px 32px 17px 25px;
+    margin-top: -6px;
     background-color: $white;
     text-align: right;
 
@@ -165,7 +163,7 @@
   .price__price-list {
     margin-bottom: 60px;
     padding: 0 70px;
-    padding-right: 33px;
+    padding-right: 19px;
   }
 
   .price__business-price-link {
@@ -191,7 +189,7 @@
 
 @media (min-width: $desktop-width) {
   .price {
-    padding: 95px 150px;
+    padding: 103px 150px;
     padding-bottom: 150px;
   }
 
@@ -225,6 +223,6 @@
   }
 
   .price__business-price-link {
-    margin-left: 22px;
+    margin-left: 25px;
   }
 }

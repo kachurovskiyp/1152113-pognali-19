@@ -11,6 +11,11 @@
   z-index: 2;
 }
 
+.travelers__article br,
+.travelers__tagline br {
+  display: none;
+}
+
 .travelers__title {
   margin-bottom: 20px;
   padding-left: 22px;
@@ -35,6 +40,7 @@
 .travelers__show-all {
   margin-top: 21px;
   margin-bottom: 6px;
+  padding-left: 22px;
 }
 
 @media (min-width: $tablet-width) {
@@ -51,29 +57,38 @@
 
   .travelers__title {
     @include font-size(45px, 45px);
+    padding-left: 37px;
+  }
+
+  .travelers__article br,
+  .travelers__tagline br {
+    display: inline;
   }
 
   .travelers__article {
     @include font-size(28px, 33px);
-    padding: 31px 0 0 25px;
+    padding: 31px 0 0 39px;
+    width: 465px;
   }
 
   .travelers__tagline {
     @include font-size(21px, 25px);
     margin-top: 40px;
+    margin-bottom: 59px;
+    padding-left: 40px;
   }
 
   .travelers__main-wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-left: 24px;
+    padding-left: 40px;
   }
 
   .travelers__show-all {
     @include font-size(24px, 24px);
     width: 88%;
-    margin: 71px 0 54px 25px;
+    margin: 71px 0 54px 40px;
     padding: 28px 32px;
     border-radius: 15px;
 
@@ -87,16 +102,16 @@
   .travelers {
     position: relative;
     min-height: 790px;
-    padding-left: 104px;
-    padding-top: 100px;
+    padding-left: 91px;
+    padding-top: 107px;
     z-index: 1;
   }
 
   .travelers__main-wrap {
     position: absolute;
-    top: 146px;
+    top: 153px;
     right: auto;
-    left: 726px;
+    left: 712px;
   }
 
   .travelers__title {
@@ -114,7 +129,7 @@
   .travelers__show-all {
     display: inline-block;
     min-width: unset;
-    width: 22%;
+    width: 21%;
     margin-top: 28px;
   }
 }

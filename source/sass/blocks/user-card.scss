@@ -17,7 +17,8 @@
 
 .user-card__user-link {
   position: relative;
-  padding-left: 60px;
+  display: block;
+  text-align: center;
 }
 
 .user-card__name {
@@ -33,8 +34,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: 5px;
-    left: 53px;
+    top: 18px;
+    left: 52px;
     background-color: $light-red;
   }
 
@@ -110,8 +111,12 @@
 
 @media (min-width: $tablet-width) {
   .user-card {
-    width: 42.5%;
+    width: 43.5%;
     margin-right: 7%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 
   .user-card__user-link {
@@ -145,7 +150,7 @@
 @media (min-width: $desktop-width) {
   .user-card {
     width: 41.5%;
-    margin-right: 67px;
+    margin-right: 59px;
   }
 
   .user-card:last-child {

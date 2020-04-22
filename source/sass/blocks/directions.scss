@@ -1,8 +1,10 @@
 .directions {
   @include round-bottom-corners(29px);
   position: relative;
-  z-index: 1;
+  z-index: 5;
   padding: 10px;
+  padding-top: 40px;
+  margin-top: -31px;
   background-color: $white-three;
 }
 
@@ -30,6 +32,10 @@
   padding-bottom: 45px;
 }
 
+.directions__country-wrapper {
+  margin-bottom: 34px;
+}
+
 .direction__show-all {
   max-width: 270px;
   margin: 0 auto;
@@ -39,7 +45,7 @@
 
 @media (min-width: $tablet-width) {
   .directions__wrapper {
-    padding: 21px 20px 45px 47px;
+    padding: 21px 20px 45px 62px;
   }
 
   .directions {
@@ -62,9 +68,9 @@
   }
 
   .directions__country-wrapper {
-    padding-left: 50px;
-    padding-right: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 56px;
+    padding-left: 63px;
+    padding-right: 65px;
   }
 
   .direction__show-all {
@@ -72,7 +78,7 @@
     max-width: 82%;
     padding: 26px 4%;
     margin: unset;
-    margin-left: 7%;
+    margin-left: 9%;
 
     &::after {
       right: 25px;
@@ -84,6 +90,7 @@
   .directions {
     margin-top: -30px;
     padding-top: 147px;
+    padding-bottom: 66px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -114,8 +121,8 @@
 
   .direction__show-all {
     position: absolute;
-    right: 314px;
-    bottom: 157px;
+    right: 311px;
+    bottom: 146px;
     min-width: 263px;
     padding: 21px;
     padding-left: 30px;

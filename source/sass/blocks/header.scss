@@ -1,11 +1,10 @@
 .header {
   position: relative;
-  padding: 25px;
-  padding-bottom: 0;
-  min-height: 480px;
+  padding: 14px 25px 0 25px;
+  min-height: 469px;
 
   background:
-    url("../img/traveller-illustration-mobile@1x.png") no-repeat 61% 235px,
+    url("../img/traveller-illustration-mobile@1x.png") no-repeat 61% 223px,
     url("../img/globe-back-mobile@1x.jpg") no-repeat left center $dark-blue-two;
 
   background-size:
@@ -95,9 +94,11 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 41px;
+    padding-left: 41px;
 
     background:
-      url("../img/traveller-illustration-tablet@1x.png") no-repeat 68% 384px,
+      url("../img/traveller-illustration-tablet@1x.png") no-repeat 72% 404px,
       url("../img/globe-back-tablet@1x.jpg") no-repeat 100% 100% #182044;
   }
 
@@ -124,8 +125,8 @@
   }
 
   .header__nav-wrapper {
-    width: 50%;
-    margin-right: 16%;
+    width: 50.5%;
+    margin-right: 18%;
   }
 
   .header__contact-wrapper {
@@ -137,7 +138,7 @@
   .header__tagline {
     @include font-size(60px, 70px);
     padding: 0;
-    margin-top: -400px;
+    margin-top: -388px;
     margin-left: 19.4%;
     max-width: 410px;
     order: 2;
@@ -152,7 +153,7 @@
     display: flex;
     justify-content: flex-start;
     min-height: 750px;
-    padding: 49px 64px;
+    padding: 49px 61px 49px 64px;
     background:
       url("../img/traveller-illustration-desktop@1x.png") no-repeat 60% bottom,
       url("../img/globe-back-tablet@1x.jpg") no-repeat left 100% #182044;
@@ -188,8 +189,8 @@
     @include font-size(60px, 70px);
     width: 400px;
     position: absolute;
-    top: 605px;
-    left: -154px;
+    top: 593px;
+    left: -152px;
     text-align: left;
   }
 }

@@ -60,7 +60,7 @@
   @include font-medium($grey);
   @include font-size(16px, 18px);
   margin: 0;
-  margin-top: 5px;
+  margin-top: 3px;
   opacity: 0.3;
 }
 
@@ -118,5 +118,11 @@
     display: block;
     margin-top: 17px;
     padding-left: 29px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country__link {
+    padding: 22px 10px 25px 34px;
   }
 }
