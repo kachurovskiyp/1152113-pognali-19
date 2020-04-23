@@ -1,14 +1,16 @@
 .price {
   @include round-bottom-corners(25px);
-  padding: 30px;
+  padding: 40px;
   background-color: $white-three;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .price__price-list {
   @include font-light($grey);
   @include font-size(16px, 22px);
+  padding-top: 20px;
+  margin-bottom: 42px;
 }
 
 .price__business-price-link {
@@ -19,11 +21,60 @@
 }
 
 .price__tagline {
-  padding-right: 55px;
+  position: relative;
+  margin: 0;
+  padding: 10px 100px 0 10px;
+
+  &::after {
+    content: "";
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    top: -3px;
+    right: -14px;
+    background: url("../../img/rates@1x.png") no-repeat center center;
+    background-size: 100%;
+  }
 }
 
 .price__item {
-  padding: 20px 50px 20px 10px;
+  padding: 21px 45px 0 9px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: $grey-white;
+  }
+
+  &::after {
+    @include font;
+    @include font-size(16px, 14px);
+    @include round-block(34px, 34px);
+    padding-top: 9px;
+    content: "1";
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: -14px;
+    text-align: center;
+    background-color: $color-light-mango;
+  }
+
+  &:nth-child(2)::after {
+    content: "2";
+    background-color: $dark-yellow;
+  }
+
+  &:nth-child(3)::after {
+    content: "3";
+    background-color: $yellow;
+  }
 }
 
 .price__number {
@@ -31,15 +82,42 @@
 }
 
 @media (min-width: $tablet-width) {
+  .price {
+    margin-top: -30px;
+    padding: 89px 0 58px 15px;
+  }
+
   .price__tagline {
+    @include font-size(45px, 45px);
+    padding-right: 0;
     text-align: center;
+    margin-left: -25px;
+    margin-bottom: 70px;
+
+    &::after {
+      top: 348px;
+      right: 83px;
+      background-size: 95%;
+      z-index: 3;
+    }
   }
 
   .price__item {
+    @include font-size(28px, 33px);
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0;
+    padding: 6px 23px 0 45px;
+
+    &::after {
+      @include font-size(28px, 28px);
+      padding-top: 15px;
+      right: auto;
+      top: 8px;
+      left: -43px;
+      width: 63px;
+      height: 63px;
+    }
   }
 
   .price__desription {
@@ -47,16 +125,104 @@
   }
 
   .price__number {
-    min-width: 150px;
-    padding: 15px 20px;
+    position: relative;
+    width: 197px;
+    padding: 18px 32px 17px 25px;
+    margin-top: -6px;
+    background-color: $white;
+    text-align: right;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .price__item:first-child .price__number::before,
+  .price__item:last-child .price__number::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 2;
+    width: 198px;
+    height: 40px;
     background-color: $white;
   }
 
-  .price__number:first-child {
-    @include round-top-corners(10px);
+  .price__item:first-child .price__number::before {
+    @include round-top-corners(20px);
+  }
+
+  .price__item:last-child .price__number::after {
+    @include round-bottom-corners(20px);
+    top: auto;
+    bottom: -40px;
+  }
+
+  .price__price-list {
+    margin-bottom: 60px;
+    padding: 0 70px;
+    padding-right: 19px;
   }
 
   .price__business-price-link {
+    @include font-size(20px, 20px);
     text-align: left;
+    padding-left: 45px;
+    margin-bottom: 30px;
+    margin-left: 69px;
+    position: relative;
+
+    &::before {
+      @include round-block(60px, 60px);
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top: -21px;
+      left: -41px;
+      background: $white url("../../img/business-blue.svg") no-repeat center center;
+      background-size: 27%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price {
+    padding: 103px 150px;
+    padding-bottom: 150px;
+  }
+
+  .price__tagline {
+    margin-left: -14px;
+    margin-bottom: 132px;
+  }
+
+  .price__price-list {
+    padding: 0 24px;
+    padding-right: 75px;
+  }
+
+  .price__number {
+    width: 443px;
+    text-align: center;
+  }
+
+  .price__item:first-child .price__number::before,
+  .price__item:last-child .price__number::after {
+    width: 443px;
+  }
+
+  .price__tagline::after {
+    width: 198px;
+    height: 198px;
+    top: 191px;
+    right: -13px;
+    background-size: 98%;
+    opacity: 0.3;
+  }
+
+  .price__business-price-link {
+    margin-left: 25px;
   }
 }

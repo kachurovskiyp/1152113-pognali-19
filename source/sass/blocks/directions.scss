@@ -1,6 +1,10 @@
 .directions {
-  @include round-bottom-corners(20px);
-  padding: 50px;
+  @include round-bottom-corners(29px);
+  position: relative;
+  z-index: 5;
+  padding: 10px;
+  padding-top: 40px;
+  margin-top: -31px;
   background-color: $white-three;
 }
 
@@ -25,37 +29,79 @@
 
 .directions__wrapper {
   padding: 40px;
+  padding-bottom: 45px;
+}
+
+.directions__country-wrapper {
+  margin-bottom: 34px;
 }
 
 .direction__show-all {
   max-width: 270px;
   margin: 0 auto;
+  margin-bottom: 22px;
+  padding-left: 23px;
 }
 
 @media (min-width: $tablet-width) {
+  .directions__wrapper {
+    padding: 21px 20px 45px 62px;
+  }
+
   .directions {
-    background: url("../../img/flags-back@1x.png") no-repeat 92% 70px;
-    background-size: 230px;
-    position: relative;
-    z-index: 1;
+    background: url("../../img/flags-back@1x.png") no-repeat 88% 82px;
+    background-size: 286px;
     background-color: $white-three;
+    padding-bottom: 80px;
+  }
+
+  .directions__title {
+    @include font-size(45px, 45px);
   }
 
   .directions__article {
-    padding-right: 300px;
-    margin-bottom: 100px;
+    @include font-size(28px, 33px);
+    padding-right: 285px;
+    padding-left: 3px;
+    margin-top: 59px;
+    margin-bottom: 62px;
+  }
+
+  .directions__country-wrapper {
+    margin-bottom: 56px;
+    padding-left: 63px;
+    padding-right: 65px;
   }
 
   .direction__show-all {
-    max-width: 100%;
-    padding-left: 5%;
+    @include font-size(24px, 24px);
+    max-width: 82%;
+    padding: 26px 4%;
+    margin: unset;
+    margin-left: 9%;
+
+    &::after {
+      right: 25px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .directions {
+    margin-top: -30px;
+    padding-top: 147px;
+    padding-bottom: 66px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+
   .directions__country-wrapper {
     min-width: 560px;
-    margin-right: 50px;
+    margin-right: 172px;
+    margin-left: 118px;
+    padding: 0;
     padding-top: 40px;
   }
 
@@ -70,19 +116,19 @@
   .directions__article {
     @include font-size(28px, 33px);
     padding: 0;
-    padding-right: 80px;
-  }
-
-  .directions {
-    display: flex;
-    flex-direction: row-reverse;
+    max-width: 340px;
   }
 
   .direction__show-all {
     position: absolute;
-    right: 230px;
-    bottom: 70px;
-    min-width: 275px;
-    padding: 20px;
+    right: 311px;
+    bottom: 146px;
+    min-width: 263px;
+    padding: 21px;
+    padding-left: 30px;
+
+    &::after {
+      right: 19px;
+    }
   }
 }

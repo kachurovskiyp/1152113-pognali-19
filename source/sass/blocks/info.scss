@@ -1,36 +1,104 @@
 .info {
-  padding: 35px 45px 60px 45px;
+  padding: 20px 58px 60px 49px;
   background: url("../img/about-mobile@1x.png") no-repeat center top $dark-blue;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  position: relative;
+  z-index: 6;
 }
 
 .info__article {
   @include font-light;
   @include font-size(16px, 22px);
+  margin-bottom: 19px;
 }
 
 .info__tagline {
   @include font-bold;
   @include font-size(16px, 22px);
+  margin-bottom: 22px;
 }
 
 .info__about {
   display: none;
 }
 
+.info__tablet-br {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .info {
     min-height: 500px;
-    padding-right: 380px;
-    background: url("../img/about-tablet@1x.png") no-repeat 90% center $dark-blue;
-    background-size: 300px;
-    padding-top: 160px;
+    padding: 238px 380px 90px 73px;
+    background: url("../img/about-tablet@1x.png") no-repeat 98% 76% $dark-blue;
+    background-size: 374px;
+
     margin-top: -140px;
   }
 
+  .info__title {
+    @include font-size(45px, 45px);
+  }
+
+  .info__article .info__mobile-br {
+    display: none;
+  }
+
+  .info__tablet-br {
+    display: inline;
+  }
+
+  .info__article {
+    @include font-size(28px, 33px);
+    padding-right: 13px;
+  }
+
+  .info__tagline {
+    @include font-size(21px, 25px);
+    margin-top: 34px;
+    margin-bottom: 53px;
+    padding-right: 25px;
+  }
+
   .info__about {
+    @include font-size(24px, 24px);
     display: block;
+    padding: 28px 35px;
     max-width: 275px;
+    border-radius: 20px;
+
+    &::after {
+      right: 27px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info {
+    min-height: 750px;
+    margin-top: 0;
+    padding: 210px 130px;
+    padding-bottom: 168px;
+    background: url("../img/about-tablet@1x.png") no-repeat 90% 203px #192144;
+    background-size: 581px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .info__article br {
+    display: none;
+  }
+
+  .info__article {
+    max-width: 620px;
+    margin-top: 59px;
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+
+  .info__tagline {
+    max-width: 440px;
+    margin-bottom: 85px;
   }
 }

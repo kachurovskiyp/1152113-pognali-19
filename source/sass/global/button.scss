@@ -2,7 +2,20 @@
   @include font-bold($dark-blue-three);
   @include font-size(18px, 18px);
   display: block;
+  position: relative;
   padding: 20px;
   background-color: $yellow;
   border-radius: 10px;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    border: 9px solid transparent;
+    border-left-color: $dark-blue-three;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 15px;
+  }
 }

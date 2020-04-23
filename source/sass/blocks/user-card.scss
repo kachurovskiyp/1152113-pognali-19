@@ -1,9 +1,9 @@
 .user-card {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 18px;
+  margin-bottom: 9px;
   background-color: $absolute-white;
   position: relative;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .user-card__image {
@@ -15,11 +15,33 @@
   float: left;
 }
 
+.user-card__user-link {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
 .user-card__name {
   @include font-bold($dark-blue-three);
   @include font-size(21px, 21px);
-  margin: 10px 0;
+  display: inline-block;
+  margin: 8px;
+  margin-bottom: 16px;
   text-align: center;
+
+  &::before {
+    @include round-block(5px, 5px);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 52px;
+    background-color: $light-red;
+  }
+
+  &--online::before {
+    background-color: $green;
+  }
 }
 
 .user-card__tags-list {
@@ -28,6 +50,7 @@
   @include font-size(16px, 18px);
   max-width: 200px;
   margin: 0 auto;
+  padding-left: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,6 +58,10 @@
 
 .user-card__tag {
   margin-right: 5px;
+}
+
+.user-card__tag-link::before {
+  content: "#";
 }
 
 .user-card__like {
@@ -84,6 +111,49 @@
 
 @media (min-width: $tablet-width) {
   .user-card {
-    width: 48%;
+    width: 43.5%;
+    margin-right: 7%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .user-card__user-link {
+    display: block;
+  }
+
+  .user-card__name {
+    @include font-bold($dark-blue);
+    @include font-size(24px, 24px);
+    padding-top: 3px;
+    margin-bottom: 20px;
+
+    &::before {
+      top: 22px;
+      left: 48px;
+    }
+  }
+
+  .user-card__tags-list {
+    @include font-size(20px, 24px);
+    max-width: unset;
+    padding: 0 10px;
+    margin-bottom: 24px;
+  }
+
+  .user-card__tag {
+    margin-left: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-card {
+    width: 41.5%;
+    margin-right: 59px;
+  }
+
+  .user-card:last-child {
+    margin-right: 0;
   }
 }

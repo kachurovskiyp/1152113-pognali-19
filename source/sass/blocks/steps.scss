@@ -9,10 +9,22 @@
   font-size: 18px;
   line-height: 18px;
   padding-bottom: 30px;
+  margin-top: -30px;
 }
 
 .steps__step {
-  padding: 25px;
+  padding: 21px 60px 23px 24px;
+  position: relative;
+
+  &::after {
+    @include font-bold($absolute-white);
+    @include font-size(18px, 18px);
+    content: "1";
+    position: absolute;
+    z-index: 2;
+    top: 21px;
+    right: 21px;
+  }
 }
 
 .steps__step:first-child {
@@ -22,50 +34,72 @@
 
 .steps__step:nth-child(2) {
   background-color: $color-light-mango;
+
+  &::after {
+    content: "2";
+  }
 }
 
 .steps__step:nth-child(3) {
   background-color: $dark-yellow;
+
+  &::after {
+    content: "3";
+  }
 }
 
 .steps__step:last-child {
   @include round-bottom-corners(10px);
   background-color: $yellow;
+
+  &::after {
+    content: "4";
+  }
 }
 
 @media (min-width: $tablet-width) {
   .steps {
     background-color: transparent;
-    margin-top: -140px;
+    margin-top: -145px;
     position: relative;
-    z-index: 1;
+    z-index: 7;
   }
 
   .steps__list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 0;
+    padding-left: 16px;
   }
 
   .steps__step {
-    width: 44%;
+    @include font-size(24px, 24px);
+    width: 49.5%;
     min-height: 140px;
-  }
+    padding: 29px 25px 25px 33px;
 
-  .steps__step:first-child,
-  .steps__step:nth-child(2) {
-    @include round-top-corners(15px);
-  }
+    &::after {
+      @include font-size(30px, 30px);
+      top: auto;
+      right: auto;
+      bottom: 24px;
+      left: 31px;
+    }
 
-  .steps__step:nth-child(2n) {
-    margin-left: -25px;
-  }
+    &:first-child,
+    &:nth-child(2) {
+      @include round-top-corners(20px);
+    }
 
-  .steps__step:last-child,
-  .steps__step:nth-last-child(-n+2) {
-    @include round-bottom-corners(15px);
+    &:last-child,
+    &:nth-last-child(-n+2) {
+      @include round-bottom-corners(20px);
+    }
+
+    &:nth-child(2n) {
+      margin-left: -6px;
+    }
   }
 }
 
@@ -73,17 +107,45 @@
   .steps {
     position: relative;
     z-index: 2;
-    margin-top: -240px;
+    margin-top: -229px;
+    margin-left: 34px;
   }
 
   .steps__list {
     @include font-size(24px, 24px);
+    margin-left: -14px;
   }
 
   .steps__step {
-    width: 22%;
-    margin-left: -25px;
+    width: 25.8%;
+    margin-left: -4px;
     border-radius: 15px;
     min-height: 110px;
+
+    &:nth-child(2n) {
+      margin-left: -30px;
+      padding-left: 28px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      padding-left: 36px;
+      margin-left: -5px;
+      width: 24%;
+    }
+
+    &::after {
+      left: auto;
+      top: 23px;
+      right: 32px;
+    }
+
+    &:first-child::after {
+      top: 23px;
+      right: 65px;
+    }
   }
 }
