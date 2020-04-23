@@ -11,14 +11,14 @@
 .contacts__wrapper {
   @include round-bottom-corners(25px);
   min-height: 200px;
-  padding: 25px;
-  margin-bottom: 20px;
+  padding: 28px 14px 22px 14px;
+  margin-bottom: 8px;
   background-color: $dark-blue;
 }
 
 .contacts__tagline {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding-left: 100px;
+  padding-left: 72px;
   text-transform: uppercase;
 }
 
@@ -39,30 +39,112 @@
   margin: 0 auto;
   text-transform: uppercase;
   font-style: normal;
-  padding: 25px 40px 25px 75px;
+  padding: 25px 40px 25px 86px;
 }
 
 .contacts__map-link {
   @include font-bold($dark-blue-three);
   @include font-size(18px, 18px);
-  padding: 15px;
-  margin: 10px 20px;
+  padding: 20px;
+  margin: 8px 25px;
   display: block;
-  border: 2px solid $dark-blue;
+  border: 2px solid #192144;
   border-radius: 7px;
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: $tablet-width) {
+  .contacts__tagline {
+    @include font-size(28px, 33px);
+    margin-top: 29px;
+  }
+
   .contacts__tagline br {
     display: none;
   }
 
+  .contacts__tel,
+  .contacts__email {
+    @include font-size(28px, 28px);
+    margin-bottom: 38px;
+  }
+
   .contacts__address {
-    text-align: center;
+    @include font-size(28px, 28px);
+    margin-top: 43px;
+    margin-bottom: 39px;
+    padding-left: 168px;
   }
 
   .contacts__address br {
     display: none;
+  }
+
+  .contacts__map-link {
+    @include font-size(24px, 24px);
+    padding: 26px;
+    padding-left: 34px;
+    margin: 0 75px;
+    border-radius: 20px;
+
+    &::after {
+      right: 26px;
+    }
+  }
+
+  .conctacts__container {
+    margin-top: 62px;
+    margin-bottom: 59px;
+    padding-left: 79px;
+  }
+
+  .contacts__bottom-wrapper {
+    padding-bottom: 66px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .conctacts__container {
+    width: 1057px;
+    margin-left: 160px;
+    margin-top: 76px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .contacts__wrapper {
+    padding: 28px 14px 77px 14px;
+  }
+
+  .contacts__bottom-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-bottom: 0;
+  }
+
+  .contacts__tagline {
+    margin-top: 38px;
+    margin-left: -18px;
+  }
+
+  .contacts__tel,
+  .contacts__email {
+    margin: 0;
+  }
+
+  .contacts__email {
+    margin-left: 1px;
+  }
+
+  .contacts__address {
+    margin-top: 50px;
+    padding-left: 370px;
+  }
+
+  .contacts__map-link {
+    margin-right: 135px;
+    width: 323px;
   }
 }
