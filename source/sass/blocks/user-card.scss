@@ -8,6 +8,7 @@
 
 .user-card__image {
   @include round-top-corners(10px);
+  width: 100%;
 }
 
 .user-card__image--catalog {

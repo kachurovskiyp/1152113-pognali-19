@@ -89,7 +89,10 @@
         </div>
         <div class="directions__country-wrapper">
           <article class="country">
-            <img class="country__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Лазурный берег Таиланда">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+              <img class="country__image" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Лазурный берег Таиланда">
+            </picture>
             <a href="#" class="country__link country__link--thailand">
               <h3 class="country__title">Таиланд</h3>
               <p class="country__tagline">Джунгли зовут!</p>
@@ -98,7 +101,10 @@
           </article>
 
           <article class="country">
-            <img class="country__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Улицы Парижа">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+              <img class="country__image" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="Улицы Парижа">
+            </picture>
             <a href="#" class="country__link country__link--france">
               <h3 class="country__title">Франция</h3>
               <p class="country__tagline">Трэ бьен, манифик!</p>
@@ -107,7 +113,10 @@
           </article>
 
           <article class="country">
-            <img class="country__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="старинная архитектура Праги">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+              <img class="country__image" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270" height="110" alt="старинная архитектура Праги">
+            </picture>
             <a href="#" class="country__link country__link--czech">
               <h3 class="country__title">Чехия</h3>
               <p class="country__tagline">Закоулки старой Европы</p>
@@ -128,7 +137,11 @@
         <div class="travelers__main-wrap">
 
           <article class="user-card">
-            <img class="user-card__image" src="img/firsova-desktop@1x.jpg" width="100%" height="100%" alt="Фото пользователя">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/tablet@2x.jpg 2x">
+              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+              <img class="user-card__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+            </picture>
             <div class="level">
               <svg class="level__scale-image level__scale-image--99" viewBox="0 0 100 100">
                 <circle cx="35" cy="35" r="30" fill="none"></circle>
@@ -161,7 +174,11 @@
           </article>
 
           <article class="user-card">
-            <img class="user-card__image" src="img/demin-desktop@1x.jpg" width="100%" height="100%" alt="Фото пользователя">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <img class="user-card__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+            </picture>
             <div class="level">
               <svg class="level__scale-image level__scale-image--80" viewBox="0 0 100 100">
                 <circle cx="35" cy="35" r="30" fill="none"></circle>
@@ -262,7 +279,11 @@
     </section>
 
     <div class="map">
-      <img class="map__image" src="img/map.png" width="100%" height="100%" alt="Офис находится по адресу ул. Большая Конюшеннаяб 19/8">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+        <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="546" alt="Офис находится по адресу ул. Большая Конюшеннаяб 19/8">
+      </picture>
     </div>
 
     <footer class="footer">

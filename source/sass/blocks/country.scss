@@ -124,5 +124,11 @@
 @media (min-width: $desktop-width) {
   .country__link {
     padding: 22px 10px 25px 34px;
+    margin-right: 0;
+  }
+
+  .country__image {
+    width: 186px;
+    height: 140px;
   }
 }
