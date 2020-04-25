@@ -119,6 +119,11 @@
     }
   }
 
+  .user-card__image {
+    width: 285px;
+    height: 285px;
+  }
+
   .user-card__user-link {
     display: block;
   }
@@ -155,5 +160,10 @@
 
   .user-card:last-child {
     margin-right: 0;
+  }
+
+  .user-card__image {
+    width: 285px;
+    height: 285px;
   }
 }
