@@ -8,22 +8,15 @@
 .social-list__link {
   @include round-block(40px, 40px);
   display: block;
+  position: relative;
   background-color: $yellow;
 }
 
-.social-list__link--fb {
-  background: $yellow url("../img/facebook.svg") no-repeat center center;
-  background-size: 30%;
-}
-
-.social-list__link--vk {
-  background: $yellow url("../img/vk.svg") no-repeat center center;
-  background-size: 60%;
-}
-
-.social-list__link--instagram {
-  background: $yellow url("../img/instagram.svg") no-repeat center center;
-  background-size: 60%;
+.social-list__social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .social-list--mobile-menu {

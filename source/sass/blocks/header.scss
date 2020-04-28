@@ -52,16 +52,47 @@
 
 .header__call-us {
   @include round-block(40px, 40px);
+  position: relative;
   display: block;
-  background: url("../img/topmenu-phone.svg") no-repeat center center $color-mango;
-  background-size: 50%;
+  background-color: $color-mango;
+  text-align: center;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.header__call-us:active .header__call-us-icon {
+  opacity: 0.3;
+}
+
+.header__call-us-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header__feedback {
   @include round-block(40px, 40px);
+  position: relative;
   display: block;
-  background: url("../img/topmenu-mail.svg") no-repeat center center $dark-yellow;
-  background-size: 50%;
+  background-color: $dark-yellow;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.header__feedback-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__feedback:active .header__feedback-icon {
+  opacity: 0.3;
 }
 
 .header__authorization {
@@ -75,6 +106,14 @@
   text-transform: uppercase;
   font-size: 17px;
   color: $dark-blue-two;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.header__authorization:active .header__authorization-text {
+  opacity: 0.3;
 }
 
 .header__contact-wrapper {

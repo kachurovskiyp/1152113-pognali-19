@@ -11,3 +11,16 @@
 .countries__item:nth-child(2n) {
   margin: 0 20px;
 }
+
+.countries__item {
+  position: relative;
+}
+
+.countries__item:hover .tooltip {
+  display: block;
+}
+
+.countries__country-flag {
+  width: 35px;
+  height: 25px;
+}
