@@ -10,10 +10,11 @@
     <header class="header">
       <div class="header__nav-wrapper">
         <a class="header__logo">
-          <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сайта 'Погнали'">
-        </a>
-        <a class="header__logo--tablet">
-          <img src="img/logo-tablet-white@1x.png" width="166" height="42" alt="Логотип сайта 'Погнали'">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@1x.png 2x">
+            <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+          </picture>
         </a>
         <button type="button" class="header__menu-button" aria-label="Меню"></button>
       </div>
@@ -25,24 +26,33 @@
           <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
           <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="catalog.html">Попутчики</a></li>
         </ul>
-        <div class="user-navigation user-navigation--mobile-menu">
+        <div class="mobile-menu__user-navigation">
           <a href="#" class="mobile-menu__authorization">Авторизация</a>
           <a class="mobile-menu__tel" href="tel:+88005558628">8 800 555-86-28</a>
           <a class="mobile-menu__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
-        <ul class="social-list social-list--mobile-menu">
+        <ul class="social-list mobile-menu__social">
           <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--fb mobile-menu__social-item" target="_blank">
+            <a href="#" class="social-list__link" target="_blank">
+              <svg class="social-list__social-icon" width="11" height="21">
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
+              </svg>
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--vk mobile-menu__social-item" target="_blank">
+            <a href="#" class="social-list__link" target="_blank">
+              <svg class="social-list__social-icon" width="30" height="16">
+                <use xlink:href="img/sprite.svg#vk-icon"></use>
+              </svg>
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--instagram mobile-menu__social-item" target="_blank">
+            <a href="#" class="social-list__link" target="_blank">
+              <svg class="social-list__social-icon" width="23" height="23">
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
+              </svg>
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
@@ -101,6 +111,8 @@
 
           <article class="country">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
               <img class="country__image" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Лазурный берег Таиланда">
             </picture>
@@ -121,6 +133,8 @@
 
           <article class="country">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
               <img class="country__image" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="Улицы Парижа">
             </picture>
@@ -141,6 +155,8 @@
 
           <article class="country">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
               <img class="country__image" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270" height="110" alt="старинная архитектура Праги">
             </picture>
@@ -172,7 +188,10 @@
         <div class="travelers__main-wrap">
 
           <article class="user-card">
-            <img class="user-card__image" src="img/firsova-desktop@1x.jpg" srcset="firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+            <picture>
+              <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+              <img class="user-card__image" src="img/firsova-desktop@1x.jpg" srcset="firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+            </picture>
             <div class="level">
               <svg class="level__scale-image level__scale-image--99" viewBox="0 0 100 100">
                 <circle cx="35" cy="35" r="30" fill="none"></circle>
@@ -240,7 +259,10 @@
           </article>
 
           <article class="user-card">
-            <img class="user-card__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+            <picture>
+              <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+              <img class="user-card__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+            </picture>
             <div class="level">
               <svg class="level__scale-image level__scale-image--80" viewBox="0 0 100 100">
                 <circle cx="35" cy="35" r="30" fill="none"></circle>
@@ -372,6 +394,9 @@
 
     <div class="map">
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
         <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="546" alt="Офис находится по адресу ул. Большая Конюшеннаяб 19/8">
@@ -380,10 +405,11 @@
 
     <footer class="footer">
       <a class="footer__logo">
-        <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сайта Погнали">
-      </a>
-      <a class="footer__logo--tablet">
-        <img src="img/logo-tablet-blue@1x.png" width="166" height="42" alt="Логотип сайта 'Погнали'">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@1x.png 2x">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+        </picture>
       </a>
       <ul class="social-list">
         <li class="social-list__item">

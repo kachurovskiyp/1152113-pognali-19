@@ -13,8 +13,9 @@
 @import "global/tooltip.scss";
 
 /* blocks style */
-@import "blocks/header.scss";
+
 @import "blocks/social-list.scss";
+@import "blocks/header.scss";
 @import "blocks/level.scss";
 @import "blocks/tags.scss";
 @import "blocks/mobile-menu.scss";
@@ -42,4 +43,3 @@
 @import "blocks/registration.scss";
 @import "blocks/contacts.scss";
 @import "blocks/map.scss";
-@import "blocks/user-navigation";

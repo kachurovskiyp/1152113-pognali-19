@@ -16,10 +16,6 @@
   line-height: 40px;
 }
 
-.header__logo--tablet {
-  display: none;
-}
-
 .header__menu-button {
   position: relative;
   width: 25px;
@@ -150,14 +146,6 @@
     margin-top: -14px;
   }
 
-  .header__logo {
-    display: none;
-  }
-
-  .header__logo--tablet {
-    display: block;
-  }
-
   .header__feedback,
   .header__call-us {
     display: none;
@@ -198,10 +186,6 @@
       url("../img/globe-back-tablet@1x.jpg") no-repeat left 100% #182044;
   }
 
-  .header__logo--tablet {
-    margin: 1px;
-  }
-
   .header__feedback,
   .header__call-us {
     display: block;
@@ -231,5 +215,13 @@
     top: 593px;
     left: -152px;
     text-align: left;
+  }
+
+  .mobile-menu__user-navigation {
+    display: none;
+  }
+
+  .mobile-menu__social {
+    display: none;
   }
 }

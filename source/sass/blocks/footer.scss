@@ -52,14 +52,6 @@
     margin-top: -100px;
   }
 
-  .footer__logo {
-    display: none;
-  }
-
-  .footer__logo--tablet {
-    display: block;
-  }
-
   .footer__copyright {
     @include font-size(20px, 24px);
     margin-top: 0;
