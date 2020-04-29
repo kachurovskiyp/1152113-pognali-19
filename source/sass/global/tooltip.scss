@@ -1,0 +1,32 @@
+.tooltip {
+  @include font;
+  @include font-size(20px, 24px);
+  display: none;
+  width: 171px;
+  height: 57px;
+
+  position: absolute;
+  bottom: -75px;
+  left: -70px;
+  z-index: 1;
+
+  text-align: center;
+  padding-top: 13px;
+  background-color: $dark-blue-grey;
+
+  &::before {
+    content: "";
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 15px solid $dark-blue-grey;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}

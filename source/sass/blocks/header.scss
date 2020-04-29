@@ -16,10 +16,6 @@
   line-height: 40px;
 }
 
-.header__logo--tablet {
-  display: none;
-}
-
 .header__menu-button {
   position: relative;
   width: 25px;
@@ -52,16 +48,47 @@
 
 .header__call-us {
   @include round-block(40px, 40px);
+  position: relative;
   display: block;
-  background: url("../img/topmenu-phone.svg") no-repeat center center $color-mango;
-  background-size: 50%;
+  background-color: $color-mango;
+  text-align: center;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.header__call-us:active .header__call-us-icon {
+  opacity: 0.3;
+}
+
+.header__call-us-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header__feedback {
   @include round-block(40px, 40px);
+  position: relative;
   display: block;
-  background: url("../img/topmenu-mail.svg") no-repeat center center $dark-yellow;
-  background-size: 50%;
+  background-color: $dark-yellow;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.header__feedback-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__feedback:active .header__feedback-icon {
+  opacity: 0.3;
 }
 
 .header__authorization {
@@ -75,6 +102,14 @@
   text-transform: uppercase;
   font-size: 17px;
   color: $dark-blue-two;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.header__authorization:active .header__authorization-text {
+  opacity: 0.3;
 }
 
 .header__contact-wrapper {
@@ -109,14 +144,6 @@
 
   .header__menu-button {
     margin-top: -14px;
-  }
-
-  .header__logo {
-    display: none;
-  }
-
-  .header__logo--tablet {
-    display: block;
   }
 
   .header__feedback,
@@ -159,10 +186,6 @@
       url("../img/globe-back-tablet@1x.jpg") no-repeat left 100% #182044;
   }
 
-  .header__logo--tablet {
-    margin: 1px;
-  }
-
   .header__feedback,
   .header__call-us {
     display: block;
@@ -192,5 +215,13 @@
     top: 593px;
     left: -152px;
     text-align: left;
+  }
+
+  .mobile-menu__user-navigation {
+    display: none;
+  }
+
+  .mobile-menu__social {
+    display: none;
   }
 }
