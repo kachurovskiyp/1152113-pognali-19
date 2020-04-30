@@ -10,12 +10,13 @@
   padding-top: 10px;
   border-radius: 50%;
   background-color: $black-opacity;
-}
 
-.level--directions {
-  @include font-size(18px, 22px);
-  @include font($grey);
-  background-color: transparent;
+  &--directions {
+    @include font-size(18px, 22px);
+    @include font($grey);
+    background-color: transparent;
+    position: static;
+  }
 }
 
 .level__number {
@@ -35,11 +36,11 @@
     bottom: -3px;
     left: 15px;
   }
-}
 
-.level__number--directions {
-  @include font-bold($dark-blue-two);
-  @include font-size(38px, 38px);
+  &--directions {
+    @include font-bold($dark-blue-two);
+    @include font-size(38px, 38px);
+  }
 }
 
 .level__scale-image {
@@ -56,6 +57,13 @@
 
   &--80 {
     stroke-dasharray: 150, 150;
+  }
+
+  &--directions {
+    top: -1px;
+    left: -15px;
+    width: 100px;
+    height: 100px;
   }
 }
 

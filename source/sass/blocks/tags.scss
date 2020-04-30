@@ -1,6 +1,34 @@
+.tags {
+  position: relative;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid $light-grey;
+  border-radius: 15px;
+}
+
 .tags__title {
   @include font-bold($dark-blue-three);
   @include font-size(16px, 18px);
-  @include clear-list;
   text-transform: uppercase;
+  text-align: center;
+  width: 80px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white-three;
+}
+
+.tags__tags-list {
+  @include clear-list
+}
+
+.tags__tag-item {
+  display: inline-block;
+}
+
+.tags__tag-link {
+  &::before {
+    content: "#";
+  }
 }

@@ -2,4 +2,6 @@
   @include round-bottom-corners(20px);
   background-color: $dark-blue-two;
   min-height: 143px;
+  position: relative;
+  z-index: 1;
 }
