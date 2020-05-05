@@ -23,3 +23,9 @@
 .social-list--mobile-menu {
   display: none;
 }
+
+@media (min-width: $tablet-width) {
+  .inner-page-footer .social-list {
+    margin-left: -11px;
+  }
+}

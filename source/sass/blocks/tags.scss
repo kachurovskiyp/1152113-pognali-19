@@ -4,6 +4,14 @@
   padding: 20px;
   border: 1px solid $light-grey;
   border-radius: 15px;
+
+  &--form {
+    padding: 22px 25px;
+    line-height: 23px;
+    max-width: 390px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
 }
 
 .tags__title {
@@ -20,15 +28,44 @@
 }
 
 .tags__tags-list {
-  @include clear-list
+  @include clear-list;
 }
 
 .tags__tag-item {
   display: inline-block;
+
+  &--form {
+    margin-left: 3px;
+  }
 }
 
 .tags__tag-link {
   &::before {
     content: "#";
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tags {
+    &--form {
+      @include font-size(20px, 24px);
+      padding: 33px 39px;
+      line-height: 23px;
+      max-width: 620px;
+      margin: unset;
+      margin-top: 55px;
+      margin-left: 12px;
+    }
+  }
+
+  .tags__title {
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+    top: auto;
+    bottom: -29px;
+  }
+
+  .tags__tag-item--form {
+    margin-left: 0;
   }
 }

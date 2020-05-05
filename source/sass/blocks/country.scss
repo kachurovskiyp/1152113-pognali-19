@@ -57,6 +57,10 @@
   right: 24px;
 }
 
+.country__visits-icon {
+  opacity: 0.2;
+}
+
 @media (min-width: $tablet-width) {
   .country {
     width: 100%;
@@ -96,12 +100,19 @@
     }
   }
 
+  .country__link-flag {
+    left: auto;
+    top: 20px;
+    right: -35px;
+    width: 70px;
+    height: 47px;
+  }
+
   .country__visits {
     @include font-size(20px, 30px);
     position: static;
     display: block;
     margin-top: 17px;
-    padding-left: 29px;
   }
 }
 

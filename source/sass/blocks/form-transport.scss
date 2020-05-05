@@ -1,0 +1,44 @@
+.form-transport {
+  position: relative;
+  max-width: 390px;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding-bottom: 15px;
+  border: 1px solid $light-grey;
+  border-radius: 15px;
+}
+
+.form-transport__title {
+  @include font-bold($dark-blue-three);
+  @include font-size(16px, 18px);
+  text-transform: uppercase;
+  text-align: center;
+  width: 120px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white-three;
+}
+
+.transport-list__item--form {
+  margin-left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .form-transport {
+    position: absolute;
+    top: 74px;
+    left: 230px;
+    width: 308px;
+    height: 95px;
+    padding-top: 15px;
+  }
+
+  .form-transport__title {
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+    top: auto;
+    bottom: -25px;
+  }
+}

@@ -10,6 +10,11 @@
   @include round-block(30px, 30px);
   position: relative;
   margin-left: 5px;
+
+  &--form {
+    @include round-block(33px, 33px);
+    background-color: $absolute-white;
+  }
 }
 
 .transport-list__item:hover .tooltip {
@@ -56,6 +61,13 @@
 
 @media (min-width: $tablet-width) {
   .transport-list {
+    margin-top: 5px;
     margin-bottom: 5px;
+  }
+
+  .transport-list__item {
+    &--form {
+      @include round-block(43px, 43px);
+    }
   }
 }

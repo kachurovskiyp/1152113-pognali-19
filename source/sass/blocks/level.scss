@@ -11,11 +11,15 @@
   border-radius: 50%;
   background-color: $black-opacity;
 
-  &--directions {
+  &--form {
     @include font-size(18px, 22px);
     @include font($grey);
     background-color: transparent;
-    position: static;
+    position: relative;
+    top: auto;
+    left: auto;
+    padding-top: 23px;
+    padding-left: 33px;
   }
 }
 
@@ -34,13 +38,19 @@
     background-color: $absolute-white;
     position: absolute;
     bottom: -3px;
-    left: 15px;
+    left: 7px;
   }
 
-  &--directions {
+  &--form {
     @include font-bold($dark-blue-two);
     @include font-size(38px, 38px);
   }
+}
+
+.level__text {
+  @include font($grey);
+  @include font-size(18px, 22px);
+  padding-left: 5px;
 }
 
 .level__scale-image {
@@ -59,9 +69,9 @@
     stroke-dasharray: 150, 150;
   }
 
-  &--directions {
-    top: -1px;
-    left: -15px;
+  &--form {
+    top: 6px;
+    left: 9px;
     width: 100px;
     height: 100px;
   }
@@ -71,5 +81,11 @@
   .level {
     top: 24px;
     left: 20px;
+
+    &--form {
+      position: relative;
+      top: auto;
+      left: auto;
+    }
   }
 }

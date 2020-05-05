@@ -81,6 +81,13 @@
   margin: 0;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .price__tagline::after {
+    background: url("../../img/rates@2x.png") no-repeat center center;
+    background-size: 100%;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .price {
     margin-top: -30px;

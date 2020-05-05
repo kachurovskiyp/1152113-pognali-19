@@ -1,21 +1,55 @@
 .add-plan {
   @include round-top-corners(20px);
-  padding: 20px 15px;
+  position: relative;
+  z-index: 2;
+  padding: 7px 24px 12px 24px;
+  padding-bottom: 70px;
+  margin-top: -30px;
   background-color: $light-blue;
 }
 
 .add-plan__title {
   @include font-bold($dark-blue-three);
   @include font-size(24px, 24px);
+  margin-bottom: 31px;
 }
 
 .add-plan__step {
   @include font($grey);
   @include font-size(16px, 22px);
-  padding: 20px;
-  margin-bottom: 20px;
+  position: relative;
+  padding: 21px 25px;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-bottom: 7px;
   border-radius: 10px;
   background-color: $absolute-white;
+
+  &--3 {
+    padding: 25px;
+  }
+}
+
+.add-plan__dots-wrap {
+  position: absolute;
+  right: 44px;
+  top: 27px;
+}
+
+.add-plan__dots {
+  fill: $steel-grey;
+
+  &--st1 {
+    fill: $dark-blue-three;
+  }
+}
+
+.add-plan__step-description {
+  margin-bottom: 22px;
+}
+
+.add-plan__step-description br {
+  display: none;
 }
 
 .add-plan__step-number {
@@ -30,29 +64,95 @@
   margin: 0;
 }
 
+.add-plan__label-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .add-plan__label {
   @include font-medium($dark-blue-three);
   @include font-size;
   text-transform: uppercase;
+  letter-spacing: 1.6px;
 }
 
 .add-plan__input-description {
   @include font-medium($dark-slate-blue);
   @include font-size;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.add-plan__input-wrap {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .add-plan__travelers-number,
 .add-plan__travel-duration {
   @include font-medium($dark-blue-three);
   @include font-size(13.5px, 15px);
-  padding: 7px 0;
+  width: 100%;
+  padding: 13px 0;
+  margin-top: -1px;
   text-align: center;
   border: 1px solid $light-grey;
-  border-radius: 2px;
+  border-radius: 5px;
+}
+
+.add-plan__down,
+.add-plan__up {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-55%);
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+}
+
+.add-plan__up {
+  left: auto;
+  right: 20px;
 }
 
 .add-plan__children-allow-label {
   @include font-size(15px, 15px);
+  margin-left: 36px;
+  padding-left: 4px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -35px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid $light-grey;
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 2px;
+    left: -27px;
+    background: url("../img/tick.svg") no-repeat center center;
+  }
+}
+
+.add-plan__children-allow {
+  display: none;
+}
+
+.add-plan__children-allow:checked + .add-plan__children-allow-label::after {
+  display: block;
 }
 
 .add-plan__next-step {
@@ -60,43 +160,181 @@
   text-transform: uppercase;
   border-radius: 30px;
   padding: 15px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.add-plan__choose-country-wrap {
+  position: relative;
+  display: flex;
+  max-width: 390px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    right: 22%;
+    width: 5px;
+    height: 10px;
+    background: url("../img/small-arrow.svg") no-repeat center center;
+  }
+
+  &--add::after {
+    display: none;
+  }
 }
 
 .add-plan__choose-country {
   @include font-medium($dark-blue-three);
-  @include font-size(18px, 14px);
-  padding: 10px;
+  @include font-size(14px, 18px);
+  display: inline-block;
+  position: relative;
+  width: 77%;
+  height: 42px;
+  margin-bottom: 12px;
+  padding: 12px 10px;
+  overflow: hidden;
   text-transform: uppercase;
-  text-align: center;
+  letter-spacing: 1.4px;
   border: 1px solid $light-grey;
   border-radius: 5px;
+
+  &--add {
+    background-color: $white-three;
+  }
+}
+
+.add-plan__choose-link {
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.add-plan__choose-button,
+.add-plan__add-button {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 26px;
+  height: 24px;
+  border: none;
+  background-color: $absolute-white;
+  box-shadow: -6px 0 10px 5px $absolute-white;
+  z-index: 1;
+}
+
+.add-plan__empty .add-plan__choose-country {
+  width: 100%;
+
+  &::before {
+    @include round-block(8px, 8px);
+    border: 1px solid $light-grey;
+    content: "";
+    position: absolute;
+    right: 21.5%;
+    top: 17px;
+  }
+}
+
+.add-plan__empty .add-plan__choose-button,
+.add-plan__empty .add-plan__add-button {
+  right: 11px;
+  box-shadow: unset;
+}
+
+.add-plan__empty .add-plan__add-button {
+  background-color: $white-three;
 }
 
 .add-plan__country-flag {
-  padding: 10px;
+  display: inline-block;
+  width: 23%;
+  height: 42px;
   border: 1px solid $light-grey;
   border-radius: 5px;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    @include round-block(8px, 8px);
+    content: "";
+    background-color: $dark-blue-three;
+    position: absolute;
+    top: 17px;
+    left: -4px;
+    z-index: 3;
+  }
+
+  &--step3 {
+    margin-top: -12px;
+    border: none;
+    box-shadow: -15px 0 12px 0 $absolute-white;
+  }
+
+  &--step3::before {
+    display: none;
+  }
+
+  &--next {
+    margin-right: -7px;
+  }
 }
 
-.add-plan__country-flag--step3 {
+.add-plan__country-flag-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-plan__del-country {
+  @include round-block(21px, 21px);
+  position: absolute;
+  top: -11px;
+  right: -11px;
   border: none;
+  background-color: $white-three;
+  z-index: 3;
+}
+
+.add-plan__del-country-icon {
+  fill: $light-grey;
 }
 
 .add-plan__country-plan {
   @include font($grey);
   @include font-size(16px, 22px);
+  width: 100%;
   padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
   border: 1px solid $light-grey;
   border-radius: 5px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100px;
+    background-color: $dark-blue-three;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    z-index: 2;
+  }
 }
 
 .add-plan__choose-country-popup {
   display: none;
 }
 
-.add-plan__add-button {
+.add-plan__add-link {
   @include font-medium($dark-blue-three);
   @include font-size(18px, 14px);
   padding: 15px 75px 15px 10px;
@@ -104,18 +342,430 @@
   border-radius: 5px;
   background-color: $white-three;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.add-plan__add-button-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.add-plan__add-link-desc::before {
+  @include round-block(8px, 8px);
+  border: 1px solid $light-grey;
+  content: "";
+  position: absolute;
+  right: 39px;
+  top: 16px;
+  z-index: 2;
+}
+
+.add-plan__country-plan-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.add-plan__country-plan-title {
+  @include font-medium($dark-blue-three);
+  @include font-size(18px, 18px);
+  margin-top: -13px;
+  padding-left: 10px;
+  white-space: nowrap;
+  position: relative;
+
+  &::before {
+    @include round-block(6px, 6px);
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -1px;
+    background-color: $dark-blue-three;
+  }
+
+  &::after {
+    content: "";
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    left: -13px;
+    background-color: $dark-blue-three;
+  }
 }
 
 .add-plan__prew-step {
   background-color: transparent;
   text-transform: uppercase;
   text-align: center;
+  padding: 13px;
+  margin-bottom: -16px;
+
+  &::after {
+    display: none;
+  }
 }
 
 .add-plan__submit {
   @include font-size(18px, 30px);
+  width: 100%;
   border: none;
   border-radius: 25px;
-  padding: 10px 50px;
+  margin-bottom: 5px;
+  padding: 0 50px;
   text-transform: uppercase;
+
+  &::after {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .add-plan__label-wrap {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $grey;
+      position: absolute;
+      top: -24px;
+      left: 0;
+    }
+  }
+
+  .add-plan {
+    padding: 7px 75px 70px 75px;
+  }
+
+  .add-plan__title {
+    @include font-size(36px, 50px);
+    margin-bottom: 50px;
+  }
+
+  .add-plan__step {
+    max-width: unset;
+    border-radius: 25px;
+    padding: 46px 50px 55px 42px;
+    margin-bottom: 40px;
+
+    &--3 {
+      margin-top: 50px;
+    }
+  }
+
+  .add-plan__step-number,
+  .add-plan__step-title {
+    @include font-size(36px, 36px);
+  }
+
+  .add-plan__step-description {
+    @include font-size(20px, 24px);
+    margin-top: 35px;
+    margin-bottom: 64px;
+  }
+
+  .add-plan__step-description br {
+    display: inline;
+  }
+
+  .add-plan__dots-wrap {
+    right: 13%;
+    top: 50px;
+  }
+
+  .add-plan__label {
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+  }
+
+  .add-plan__input-description {
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+    margin-right: -7px;
+  }
+
+  .add-plan__input-wrap {
+    margin-top: 26px;
+    margin-bottom: 110px;
+  }
+
+  .add-plan__travel-duration,
+  .add-plan__travelers-number {
+    @include font-medium($dark-blue-three);
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+    height: 72px;
+    width: 101%;
+  }
+
+  .add-plan__down svg,
+  .add-plan__up svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .add-plan__down {
+    top: 46%;
+    left: 19px;
+  }
+
+  .add-plan__up {
+    top: 46%;
+    right: 25px;
+  }
+
+  .add-plan__children-allow-label {
+    @include font-medium($dark-blue-three);
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 436px;
+    left: 62px;
+
+    &::before {
+      top: -8px;
+      left: -55px;
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      width: 14px;
+      height: 12px;
+      top: 4px;
+      left: -42px;
+    }
+  }
+
+  .add-plan__next-step {
+    @include font-size(24px, 24px);
+    text-transform: none;
+    text-align: left;
+    border-radius: 20px;
+    margin-top: 41px;
+    padding: 29px 34px;
+    width: 55%;
+
+    &::after {
+      display: block;
+      top: 33px;
+      right: 30px;
+    }
+  }
+
+  .add-plan__choose-wrap {
+    padding-top: 12px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 529px;
+      height: 1px;
+      background-color: $steel-grey;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      opacity: 0.5;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 80px;
+      background-color: $steel-grey;
+      position: absolute;
+      top: -30px;
+      right: 129px;
+      opacity: 0.5;
+    }
+  }
+
+  .add-plan__choose-country-wrap {
+    max-width: unset;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .add-plan__choose-country {
+    @include font-size(20px, 18px);
+    letter-spacing: 2px;
+    width: 70.5%;
+    margin-bottom: 5px;
+    height: 70px;
+    padding: 24px 25px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 80px;
+      background-color: $steel-grey;
+      position: absolute;
+      top: -133px;
+      right: -27px;
+      opacity: 0.5;
+    }
+  }
+
+  .add-plan__add-button,
+  .add-plan__choose-button {
+    top: 19px;
+    right: 25px;
+
+    svg {
+      width: 17px;
+      height: 9px;
+    }
+  }
+
+  .add-plan__empty .add-plan__add-button,
+  .add-plan__empty .add-plan__choose-button {
+    right: 25px;
+  }
+
+  .add-plan__add-button {
+    top: 21px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      opacity: 0.4;
+    }
+  }
+
+  .add-plan__country-flag {
+    margin-left: 50px;
+    width: 14%;
+    height: 70px;
+    border: none;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      top: 26px;
+      left: -32px;
+    }
+
+    svg {
+      width: 70px;
+      height: 47px;
+    }
+
+    &--step3 {
+      margin-left: 0;
+      margin-right: 23px;
+      position: relative;
+
+      &::after {
+        @include round-block(15px, 15px);
+        background-color: $dark-blue-three;
+        position: absolute;
+        top: 26px;
+        right: -34px;
+        content: "";
+      }
+    }
+  }
+
+  .add-plan__del-country {
+    background-color: transparent;
+    opacity: 0.6;
+    top: 24px;
+    right: -6px;
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  .add-plan__empty .add-plan__choose-country {
+    width: 70.5%;
+    overflow: visible;
+
+    &::before {
+      @include round-block(15px, 15px);
+      right: -9.5%;
+      top: 24px;
+      background-color: $absolute-white;
+      z-index: 1;
+    }
+  }
+
+  .add-plan__prew-step {
+    @include font-size(24px, 24px);
+    text-transform: none;
+    position: absolute;
+    right: 29px;
+    bottom: 89px;
+
+    &::before {
+      content: "";
+      width: 1px;
+      height: 1px;
+      border: 9px solid transparent;
+      border-right-color: $dark-blue-three;
+      position: absolute;
+      top: 17px;
+      left: -28px;
+    }
+  }
+
+  .add-plan__country-plan-title {
+    @include font-size(30px, 18px);
+    font-weight: 700;
+    margin-top: -18px;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .add-plan__country-plan {
+    @include font-size(20px, 24px);
+    width: 95%;
+    height: 142px;
+    padding: 15px;
+    margin: 16px 0 40px 2px;
+    padding-right: 35px;
+
+    &::after {
+      width: 3px;
+      height: 247px;
+      background-color: $dark-blue-three;
+      position: absolute;
+      top: 26px;
+      right: -34px;
+      content: "";
+    }
+  }
+
+  .add-plan__submit {
+    @include font-size(24px, 24px);
+    text-transform: none;
+    text-align: left;
+    border-radius: 20px;
+    padding: 29px 34px;
+    width: 55%;
+
+    &::after {
+      display: block;
+      top: 33px;
+      right: 30px;
+    }
+  }
 }

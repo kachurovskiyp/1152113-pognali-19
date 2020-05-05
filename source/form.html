@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Form</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -9,11 +10,18 @@
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="catalog-header inner-page-header">
-    <a class="catalog-header__logo" href="index.html">
-      <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сайта 'Погнали'">
-    </a>
-    <button type="button" class="header__menu-button" aria-label="Меню"></button>
+  <header class="inner-header">
+    <div class="inner-header__wrap">
+      <a class="inner-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@1x.png 2x">
+          <img src="img/logo-mobile-white@1x.png" class="inner-header__logo-image" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+        </picture>
+      </a>
+      <button type="button" class="header__menu-button inner-header__menu-button" aria-label="Меню"></button>
+      <a href="#" class="inner-header__authorization"><span class="inner-header__authorization-text">Авторизация</span></a>
+    </div>
 
     <section class="mobile-menu">
       <ul class="mobile-menu__item-list">
@@ -43,67 +51,95 @@
       </ul>
     </section>
 
-    <p class="catalog-header__tagline page-title">Направления</p>
+    <p class="inner-header__tagline page-title">Направления</p>
   </header>
 
   <main>
     <h1 class="visually-hidden">Мои направления</h1>
     <div class="directions__wrapper directions__wrapper--form">
-      <section class="form-directions">
-        <div class="level level--directions">
-          <svg class="level__scale-image level__scale-image--directions level__scale-image--80" viewBox="0 0 100 100">
+      <section class="directions__form">
+        <div class="level level--form">
+          <svg class="level__scale-image level__scale-image--form level__scale-image--80" viewBox="0 0 100 100">
             <circle cx="35" cy="35" r="30" fill="none"></circle>
-            <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+            <path fill="none" stroke-linecap="round" stroke-width="2" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
           </svg>
-          <span class="level__number level__number--directions">80</span> level
+          <span class="level__number level__number--form">80</span>
+          <span class="level__text">level</span>
         </div>
         <img class="directions__user-image directions__user-image--form" src="img/demin-tablet@1x.jpg" width="100" height="100" alt="Фото пользователя">
-        <a href="#" class="directions__change-image">Сменить фото</a>
+        <a href="#" class="directions__change-image directions__change-image--form">Сменить фото</a>
       </section>
 
-      <section class="tags">
+      <section class="tags tags--form">
         <h3 class="tags__title">Тэги</h3>
-        <ul class="tags__tags-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="tags__tag-item"><a href="#" class="tags__tag-link">бургер</a></li>
-          <li class="tags__tag-item"><a href="#" class="tags__tag-link">бар</a></li>
-          <li class="tags__tag-item"><a href="#" class="tags__tag-link">футбол</a></li>
-          <li class="tags__tag-item"><a href="#" class="tags__tag-link">концерт</a></li>
-          <li class="tags__tag-item"><a href="#" class="tags__tag-link">крафт</a></li>
+        <ul class="tags__tags-list"> <!-- символ # добавлен псевдоэлеметом -->
+          <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">бургер</a></li>
+          <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">бар</a></li>
+          <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">футбол</a></li>
+          <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">концерт</a></li>
+          <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">крафт</a></li>
         </ul>
       </section>
 
       <section class="form-transport">
         <h3 class="form-transport__title">Транспорт</h3>
         <ul class="transport-list">
-          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
-          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
-          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+          <li class="transport-list__item transport-list__item--form">
+            <span class="tooltip">Авиаперелет</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
+              <use xlink:href="#plane"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--form">
+            <span class="tooltip">Автотранспорт</span>
+            <svg class="transport-list__icon" width="17" height="21">
+              <use xlink:href="#bus"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--form">
+            <span class="tooltip">Велосипед</span>
+            <svg class="transport-list__icon" width="24" height="21">
+              <use xlink:href="#bike"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--form">
+            <span class="tooltip">Пешком</span>
+            <svg class="transport-list__icon" width="20" height="21">
+              <use xlink:href="#run"></use>
+            </svg>
+          </li>
         </ul>
       </section>
     </div>
 
-    <section class="my-plans">
-      <h3 class="my-plans__title">Мои планы:</h3>
+    <section class="my-plans my-plans--form">
+      <h3 class="my-plans__title my-plans__title--form">Мои планы:</h3>
       <article class="my-plans__item">
         <h4 class="visually-hidden">Мой план</h4>
-        <p class="my-plans__direction">1. Франция, Италия</p>
-        <p class="my-plans__travelers">3 попутчика</p>
-        <p class="my-plans__date">26 мар — 29 мар</p>
-        <a href="#" class="my-plans__change-link">Изменить</a>
+        <p class="my-plans__direction my-plans__direction--form"><span class="my-plans__plan-number-mobile">1.</span> Франция, Италия</p>
+        <p class="my-plans__plan-number">1.</p>
+        <p class="my-plans__travelers my-plans__travelers--form">3 попутчика</p>
+        <p class="my-plans__date my-plans__date--form">26 мар — 29 мар</p>
+        <a href="#" class="my-plans__change-link my-plans__change-link--form">Изменить</a>
       </article>
 
       <article class="my-plans__item">
         <h4 class="visually-hidden">Мой план</h4>
-        <p class="my-plans__direction">2. Таиланд, Индонезия</p>
-        <p class="my-plans__travelers">1 попутчик</p>
-        <p class="my-plans__date">1 июл — 15 июл</p>
-        <a href="#" class="my-plans__change-link">Изменить</a>
+        <p class="my-plans__direction my-plans__direction--form"><span class="my-plans__plan-number-mobile">2.</span> Таиланд, Индонезия</p>
+        <p class="my-plans__plan-number">2.</p>
+        <p class="my-plans__travelers my-plans__travelers--form">1 попутчик</p>
+        <p class="my-plans__date my-plans__date--form">1 июл — 15 июл</p>
+        <a href="#" class="my-plans__change-link my-plans__change-link--form">Изменить</a>
       </article>
     </section>
 
     <section class="add-plan">
       <h3 class="add-plan__title">Добавить план:</h3>
+      <div class="add-plan__dots-wrap">
+        <svg class="add-plan__dots" width="50" height="5">
+          <use xlink:href="#dots"></use>
+        </svg>
+      </div>
       <form action="https://echo.htmlacademy.ru" class="add-plan__form">
         <section class="add-plan__step">
           <h3 class="visually-hidden">Добавить план. Шаг 1</h3>
@@ -111,34 +147,67 @@
           <p class="add-plan__step-title">Даты пребывания</p>
           <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-          <label class="add-plan__label" for="travelers-number">Ищу попутчиков:</label>
-          <span class="add-plan__input-description">Чел.</span>
-          <input type="text" class="add-plan__travelers-number" id="travelers-number" value="2">
-          <button type="button" class="add-plan__down">-</button>
-          <button type="button" class="add-plan__up">+</button>
+          <div class="add-plan__label-wrap">
+            <label class="add-plan__label" for="travelers-number">Ищу попутчиков:</label>
+            <span class="add-plan__input-description">Чел.</span>
+          </div>
+          <div class="add-plan__input-wrap">
+            <input type="text" class="add-plan__travelers-number" id="travelers-number" value="2">
+            <button type="button" class="add-plan__down">
+              <svg class="add-plan__button-minus" width="14" height="14">
+                <use xlink:href="#qty-minus"></use>
+              </svg>
+            </button>
+            <button type="button" class="add-plan__up">
+              <svg class="add-plan__button-plus" width="14" height="14">
+                <use xlink:href="#qty-plus"></use>
+              </svg>
+            </button>
+          </div>
 
-          <label class="add-plan__label" for="travel-duration">Длительность:</label>
-          <span class="add-plan__input-description">Дн.</span>
-          <input type="text" class="add-plan__travel-duration" id="travel-duration" value="2">
-          <button type="button" class="add-plan__down">-</button>
-          <button type="button" class="add-plan__up">+</button>
-          <input type="checkbox" class="add-plan__children-allow" name="children-allow" id="children-allow">
+          <div class="add-plan__label-wrap">
+            <label class="add-plan__label" for="travel-duration">Длительность:</label>
+            <span class="add-plan__input-description">Дн.</span>
+          </div>
+          <div class="add-plan__input-wrap">
+            <input type="text" class="add-plan__travel-duration" id="travel-duration" value="2">
+            <button type="button" class="add-plan__down">
+              <svg class="add-plan__button-minus" width="14" height="14">
+                <use xlink:href="#qty-minus"></use>
+              </svg>
+            </button>
+            <button type="button" class="add-plan__up">
+              <svg class="add-plan__button-plus" width="14" height="14">
+                <use xlink:href="#qty-plus"></use>
+              </svg>
+            </button>
+          </div>
 
+          <input type="checkbox" class="add-plan__children-allow" name="children-allow" id="children-allow" checked>
           <label for="children-allow" class="add-plan__children-allow-label">Можно с детьми</label>
 
           <div class="calendar">
-            <p class="calendar__month">Март 2019</p>
-            <button type="button" class="calendar__prew" aria-label="Предидущий месяц"></button>
-            <button type="button" class="calendar__next" aria-label="Следующий месяц"></button>
+            <p class="calendar__month">Март 2019
+              <button type="button" class="calendar__prew" aria-label="Предидущий месяц">
+                <svg class="calendar__prew-icon" width="9" height="17">
+                  <use xlink:href="#month-arrow-left"></use>
+                </svg>
+              </button>
+              <button type="button" class="calendar__next" aria-label="Следующий месяц">
+                <svg class="calendar__next-icon" width="9" height="17">
+                  <use xlink:href="#month-arrow-right"></use>
+                </svg>
+              </button>
+            </p>
             <table class="calendar__days">
               <tr>
-                <th class="calendar__day-of-week">п</th>
-                <th class="calendar__day-of-week">в</th>
-                <th class="calendar__day-of-week">с</th>
-                <th class="calendar__day-of-week">ч</th>
-                <th class="calendar__day-of-week">п</th>
-                <th class="calendar__day-of-week calendar__day-of-week--weekend">с</th>
-                <th class="calendar__day-of-week calendar__day-of-week--weekend">в</th>
+                <th class="calendar__day-of-week"><span class="calendar__day-text">п</span><span class="calendar__day-text--2">Пн</span></th>
+                <th class="calendar__day-of-week"><span class="calendar__day-text">в</span><span class="calendar__day-text--2">Вт</span></th>
+                <th class="calendar__day-of-week"><span class="calendar__day-text">с</span><span class="calendar__day-text--2">Ср</span></th>
+                <th class="calendar__day-of-week"><span class="calendar__day-text">ч</span><span class="calendar__day-text--2">Чт</span></th>
+                <th class="calendar__day-of-week"><span class="calendar__day-text">п</span><span class="calendar__day-text--2">Пн</span></th>
+                <th class="calendar__day-of-week calendar__day-of-week--weekend"><span class="calendar__day-text">с</span><span class="calendar__day-text--2">Сб</span></th>
+                <th class="calendar__day-of-week calendar__day-of-week--weekend"><span class="calendar__day-text">в</span><span class="calendar__day-text--2">Вс</span></th>
               </tr>
               <tr>
                 <td class="calendar__day-number calendar__day-number--disabled">
@@ -329,211 +398,276 @@
           <h3 class="visually-hidden">Добавить план. Шаг 2</h3>
           <p class="add-plan__step-number">Шаг 2.</p>
           <p class="add-plan__step-title">Маршрут</p>
-          <p class="add-plan__step-description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+          <p class="add-plan__step-description">Укажите страны, которые вы хотели посетить.<br> Это может быть одна или сразу несколько.</p>
 
-          <a href="#" class="add-plan__choose-country">Босния и Герцеговина</a>
-          <div class="add-plan__country-flag">
-            <h3 class="visually-hidden">Флаг выбранной страны</h3>
-            <img src="https://via.placeholder.com/35x25" width="35" height="25" alt="флаг Босния и Герцеговина">
+          <div class="add-plan__choose-wrap">
+            <div class="add-plan__choose-country-wrap">
+              <div class="add-plan__choose-country">
+                <a href="#" class="add-plan__choose-link">Босния и Герцеговина</a>
+                <button type="button" class="add-plan__choose-button" aria-label="Открыть список стран">
+                  <svg class="add-plan__choose-button-icon" width="12" height="7">
+                    <use xlink:href="#dropdown-form"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="add-plan__country-flag">
+                <h3 class="visually-hidden">Флаг выбранной страны</h3>
+                <svg class="add-plan__country-flag-icon" width="35" height="25">
+                  <use xlink:href="#flag-bosnia"></use>
+                </svg>
+              </div>
+              <button type="button" class="add-plan__del-country" aria-label="Удалить выбранную страну">
+                <svg class="add-plan__del-country-icon" width="9" height="9">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="add-plan__choose-country-popup">
+              <table class="letter-table letter-table--form">
+                <tr>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-a" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-a">а</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-b" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-b">б</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-c" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-c">в</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-g" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-g">г</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-d" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-d">д</label>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-e" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-e">е</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-z" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-z">з</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-i" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-i">и</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-k" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-k">к</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-l" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-l">л</label>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-m" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-m">м</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-n" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-n">н</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-o" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-o">о</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-p" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-p">п</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-r" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-r">р</label>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-s" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-s">с</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-t" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-t">т</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-y" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-y">у</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-f" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-f">ф</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-x" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-x">х</label>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-ch" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-ch">ч</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-sh" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-sh">ш</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-ee" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-ee">э</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-j" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-j">ю</label>
+                  </td>
+                  <td class="letter-table__letter">
+                    <input type="radio" name="letter" id="letter-ja" class="visually-hidden">
+                    <label class="letter-table__label letter-table__label--form" for="letter-ja">я</label>
+                  </td>
+                </tr>
+              </table>
+
+              <ul class="country-list">
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="australia" id="australia" class="visually-hidden">
+                  <label for="australia">Австралия</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="austria" id="austria" class="visually-hidden">
+                  <label for="austria">Австрия</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="azerbaijan" id="azerbaijan" class="visually-hidden">
+                  <label for="azerbaijan">Азербайджан</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="albania" id="albania" class="visually-hidden">
+                  <label for="albania">Албания</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="algeria" id="algeria" class="visually-hidden">
+                  <label for="algeria">Алжир</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="angola" id="angola" class="visually-hidden">
+                  <label for="angola">Ангола</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="andorra" id="andorra" class="visually-hidden">
+                  <label for="andorra">Андора</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="antigua" id="antigua" class="visually-hidden">
+                  <label for="antigua">Антигуа и Барбуда</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="argentina" id="argentina" class="visually-hidden">
+                  <label for="argentina">Аргентина</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="armenia" id="armenia" class="visually-hidden">
+                  <label for="armenia">Армения</label>
+                </li>
+                <li class="country-list__country-item">
+                  <input type="checkbox" name="afghanistan" id="afghanistan" class="visually-hidden">
+                  <label for="afghanistan">Афганистан</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="add-plan__choose-country-wrap">
+              <div class="add-plan__choose-country">
+                <a href="#" class="add-plan__choose-link">Чехия</a>
+                <button type="button" class="add-plan__choose-button" aria-label="Открыть список стран">
+                  <svg class="add-plan__choose-button-icon" width="12" height="7">
+                    <use xlink:href="#dropdown-form"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="add-plan__country-flag">
+                <h3 class="visually-hidden">Флаг выбранной страны</h3>
+                <svg class="add-plan__country-flag-icon" width="35" height="25">
+                  <use xlink:href="#flag-czech"></use>
+                </svg>
+              </div>
+              <button type="button" class="add-plan__del-country" aria-label="Удалить выбранную страну">
+                <svg class="add-plan__del-country-icon" width="9" height="9">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="add-plan__choose-country-wrap add-plan__empty">
+              <div class="add-plan__choose-country">
+                <a href="#" class="add-plan__choose-link">Выберите страну</a>
+                <button type="button" class="add-plan__choose-button" aria-label="Открыть список стран">
+                  <svg class="add-plan__choose-button-icon" width="12" height="7">
+                    <use xlink:href="#dropdown-form"></use>
+                  </svg>
+                </button>
+              </div>
+              <button type="button" class="add-plan__del-country" aria-label="Удалить выбранную страну">
+                <svg class="add-plan__del-country-icon" width="9" height="9">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="add-plan__choose-country-wrap add-plan__choose-country-wrap--add add-plan__empty ">
+              <div class="add-plan__choose-country add-plan__choose-country--add">
+                <a href="#" class="add-plan__choose-link">Добавить страну</a>
+                <button type="button" class="add-plan__add-button" aria-label="Добавить страну">
+                  <svg class="add-plan__choose-button-icon" width="14" height="14">
+                    <use xlink:href="#qty-plus"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
-
-          <div class="add-plan__choose-country-popup">
-            <table class="letter-table letter-table--form">
-              <tr>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-a" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-a">а</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-b" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-b">б</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-c" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-c">в</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-g" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-g">г</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-d" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-d">д</label>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-e" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-e">е</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-z" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-z">з</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-i" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-i">и</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-k" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-k">к</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-l" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-l">л</label>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-m" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-m">м</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-n" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-n">н</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-o" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-o">о</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-p" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-p">п</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-r" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-r">р</label>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-s" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-s">с</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-t" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-t">т</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-y" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-y">у</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-f" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-f">ф</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-x" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-x">х</label>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-ch" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-ch">ч</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-sh" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-sh">ш</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-ee" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-ee">э</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-j" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-j">ю</label>
-                </td>
-                <td class="letter-table__letter">
-                  <input type="radio" name="letter" id="letter-ja" class="visually-hidden">
-                  <label class="letter-table__label letter-table__label--form" for="letter-ja">я</label>
-                </td>
-              </tr>
-            </table>
-
-            <ul class="country-list">
-              <li class="country-list__country-item">
-                <input type="checkbox" name="australia" id="australia" class="visually-hidden">
-                <label for="australia">Австралия</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="austria" id="austria" class="visually-hidden">
-                <label for="austria">Австрия</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="azerbaijan" id="azerbaijan" class="visually-hidden">
-                <label for="azerbaijan">Азербайджан</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="albania" id="albania" class="visually-hidden">
-                <label for="albania">Албания</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="algeria" id="algeria" class="visually-hidden">
-                <label for="algeria">Алжир</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="angola" id="angola" class="visually-hidden">
-                <label for="angola">Ангола</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="andorra" id="andorra" class="visually-hidden">
-                <label for="andorra">Андора</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="antigua" id="antigua" class="visually-hidden">
-                <label for="antigua">Антигуа и Барбуда</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="argentina" id="argentina" class="visually-hidden">
-                <label for="argentina">Аргентина</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="armenia" id="armenia" class="visually-hidden">
-                <label for="armenia">Армения</label>
-              </li>
-              <li class="country-list__country-item">
-                <input type="checkbox" name="afghanistan" id="afghanistan" class="visually-hidden">
-                <label for="afghanistan">Афганистан</label>
-              </li>
-            </ul>
-          </div>
-
-          <a href="#" class="add-plan__choose-country">Чехия</a>
-          <div class="add-plan__country-flag">
-            <h3 class="visually-hidden">Флаг выбранной страны</h3>
-            <img src="img/czech.png" width="35" height="25" alt="флаг Чехия">
-          </div>
-
-          <a href="#" class="add-plan__choose-country">Выберите страну</a>
-          <div class="add-plan__country-flag">
-            <h3 class="visually-hidden">Флаг выбранной страны</h3>
-          </div>
-
-          <button type="button" class="add-plan__add-button">Добавить страну</button>
           <a href="#step3" class="button add-plan__next-step">Следующий шаг</a>
           <a href="#step1" class="button add-plan__prew-step">На шаг назад</a>
         </section>
 
-        <section class="add-plan__step" id="step3">
+        <section class="add-plan__step add-plan__step--3" id="step3">
           <h3 class="visually-hidden">Добавить план. Шаг 3</h3>
           <p class="add-plan__step-number">Шаг 3.</p>
           <p class="add-plan__step-title">Развлечения</p>
           <p class="add-plan__step-description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
-          <label for="country-plan">Босния и герцеговина</label>
-          <div class="add-plan__country-flag add-plan__country-flag--step3"></div>
-          <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="30" rows="10" placeholder="План действий"></textarea>
-
-          <label for="country-plan">Чехия</label>
-          <div class="add-plan__country-flag add-plan__country-flag--step3">
-            <img src="img/czech.png" width="35" height="25" alt="флаг Чехия">
+          <div class="add-plan__country-plan-wrap">
+            <label for="country-plan" class="add-plan__country-plan-title">Босния и Герцеговина</label>
+            <div class="add-plan__country-flag add-plan__country-flag--step3">
+              <svg class="add-plan__country-flag-icon" width="35" height="25">
+                <use xlink:href="#flag-bosnia"></use>
+              </svg>
+            </div>
           </div>
-          <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий"></textarea>
+
+          <div class="add-plan__country-plan-wrap">
+            <label for="country-plan" class="add-plan__country-plan-title">Чехия</label>
+            <div class="add-plan__country-flag add-plan__country-flag--step3 add-plan__country-flag--next">
+              <svg class="add-plan__country-flag-icon" width="35" height="25">
+                <use xlink:href="#flag-czech"></use>
+              </svg>
+            </div>
+          </div>
+          <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+
           <button class="button add-plan__submit" type="submit">Отправить</button>
           <a href="#step2" class="button add-plan__prew-step">На шаг назад</a>
         </section>
@@ -541,26 +675,48 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p class="footer__tagline">Погнали?</p>
+  <footer class="footer inner-page-footer">
+    <a href="index.html" class="footer__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@1x.png 2x">
+        <img src="img/logo-mobile-blue@1x.png" class="footer__logo-image" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+      </picture>
+    </a>
     <ul class="social-list">
       <li class="social-list__item">
-        <a href="#" class="social-list__link social-list__link--fb" target="_blank">
+        <a href="#" class="social-list__link" target="_blank">
+          <svg class="social-list__social-icon" width="11" height="21">
+            <use xlink:href="#facebook"></use>
+          </svg>
           <span class="visually-hidden">Фейсбук</span>
         </a>
       </li>
       <li class="social-list__item">
-        <a href="#" class="social-list__link social-list__link--vk" target="_blank">
+        <a href="#" class="social-list__link" target="_blank">
+          <svg class="social-list__social-icon" width="30" height="16">
+            <use xlink:href="#vk"></use>
+          </svg>
           <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
       <li class="social-list__item">
-        <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
+        <a href="#" class="social-list__link" target="_blank">
+          <svg class="social-list__social-icon" width="23" height="23">
+            <use xlink:href="#instagram"></use>
+          </svg>
           <span class="visually-hidden">Инстаграм</span>
         </a>
       </li>
     </ul>
-    <p class="footer__copyright">Разработано <a href="https://up.htmlacademy.ru/adaptive/19" target="_blank"><span class="visually-hidden">HTML Academy</span></a></p>
+    <p class="footer__copyright">Разработано
+      <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+        <span class="visually-hidden">HTML Academy</span>
+        <svg class="footer__copyright-logo" width="27" height="34">
+          <use xlink:href="#htmlacademy"></use>
+        </svg>
+      </a>
+    </p>
   </footer>
 </body>
 </html>
