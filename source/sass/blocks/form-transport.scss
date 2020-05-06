@@ -17,7 +17,7 @@
   position: absolute;
   top: -25px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-52%);
   background-color: $white-three;
 }
 
@@ -29,7 +29,8 @@
   .form-transport {
     position: absolute;
     top: 74px;
-    left: 230px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 308px;
     height: 95px;
     padding-top: 15px;
