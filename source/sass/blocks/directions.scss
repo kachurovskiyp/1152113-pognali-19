@@ -163,6 +163,12 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     z-index: 2;
+
+    &--form {
+      display: block;
+      padding-top: 37px;
+      padding-bottom: 115px;
+    }
   }
 
   .directions__country-wrapper {
@@ -175,6 +181,43 @@
 
   .directions__wrapper {
     padding: 0;
+
+    &--form {
+      display: flex;
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+
+  .directions__form {
+    &--form {
+      position: absolute;
+      top: -196px;
+      right: 154px;
+    }
+  }
+
+  .directions__user-image {
+    &--form{
+      width: 190px;
+      height: 190px;
+      border-radius: unset;
+      margin: 0;
+    }
+  }
+
+  .directions__change-image--form .directions__change-image-text {
+    display: none;
+  }
+
+  .directions__change-image {
+    &--form {
+      width: 190px;
+      position: absolute;
+      bottom: -47px;
+      right: 0;
+      padding: 15px 0;
+    }
   }
 
   .directions__title {

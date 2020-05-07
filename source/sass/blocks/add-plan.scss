@@ -763,3 +763,14 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .add-plan {
+    @include round-top-corners(55px);
+    margin-top: -60px;
+  }
+
+  .add-plan__title {
+    padding-left: 54px;
+  }
+}

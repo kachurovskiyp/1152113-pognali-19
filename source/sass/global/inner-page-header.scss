@@ -103,6 +103,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .inner-header {
+    &--form {
+      z-index: unset;
+    }
+  }
   .inner-header__menu-button {
     display: none;
   }
@@ -112,6 +117,22 @@
   }
 
   .inner-header__wrap {
+    display: inline-block;
     margin: unset;
+
+    &--form {
+      float: left;
+    }
+  }
+
+  .inner-header__tagline {
+    &--form {
+      margin-left: 126px;
+      margin-top: 54px;
+    }
+
+    &::after {
+      left: 128px;
+    }
   }
 }

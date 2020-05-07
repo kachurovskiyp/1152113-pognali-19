@@ -43,3 +43,19 @@
     bottom: -25px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form-transport{
+    position: static;
+    margin: unset;
+    margin-top: 66px;
+    margin-right: -130px;
+    min-width: 383px;
+    border-radius: 10px;
+  }
+
+  .form-transport__title {
+    top: 63px;
+    left: 195px;
+  }
+}

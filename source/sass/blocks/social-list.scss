@@ -29,3 +29,9 @@
     margin-left: -11px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    display: none;
+  }
+}

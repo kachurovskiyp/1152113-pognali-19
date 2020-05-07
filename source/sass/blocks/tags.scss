@@ -69,3 +69,19 @@
     margin-left: 0;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .tags {
+    &--form {
+      max-width: unset;
+      width: 730px;
+      margin-top: 68px;
+      margin-left: 123px;
+      border-radius: 10px;
+    }
+  }
+
+  .tags__title {
+    left: 64px;
+  }
+}
