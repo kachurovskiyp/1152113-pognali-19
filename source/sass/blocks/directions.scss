@@ -6,6 +6,12 @@
   padding-top: 40px;
   margin-top: -31px;
   background-color: $white-three;
+
+  &--form {
+    position: static;
+    padding: unset;
+    margin-top: unset;
+  }
 }
 
 .directions__article {
@@ -65,7 +71,7 @@
   margin-bottom: 34px;
 }
 
-.direction__show-all {
+.directions__show-all {
   max-width: 270px;
   margin: 0 auto;
   margin-bottom: 22px;
@@ -94,8 +100,6 @@
   }
 
   .directions {
-    background: url("../../img/flags-back@1x.png") no-repeat 88% 82px;
-    background-size: 286px;
     background-color: $white-three;
     padding-bottom: 80px;
   }
@@ -137,7 +141,7 @@
     padding-right: 65px;
   }
 
-  .direction__show-all {
+  .directions__show-all {
     @include font-size(24px, 24px);
     max-width: 82%;
     padding: 26px 4%;
@@ -183,7 +187,7 @@
     max-width: 340px;
   }
 
-  .direction__show-all {
+  .directions__show-all {
     position: absolute;
     right: 311px;
     bottom: 146px;

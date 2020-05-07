@@ -20,7 +20,7 @@
 }
 
 .inner-header__menu-button {
-  margin-right: 26px;
+    margin-right: 26px;
 }
 
 .inner-header__authorization {
@@ -99,5 +99,19 @@
       bottom: -3px;
       left: 76px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner-header__menu-button {
+    display: none;
+  }
+
+  .inner-header__authorization {
+    display: none;
+  }
+
+  .inner-header__wrap {
+    margin: unset;
   }
 }

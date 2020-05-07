@@ -1,0 +1,18 @@
+.menu-button {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  align-self: center;
+  border: none;
+
+&::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  background-color: $absolute-white;
+}
+}

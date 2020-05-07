@@ -10,16 +10,18 @@
   line-height: 18px;
   padding-bottom: 30px;
   margin-top: -30px;
+  counter-reset: stepCounter;
 }
 
 .steps__step {
   padding: 21px 60px 23px 24px;
   position: relative;
+  counter-increment: stepCounter;
 
   &::after {
     @include font-bold($absolute-white);
     @include font-size(18px, 18px);
-    content: "1";
+    content: counter(stepCounter);
     position: absolute;
     z-index: 2;
     top: 21px;
@@ -36,7 +38,7 @@
   background-color: $color-light-mango;
 
   &::after {
-    content: "2";
+    content: counter(stepCounter);
   }
 }
 
@@ -44,7 +46,7 @@
   background-color: $dark-yellow;
 
   &::after {
-    content: "3";
+    content: counter(stepCounter);
   }
 }
 
@@ -53,7 +55,7 @@
   background-color: $yellow;
 
   &::after {
-    content: "4";
+    content: counter(stepCounter);
   }
 }
 
