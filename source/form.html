@@ -155,10 +155,16 @@
       </div>
       <form action="https://echo.htmlacademy.ru" class="add-plan__form">
         <section class="add-plan__step">
+          <ul class="add-plan__breadcrumbs">
+            <li class="add-plan__breadcrumbs-item add-plan__breadcrumbs-item--active">Даты</li>
+            <li class="add-plan__breadcrumbs-item">Маршрут</li>
+            <li class="add-plan__breadcrumbs-item">Развлечения</li>
+          </ul>
+
           <h3 class="visually-hidden">Добавить план. Шаг 1</h3>
           <p class="add-plan__step-number">Шаг 1.</p>
           <p class="add-plan__step-title">Даты пребывания</p>
-          <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+          <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых <br class="add-plan__br-desktop">вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
           <div class="add-plan__label-wrap">
             <label class="add-plan__label" for="travelers-number">Ищу попутчиков:</label>
@@ -178,11 +184,11 @@
             </button>
           </div>
 
-          <div class="add-plan__label-wrap">
+          <div class="add-plan__label-wrap add-plan__label-wrap--duration">
             <label class="add-plan__label" for="travel-duration">Длительность:</label>
             <span class="add-plan__input-description">Дн.</span>
           </div>
-          <div class="add-plan__input-wrap">
+          <div class="add-plan__input-wrap add-plan__input-wrap--duration">
             <input type="text" class="add-plan__travel-duration" id="travel-duration" value="2">
             <button type="button" class="add-plan__down">
               <svg class="add-plan__button-minus" width="14" height="14">
@@ -247,7 +253,7 @@
                   <input type="checkbox" name="day-number-28" id="day-number-28" class="visually-hidden">
                   <label for="day-number-28">28</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number--disabled">
+                <td class="calendar__day-number calendar__day-number--disabled calendar__day-number--march">
                   <input type="checkbox" name="day-number-1" id="day-number-1" class="visually-hidden">
                   <label for="day-number-1">1</label>
                 </td>
@@ -344,61 +350,61 @@
               </tr>
               <tr>
                 <td class="calendar__day-number calendar__day-number--disabled">
-                  <input type="checkbox" name="day-number-.23" id="day-number-1-23" class="visually-hidden">
+                  <input type="checkbox" name="day-number-1-23" id="day-number-1-23" class="visually-hidden">
                   <label for="day-number-1-23">23</label>
                 </td>
                 <td class="calendar__day-number calendar__day-number--disabled">
-                  <input type="checkbox" name="day-number-.24" id="day-number-1-24" class="visually-hidden">
+                  <input type="checkbox" name="day-number-1-24" id="day-number-1-24" class="visually-hidden">
                   <label for="day-number-1-24">24</label>
                 </td>
                 <td class="calendar__day-number calendar__day-number--disabled">
-                  <input type="checkbox" name="day-number-.25" id="day-number-1-25" class="visually-hidden">
+                  <input type="checkbox" name="day-number-1-25" id="day-number-1-25" class="visually-hidden">
                   <label for="day-number-1-25">25</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number--checked calendar__day-number--active">
-                  <input type="checkbox" name="day-number-.26" id="day-number-1-26" class="visually-hidden">
+                <td class="calendar__day-number calendar__day-number--checked calendar__day-number--first calendar__day-number--active">
+                  <input type="checkbox" name="day-number-1-26" id="day-number-1-26" class="visually-hidden">
                   <label for="day-number-1-26">26</label>
                 </td>
                 <td class="calendar__day-number calendar__day-number--checked">
-                  <input type="checkbox" name="day-number-.27" id="day-number-1-27" class="visually-hidden">
+                  <input type="checkbox" name="day-number-1-27" id="day-number-1-27" class="visually-hidden">
                   <label for="day-number-1-27">27</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number--checked">
-                  <input type="checkbox" name="day-number-.28" id="day-number-1-28" class="visually-hidden">
+                <td class="calendar__day-number calendar__day-number--checked calendar__day-number--last">
+                  <input type="checkbox" name="day-number-1-28" id="day-number-1-28" class="visually-hidden">
                   <label for="day-number-1-28">28</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.29" id="day-number-1-29" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-29" id="day-number-1-29" class="visually-hidden">
                   <label for="day-number-1-29">29</label>
                 </td>
               </tr>
               <tr>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.30" id="day-number-1-30" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-30" id="day-number-1-30" class="visually-hidden">
                   <label for="day-number-1-30">30</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.31" id="day-number-1-31" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-31" id="day-number-1-31" class="visually-hidden">
                   <label for="day-number-1-31">31</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.1" id="day-number-1-1" class="visually-hidden">
+                <td class="calendar__day-number calendar__day-number calendar__day-number--april">
+                  <input type="checkbox" name="day-number-1-1" id="day-number-1-1" class="visually-hidden">
                   <label for="day-number-1-1">1</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.2" id="day-number-1-2" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-2" id="day-number-1-2" class="visually-hidden">
                   <label for="day-number-1-2">2</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.3" id="day-number-1-3" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-3" id="day-number-1-3" class="visually-hidden">
                   <label for="day-number-1-3">3</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.4" id="day-number-1-4" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-4" id="day-number-1-4" class="visually-hidden">
                   <label for="day-number-1-4">4</label>
                 </td>
-                <td class="calendar__day-number calendar__day-number">
-                  <input type="checkbox" name="day-number-.5" id="day-number-1-5" class="visually-hidden">
+                <td class="calendar__day-number">
+                  <input type="checkbox" name="day-number-1-5" id="day-number-1-5" class="visually-hidden">
                   <label for="day-number-1-5">5</label>
                 </td>
               </tr>
@@ -408,6 +414,12 @@
         </section>
 
         <section class="add-plan__step" id="step2">
+          <ul class="add-plan__breadcrumbs">
+            <li class="add-plan__breadcrumbs-item">Даты</li>
+            <li class="add-plan__breadcrumbs-item add-plan__breadcrumbs-item--active">Маршрут</li>
+            <li class="add-plan__breadcrumbs-item">Развлечения</li>
+          </ul>
+
           <h3 class="visually-hidden">Добавить план. Шаг 2</h3>
           <p class="add-plan__step-number">Шаг 2.</p>
           <p class="add-plan__step-title">Маршрут</p>
@@ -656,6 +668,12 @@
         </section>
 
         <section class="add-plan__step add-plan__step--3" id="step3">
+          <ul class="add-plan__breadcrumbs">
+            <li class="add-plan__breadcrumbs-item">Даты</li>
+            <li class="add-plan__breadcrumbs-item">Маршрут</li>
+            <li class="add-plan__breadcrumbs-item add-plan__breadcrumbs-item--active">Развлечения</li>
+          </ul>
+
           <h3 class="visually-hidden">Добавить план. Шаг 3</h3>
           <p class="add-plan__step-number">Шаг 3.</p>
           <p class="add-plan__step-title">Развлечения</p>

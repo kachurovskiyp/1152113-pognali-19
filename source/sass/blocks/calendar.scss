@@ -138,3 +138,98 @@
     padding: 10px 25px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .calendar {
+    margin-top: 60px;
+    text-align: left;
+  }
+
+  .calendar__month {
+    max-width: 1025px;
+    margin-left: 107px;
+    text-align: center;
+  }
+
+  .calendar__days {
+    width: unset;
+    margin-top: -23px;
+  }
+
+  .calendar__day-of-week {
+    text-align: left;
+    padding: 1px 108px 23px 13px;
+  }
+
+  .calendar__day-number {
+    padding: 0;
+    height: 71px;
+
+    &--march {
+      position: relative;
+
+      &::after {
+        @include font($greyish-brown);
+        @include font-size(18px, 30px);
+        letter-spacing: 1.8px;
+        content: "мар";
+        position: absolute;
+        top: 6px;
+        left: 37px;
+      }
+    }
+
+    &--april {
+      position: relative;
+
+      &::after {
+        @include font($greyish-brown);
+        @include font-size(18px, 30px);
+        letter-spacing: 1.8px;
+        content: "мар";
+        position: absolute;
+        top: 6px;
+        left: 37px;
+      }
+    }
+
+    &--first {
+      position: relative;
+
+      &::before {
+        @include font($absolute-white);
+        @include font-size(18px, 30px);
+        letter-spacing: 1.8px;
+        content: "Заезд";
+        position: absolute;
+        top: 32px;
+        left: 17px;
+      }
+    }
+
+    &--last {
+      position: relative;
+
+      &::before {
+        @include font($absolute-white);
+        @include font-size(18px, 30px);
+        letter-spacing: 1.8px;
+        content: "Выезд";
+        position: absolute;
+        top: 32px;
+        left: 17px;
+      }
+    }
+  }
+
+  .calendar__new-month {
+
+  }
+
+  .calendar__day-number label {
+    text-align: left;
+    display: block;
+    padding-left: 15px;
+    margin-top: -23px;
+  }
+}

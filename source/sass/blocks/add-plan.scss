@@ -31,6 +31,10 @@
   }
 }
 
+.add-plan__breadcrumbs {
+  display: none;
+}
+
 .add-plan__dots-wrap {
   position: absolute;
   right: 44px;
@@ -47,6 +51,10 @@
 
 .add-plan__step-description {
   margin-bottom: 22px;
+}
+
+.add-plan__br-desktop {
+  display: none;
 }
 
 .add-plan__step-description br {
@@ -768,9 +776,123 @@
   .add-plan {
     @include round-top-corners(55px);
     margin-top: -60px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
 
   .add-plan__title {
-    padding-left: 54px;
+    margin-top: 40px;
+    margin-left: 71px;
+  }
+
+  .add-plan__dots-wrap {
+    display: none;
+  }
+
+  .add-plan__step {
+    border-radius: 65px;
+    padding-bottom: 108px;
+  }
+
+  .add-plan__breadcrumbs {
+    @include clear-list;
+    @include font($black);
+    @include font-size(20px, 14px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    position: absolute;
+    top: 110px;
+    right: 207px;;
+    opacity: .6;
+  }
+
+  .add-plan__breadcrumbs-item {
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+      @include round-block(6px, 6px);
+      content: "";
+      background-color: $steel-grey;
+      position: absolute;
+      top: 49%;
+      left: -43px;
+    }
+
+    &--active {
+      color: $black;
+      opacity: 1;
+
+      &::before {
+        background-color: $dark-blue-three;
+      }
+    }
+  }
+
+  .add-plan__step-number {
+    margin-left: 119px;
+    margin-top: 51px;
+    display: inline-block;
+    float: left;
+  }
+
+  .add-plan__step-title {
+    margin-top: 50px;
+    margin-left: 230px;
+  }
+
+  .add-plan__step-description {
+    margin-left: 120px;
+    margin-bottom: 80px;
+  }
+
+  .add-plan__br-desktop {
+    display: inline;
+  }
+
+  .add-plan__label-wrap {
+    max-width: 476px;
+    margin-left: 119px;
+    margin-top: 113px;
+
+    &::before {
+      top: -56px;
+      width: 210%;
+    }
+
+    &--duration {
+      margin-top: 65px;
+    }
+
+    &--duration::before {
+      display: none;
+    }
+  }
+
+  .add-plan__input-wrap {
+    margin-top: 26px;
+    margin-bottom: 110px;
+    max-width: 178px;
+    position: absolute;
+    top: 278px;
+    left: 382px;
+
+    &--duration {
+      top: 360px;
+    }
+  }
+
+  .add-plan__children-allow-label {
+    position: absolute;
+    top: 328px;
+    left: 938px;
+  }
+
+  .add-plan__next-step {
+    margin-top: 56px;
+    padding: 27px 34px;
+    width: 23%;
+    margin-left: 120px;
   }
 }
