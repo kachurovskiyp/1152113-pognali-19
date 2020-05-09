@@ -37,3 +37,17 @@
     margin-top: 24px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .inner-page-footer .social-list {
+    display: flex;
+    margin-left: -48px;
+  }
+
+  .inner-page-footer .footer__logo-image {
+    width: 200px;
+    height: 52px;
+    margin-top: -8px;
+    margin-left: 2px;
+  }
+}

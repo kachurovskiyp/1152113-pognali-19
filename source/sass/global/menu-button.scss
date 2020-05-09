@@ -5,14 +5,14 @@
   align-self: center;
   border: none;
 
-&::after {
-  content: "";
-  display: block;
-  width: 25px;
-  height: 3px;
-  position: absolute;
-  top: 8px;
-  left: 0;
-  background-color: $absolute-white;
-}
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background-color: $absolute-white;
+  }
 }

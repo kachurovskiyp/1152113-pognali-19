@@ -791,7 +791,13 @@
 
   .add-plan__step {
     border-radius: 65px;
-    padding-bottom: 108px;
+    padding-bottom: 110px;
+
+    &--3 {
+      margin-top: 42px;
+      margin-bottom: 62px;
+      padding: 48px 50px 99px 160px;
+    }
   }
 
   .add-plan__breadcrumbs {
@@ -803,8 +809,8 @@
     display: block;
     position: absolute;
     top: 110px;
-    right: 207px;;
-    opacity: .6;
+    right: 207px;
+    opacity: 0.6;
   }
 
   .add-plan__breadcrumbs-item {
@@ -835,16 +841,44 @@
     margin-top: 51px;
     display: inline-block;
     float: left;
+
+    &--step3 {
+      margin-left: 0;
+      margin-top: 47px;
+    }
   }
 
   .add-plan__step-title {
     margin-top: 50px;
     margin-left: 230px;
+
+    &--step3 {
+      margin-left: 113px;
+      margin-top: 47px;
+    }
   }
 
   .add-plan__step-description {
     margin-left: 120px;
     margin-bottom: 80px;
+
+    &--step3 {
+      margin-left: 2px;
+      margin-top: 34px;
+      margin-bottom: 130px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 90%;
+        height: 1px;
+        background-color: $steel-grey;
+        position: absolute;
+        bottom: -58px;
+        left: 0;
+        opacity: 0.5;
+      }
+    }
   }
 
   .add-plan__br-desktop {
@@ -891,8 +925,65 @@
 
   .add-plan__next-step {
     margin-top: 56px;
-    padding: 27px 34px;
     width: 23%;
     margin-left: 120px;
+    padding: 25px 34px;
+  }
+
+  .add-plan__choose-wrap {
+    margin-left: 120px;
+    margin-top: 111px;
+    width: 84%;
+
+    &::before {
+      top: -51px;
+    }
+  }
+
+  .add-plan__choose-country {
+    &::after {
+      top: -233px;
+      right: -47px;
+    }
+  }
+
+  .add-plan__country-flag {
+    &::before {
+      left: -12px;
+    }
+
+    &--step3 {
+      &::after {
+        right: 133px;
+      }
+    }
+  }
+
+  .add-plan__decoration-line {
+    right: 163px;
+    top: 19px;
+  }
+
+  .add-plan__del-country {
+    right: 44px;
+  }
+
+  .add-plan__prew-step {
+    right: 151px;
+    bottom: 135px;
+  }
+
+  .add-plan__country-plan-wrap {
+    width: 84.5%;
+  }
+
+  .add-plan__country-plan {
+    padding: 22px 35px 15px 23px;
+    width: 65.5%;
+  }
+
+  .add-plan__submit {
+    width: 26%;
+    margin-top: 10px;
   }
 }
