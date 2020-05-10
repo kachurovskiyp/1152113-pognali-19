@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Project: Погнали</title>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
       <div class="header__nav-wrapper">
         <a class="header__logo">
@@ -16,7 +19,7 @@
             <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
           </picture>
         </a>
-        <button type="button" class="header__menu-button" aria-label="Меню"></button>
+        <button type="button" class="menu-button header__menu-button" aria-label="Меню"></button>
       </div>
       <nav class="mobile-menu">
         <a><img class="mobile-menu__logo" src="img/logo-mobile-blue@1x.png" width="100" height="17" alt="Логотип сайта Погнали"></a>
@@ -64,13 +67,13 @@
         <a href="tel:+88005558628" class="header__call-us">
           <span class="visually-hidden">Позвоните нам</span>
           <svg class="header__call-us-icon" width="18" height="18">
-            <use xlink:href="img/sprite.svg#header-call-us"></use>
+            <use xlink:href="#topmenu-phone"></use>
           </svg>
         </a>
         <a href="#" class="header__feedback">
           <span class="visually-hidden">Напишите нам</span>
           <svg class="header__feedback-icon" width="18" height="14">
-            <use xlink:href="img/sprite.svg#header-feedback"></use>
+            <use xlink:href="#topmenu-mail"></use>
           </svg>
         </a>
         <a href="#" class="header__authorization"><span class="header__authorization-text">Авторизация</span></a>
@@ -118,13 +121,13 @@
             </picture>
             <a href="#" class="country__link">
               <svg class="country__link-flag" width="35" height="25">
-                <use xlink:href="img/sprite.svg#flag-thailand"></use>
+                <use xlink:href="#flag-thailand"></use>
               </svg>
               <h3 class="country__title">Таиланд</h3>
               <p class="country__tagline">Джунгли зовут!</p>
               <span class="country__visits">
-                <svg class="country__visits-icon" width="11" height="11">
-                  <use xlink:href="img/sprite.svg#country-visits"></use>
+                <svg class="country__visits-icon" width="21" height="20">
+                  <use xlink:href="#user"></use>
                 </svg>
                 18321
               </span>
@@ -140,13 +143,13 @@
             </picture>
             <a href="#" class="country__link">
               <svg class="country__link-flag" width="35" height="25">
-                <use xlink:href="img/sprite.svg#flag-france"></use>
+                <use xlink:href="#flag-france"></use>
               </svg>
               <h3 class="country__title">Франция</h3>
               <p class="country__tagline">Трэ бьен, манифик!</p>
               <span class="country__visits">
-                <svg class="country__visits-icon" width="11" height="11">
-                  <use xlink:href="img/sprite.svg#country-visits"></use>
+                <svg class="country__visits-icon" width="21" height="20">
+                  <use xlink:href="#user"></use>
                 </svg>
                 12518
               </span>
@@ -162,20 +165,20 @@
             </picture>
             <a href="#" class="country__link">
               <svg class="country__link-flag" width="35" height="25">
-                <use xlink:href="img/sprite.svg#flag-czech"></use>
+                <use xlink:href="#flag-czech"></use>
               </svg>
               <h3 class="country__title">Чехия</h3>
               <p class="country__tagline">Закоулки старой Европы</p>
               <span class="country__visits">
-                <svg class="country__visits-icon" width="11" height="11">
-                  <use xlink:href="img/sprite.svg#country-visits"></use>
+                <svg class="country__visits-icon" width="21" height="20">
+                  <use xlink:href="#user"></use>
                 </svg>
                 5326
               </span>
             </a>
           </article>
         </div>
-        <a href="#" class="button direction__show-all">Показать все</a>
+        <a href="#" class="button directions__show-all">Показать все</a>
       </section>
 
       <section class="travelers">
@@ -203,19 +206,19 @@
               <li class="countries__item">
                 <span class="tooltip">Шри-ланка</span>
                 <svg class="countries__country-flag" width="35" height="25">
-                  <use xlink:href="img/sprite.svg#flag-sri-lanka"></use>
+                  <use xlink:href="#flag-sri-lanka"></use>
                 </svg>
               </li>
               <li class="countries__item">
                 <span class="tooltip">Таиланд</span>
                 <svg class="countries__country-flag" width="35" height="25">
-                  <use xlink:href="img/sprite.svg#flag-thailand"></use>
+                  <use xlink:href="#flag-thailand"></use>
                 </svg>
               </li>
               <li class="countries__item">
                 <span class="tooltip">Сейшелы</span>
                 <svg class="countries__country-flag" width="35" height="25">
-                  <use xlink:href="img/sprite.svg#flag-seychelles"></use>
+                  <use xlink:href="#flag-seychelles"></use>
                 </svg>
               </li>
             </ul>
@@ -234,25 +237,25 @@
               <li class="transport-list__item">
                 <span class="tooltip">Авиаперелет</span>
                 <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
-                  <use xlink:href="img/sprite.svg#plane-icon"></use>
+                  <use xlink:href="#plane"></use>
                 </svg>
               </li>
               <li class="transport-list__item">
                 <span class="tooltip">Автотранспорт</span>
                 <svg class="transport-list__icon" width="17" height="21">
-                  <use xlink:href="img/sprite.svg#bus-icon"></use>
+                  <use xlink:href="#bus"></use>
                 </svg>
               </li>
               <li class="transport-list__item">
                 <span class="tooltip">Велосипед</span>
                 <svg class="transport-list__icon" width="24" height="21">
-                  <use xlink:href="img/sprite.svg#bike-icon"></use>
+                  <use xlink:href="#bike"></use>
                 </svg>
               </li>
               <li class="transport-list__item">
                 <span class="tooltip">Пешком</span>
                 <svg class="transport-list__icon" width="20" height="21">
-                  <use xlink:href="img/sprite.svg#afoot-icon"></use>
+                  <use xlink:href="#run"></use>
                 </svg>
               </li>
             </ul>
@@ -274,13 +277,13 @@
               <li class="countries__item">
                 <span class="tooltip">Бельгия</span>
                 <svg class="countries__country-flag" width="35" height="25">
-                  <use xlink:href="img/sprite.svg#flag-belgium"></use>
+                  <use xlink:href="#flag-belgium"></use>
                 </svg>
               </li>
               <li class="countries__item">
                 <span class="tooltip">Чехия</span>
                 <svg class="countries__country-flag" width="35" height="25">
-                  <use xlink:href="img/spri1te.svg#flag-czech"></use>
+                  <use xlink:href="#flag-czech"></use>
                 </svg>
               </li>
             </ul>
@@ -296,25 +299,25 @@
               <li class="transport-list__item">
                 <span class="tooltip">Авиаперелет</span>
                 <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
-                  <use xlink:href="img/sprite.svg#plane-icon"></use>
+                  <use xlink:href="#plane"></use>
                 </svg>
               </li>
               <li class="transport-list__item">
                 <span class="tooltip">Автотранспорт</span>
                 <svg class="transport-list__icon transport-list__icon--active" width="17" height="21">
-                  <use xlink:href="img/sprite.svg#bus-icon"></use>
+                  <use xlink:href="#bus"></use>
                 </svg>
               </li>
               <li class="transport-list__item">
                 <span class="tooltip">Велосипед</span>
                 <svg class="transport-list__icon" width="24" height="21">
-                  <use xlink:href="img/sprite.svg#bike-icon"></use>
+                  <use xlink:href="#bike"></use>
                 </svg>
               </li>
               <li class="transport-list__item">
                 <span class="tooltip">Пешком</span>
                 <svg class="transport-list__icon transport-list__icon--active" width="20" height="21">
-                  <use xlink:href="img/sprite.svg#afoot-icon"></use>
+                  <use xlink:href="#run"></use>
                 </svg>
               </li>
             </ul>
@@ -343,25 +346,25 @@
         <a href="#" class="price__business-price-link">Показать тарифы для бизнеса</a>
         <div class="business-price">
           <h2 class="business-price__title block-title">Бизнес-тарифы</h2>
-          <dl class="bussines-price__price-list">
-            <div class="bussines-price__price-item">
+          <dl class="business-price__price-list">
+            <div class="business-price__price-item">
               <dt class="price__desription">Реклама у блоггера</dt>
               <dd class="price__number">300 000 руб./пост</dd>
             </div>
-            <div class="bussines-price__price-item">
+            <div class="business-price__price-item">
               <dt class="price__desription">Накрутка подписчиков</dt>
               <dd class="price__number">от 1 руб./шт.</dd>
             </div>
-            <div class="bussines-price__price-item">
+            <div class="business-price__price-item">
               <dt class="price__desription">Лайки от ботов</dt>
               <dd class="price__number">от 20 коп./лайк</dd>
             </div>
-            <div class="bussines-price__price-item">
+            <div class="business-price__price-item">
               <dt class="price__desription">Ваш продакт-плейсмент</dt>
               <dd class="price__number">Индивидуально</dd>
             </div>
           </dl>
-          <a href="#" class="bussines-price__close">Закрыть окно</a>
+          <a href="#" class="business-price__close">Закрыть окно</a>
         </div>
       </section>
     </main>
@@ -381,13 +384,31 @@
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__tagline">Остались вопросы? <br> Мы с радостью на них ответим!</p>
-        <div class="conctacts__container">
-          <a class="contacts__tel" href="tel:+88005558628">8 800 555-86-28</a>
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <div class="contacts__container">
+          <a class="contacts__tel" href="tel:+88005558628">
+            <div class="contacts__icon-wrap">
+              <svg class="contacts__icon" width="18" height="18">
+                <use xlink:href="#contacts-phone"></use>
+              </svg>
+            </div>
+            8 800 555-86-28</a>
+          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">
+            <div class="contacts__icon-wrap">
+              <svg class="contacts__icon" width="18" height="13">
+                <use xlink:href="#contacts-mail"></use>
+              </svg>
+            </div>
+            mail@htmlacademy.ru</a>
         </div>
       </div>
       <div class="contacts__bottom-wrapper">
-        <address class="contacts__address">ул. Большая <br> Конюшенная, 19/8</address>
+        <address class="contacts__address">
+          <div class="contacts__icon-wrap contacts__icon-wrap--location">
+            <svg class="contacts__icon contacts__icon--location" width="14" height="22">
+              <use xlink:href="#contacts-location"></use>
+            </svg>
+          </div>
+          ул. Большая <br> Конюшенная, 19/8</address>
         <a class="button contacts__map-link" href="#">Проложить маршрут</a>
       </div>
     </section>
@@ -415,7 +436,7 @@
         <li class="social-list__item">
           <a href="#" class="social-list__link" target="_blank">
             <svg class="social-list__social-icon" width="11" height="21">
-              <use xlink:href="img/sprite.svg#facebook-icon"></use>
+              <use xlink:href="#facebook"></use>
             </svg>
             <span class="visually-hidden">Фейсбук</span>
           </a>
@@ -423,7 +444,7 @@
         <li class="social-list__item">
           <a href="#" class="social-list__link" target="_blank">
             <svg class="social-list__social-icon" width="30" height="16">
-              <use xlink:href="img/sprite.svg#vk-icon"></use>
+              <use xlink:href="#vk"></use>
             </svg>
             <span class="visually-hidden">Вконтакте</span>
           </a>
@@ -431,7 +452,7 @@
         <li class="social-list__item">
           <a href="#" class="social-list__link" target="_blank">
             <svg class="social-list__social-icon" width="23" height="23">
-              <use xlink:href="img/sprite.svg#instagram-icon"></use>
+              <use xlink:href="#instagram"></use>
             </svg>
             <span class="visually-hidden">Инстаграм</span>
           </a>
@@ -441,7 +462,7 @@
         <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
           <span class="visually-hidden">HTML Academy</span>
           <svg class="footer__copyright-logo" width="27" height="34">
-            <use xlink:href="img/sprite.svg#academy-icon"></use>
+            <use xlink:href="#htmlacademy"></use>
           </svg>
         </a>
       </p>

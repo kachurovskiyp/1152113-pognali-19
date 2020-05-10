@@ -1,5 +1,139 @@
-.inner-page-header {
+.inner-header {
   @include round-bottom-corners(20px);
   background-color: $dark-blue-two;
   min-height: 143px;
+  position: relative;
+  z-index: 1;
+}
+
+.inner-header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.inner-header__logo {
+  display: block;
+  margin-left: 25px;
+  margin-top: 17px;
+}
+
+.inner-header__menu-button {
+  margin-right: 26px;
+}
+
+.inner-header__authorization {
+  @include font-bold($dark-blue-two);
+  @include font-size(17px, 30px);
+  display: none;
+  padding: 5px 40px;
+  background-color: $yellow;
+  border-radius: 25px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: $dark-blue-two;
+
+  &:hover {
+    background-color: $dark-mango;
+  }
+}
+
+.inner-header__authorization:active .inner-header__authorization-text {
+  opacity: 0.3;
+}
+
+.inner-header__tagline {
+  margin: -7px 0 0 25px;
+
+  &::after {
+    content: "";
+    width: 214px;
+    height: 5px;
+    background-color: $color-mango;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .inner-header {
+    @include round-bottom-corners(60px);
+    min-height: 350px;
+  }
+
+  .inner-header__wrap {
+    padding: 28px 39px 12px 14px;
+    margin-bottom: 112px;
+  }
+
+  .inner-header__logo-image {
+    width: 166px;
+    height: 42px;
+  }
+
+  .inner-header__menu-button {
+    margin: -10px -25px -13px 1px;
+  }
+
+  .inner-header__authorization {
+    @include font-size(20px, 30px);
+    display: block;
+    position: relative;
+    z-index: 2;
+    min-width: 168px;
+    padding: 10px 30px;
+  }
+
+  .inner-header__tagline {
+    @include font-size(60px, 70px);
+    margin-left: 73px;
+
+    &::after {
+      width: 355px;
+      bottom: -3px;
+      left: 76px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner-header {
+    &--form {
+      z-index: unset;
+    }
+  }
+
+  .inner-header__menu-button {
+    display: none;
+  }
+
+  .inner-header__authorization {
+    display: none;
+  }
+
+  .inner-header__wrap {
+    display: inline-block;
+    margin: unset;
+
+    &--form {
+      float: left;
+    }
+  }
+
+  .inner-header__tagline {
+    &--form {
+      margin-left: 126px;
+      margin-top: 54px;
+    }
+
+    &::after {
+      left: 128px;
+    }
+  }
 }

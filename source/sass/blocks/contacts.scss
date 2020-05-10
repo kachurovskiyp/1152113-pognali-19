@@ -26,16 +26,45 @@
 .contacts__email {
   @include font-bold($yellow);
   @include font-size(16px, 22px);
+  position: relative;
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
   padding-left: 72px;
   text-transform: uppercase;
+  color: $yellow;
+}
+
+.contacts__icon-wrap {
+  @include round-block(45px, 45px);
+  display: inline-block;
+  background-color: $dark-blue-grey-two;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  &--location {
+    left: 10px;
+  }
+}
+
+.contacts__icon {
+  fill: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &--location {
+    fill: $yellow;
+  }
 }
 
 .contacts__address {
   @include font-bold($dark-blue);
   @include font-size(16px, 22px);
+  position: relative;
   margin: 0 auto;
   text-transform: uppercase;
   font-style: normal;
@@ -92,7 +121,7 @@
     }
   }
 
-  .conctacts__container {
+  .contacts__container {
     margin-top: 62px;
     margin-bottom: 59px;
     padding-left: 79px;
@@ -104,7 +133,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .conctacts__container {
+  .contacts__container {
     width: 1057px;
     margin-left: 160px;
     margin-top: 76px;

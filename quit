@@ -1,0 +1,185 @@
+[33mcommit 1f3da7bbec65613e8817a0aad07a4ceff4816e5d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: 53f8211 156e890
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Sat Apr 18 12:18:07 2020 +0300
+
+    Merge pull request #7 from kachurovskiyp/module4-task1
+
+[33mcommit 156e89092eb54ce70bd3063251f5a4b0a8ebffff[m[33m ([m[1;31morigin/module4-task1[m[33m, [m[1;32mmodule4-task1[m[33m)[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Sat Apr 18 10:33:05 2020 +0200
+
+    Внисит правки после проверки
+
+[33mcommit 7b187bf48580b70da89e43dfc34ca287fc30d891[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 17 20:25:16 2020 +0200
+
+    Начинает верстать адаптивные сетки
+
+[33mcommit 7afe2f4e197af4e07e7ac8d7c4287ee5a57b2330[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Tue Apr 14 20:17:33 2020 +0200
+
+    Добавляет верстку главной от 630px
+
+[33mcommit 56bcdc76c70ca7582c39cea29d8d643af9187441[m
+Author: Pavlo Kachurovskiy <kachurovskiy.p@gmail.com>
+Date:   Tue Apr 14 14:41:15 2020 +0200
+
+    Добавляет сетку главной страницы
+
+[33mcommit efbde6223b6195acdee536d0fb7d93f9efa24822[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Tue Apr 14 06:36:14 2020 +0200
+
+    Добавляет сетку хейдера
+
+[33mcommit 53f82114c6611fd8eb3a4064870c28ec56c25a3e[m
+Merge: cabdaab 6ec3c7c
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Sat Apr 11 10:54:21 2020 +0300
+
+    Merge pull request #6 from kachurovskiyp/module3-task2
+
+[33mcommit 6ec3c7cf8fe640381972006504e55ff86d527113[m[33m ([m[1;31morigin/module3-task2[m[33m, [m[1;32mmodule3-task2[m[33m)[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 10 20:11:05 2020 +0200
+
+    Добавляет вестку пропущенных блоков
+
+[33mcommit cabdaab12678a6725826cedb8ebacfb3faa30354[m
+Merge: 0c881bd f632d33
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Fri Apr 10 18:27:33 2020 +0300
+
+    Merge pull request #5 from kachurovskiyp/module3-task1
+
+[33mcommit f632d33c8cd65e2c0a50570bcf93af808c1d260c[m
+Author: Pavlo Kachurovskiy <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 10 11:58:10 2020 +0200
+
+    Добавляет верстку страницы формы
+
+[33mcommit dda3ab38595a357f4b95c3cc0bebfd57390e57a6[m[33m ([m[1;31morigin/module3-task1[m[33m, [m[1;32mmodule3-task1[m[33m)[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Thu Apr 9 20:48:07 2020 +0200
+
+    Вносит правки по рекомендации наставника
+
+[33mcommit 80df25bece9631f9070786df2f1e5c04fa7d8086[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Wed Apr 8 16:37:43 2020 +0200
+
+    Добавляет стилизацию страницы каталога
+
+[33mcommit b3ce46576a47eb49d9d3e7842c9fc19f70a7a4a3[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Tue Apr 7 16:26:59 2020 +0200
+
+    Добавляет стилизацию главной страницы
+
+[33mcommit 2d8b711ae629b2a1703a779035b0c77b95c2c735[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Sun Apr 5 20:41:08 2020 +0200
+
+    Исправляет ошибка линтера
+
+[33mcommit 0c881bd66ffcd55d548077dbff80a16fbe8c6cf6[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Sun Apr 5 18:51:49 2020 +0300
+
+    :kissing_cat: Добавляет сборку Sass на Gulp
+
+[33mcommit 8295d7b4841f234bdb1063d2dea60b96751ea6ec[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Sun Apr 5 18:51:42 2020 +0300
+
+    :gift: Нарезает графику для вёрстки
+
+[33mcommit 8847382b15fa2f28031cff781abffad153456d34[m
+Merge: a1f6c95 40ac265
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Sun Apr 5 18:08:19 2020 +0300
+
+    Merge pull request #4 from kachurovskiyp/module2-task2
+
+[33mcommit 40ac2652d781138f0ca961faaed5bed35f92ce5e[m[33m ([m[1;31morigin/module2-task2[m[33m, [m[1;32mmodule2-task2[m[33m)[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Sun Apr 5 17:02:57 2020 +0200
+
+    Вносит правки по рекомендации наставника
+
+[33mcommit ae975db18406dadcd1064c7d604dd692b327020c[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Sun Apr 5 09:56:06 2020 +0200
+
+    Добавляет верстку формы
+
+[33mcommit 9d54539742d6f959946cbda593ec6cdd44d52e5a[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Sat Apr 4 12:39:12 2020 +0200
+
+    Вносит правки по рекомендации наставника
+
+[33mcommit c4decd56c5082da236471b157a92b258d8c0119c[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 3 20:21:58 2020 +0200
+
+    Исправляет ошибку автоматической проверки
+
+[33mcommit 242710bd7dcacd91503687c6f4a3f50b4d8fc1c7[m
+Author: Pavlo Kachurovskiy <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 3 13:02:01 2020 +0200
+
+    Добавляет разметку каталога
+
+[33mcommit 31aeb92f7742d2c7e08afb5794910abf5e59bd11[m
+Author: Pavlo Kachurovskiy <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 3 12:59:30 2020 +0200
+
+    Внисит правки по рекомендации наставника
+
+[33mcommit 58a985ac379b08fec3183fa2d18c5c0e02a9f0f6[m
+Author: Pavlo Kachurovskiy <kachurovskiy.p@gmail.com>
+Date:   Fri Apr 3 09:35:35 2020 +0200
+
+    Заканчивает разметку главной
+
+[33mcommit a1f6c959ac305a610bf9a89424260be8b816023c[m
+Merge: f76a9e8 36bbf55
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Wed Apr 1 21:21:24 2020 +0300
+
+    Merge pull request #3 from kachurovskiyp/module2-task1
+
+[33mcommit 36bbf551d19619fa3850bbb5cb4daaf3695d28a4[m[33m ([m[1;31morigin/module2-task1[m[33m, [m[1;32mmodule2-task1[m[33m)[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Wed Apr 1 16:59:27 2020 +0200
+
+    Вносит правки по рекомендациям наставника
+
+[33mcommit 7879786673918d6cc0282bb320795abb858f3717[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Tue Mar 31 18:46:40 2020 +0200
+
+    Начинает разметку главной страницы
+
+[33mcommit f76a9e800d8201e63d940023d425faf91be59efd[m
+Merge: ae00760 22948a4
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Wed Mar 25 09:45:45 2020 +0300
+
+    Merge pull request #2 from kachurovskiyp/module1-task1
+
+[33mcommit 22948a4d99f8fed8e713bb39bfd4be4f958e6197[m[33m ([m[1;31morigin/module1-task1[m[33m, [m[1;32mmodule1-task1[m[33m)[m
+Author: Pawel <kachurovskiy.p@gmail.com>
+Date:   Tue Mar 24 19:23:48 2020 +0100
+
+    Добавляет наставника
+
+[33mcommit ae00760f1925d07d5f15c24815fd051121934c27[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Tue Mar 24 20:20:18 2020 +0300
+
+    :hatching_chick:

@@ -99,10 +99,21 @@
     padding: 0;
     flex-grow: 1;
     background-color: transparent;
+
+    &--form {
+      display: flex;
+    }
   }
 
   .mobile-menu__logo {
     display: none;
+  }
+
+  .inner-header__logo-image {
+    width: 200px;
+    height: 52px;
+    margin-left: 21px;
+    margin-top: 4px;
   }
 
   .mobile-menu__item-list {
@@ -111,7 +122,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: unset;
-    padding-left: 173px;
+    padding-left: 220px;
     padding-top: 10px;
 
     &::before {
@@ -125,6 +136,11 @@
       background-color: $absolute-white;
       z-index: 2;
     }
+
+    &--form {
+      padding-left: 107px;
+      margin-top: 50px;
+    }
   }
 
   .mobile-menu__item-link {
@@ -133,7 +149,77 @@
     margin-right: 33px;
   }
 
+  .mobile-menu__tel,
+  .mobile-menu__email,
+  .mobile-menu__authorization {
+    &--form {
+      margin-top: 50px;
+    }
+  }
+
+  .mobile-menu__tel {
+    @include round-block(50px, 50px);
+    position: relative;
+    display: block;
+    background-color: $color-mango;
+    text-align: center;
+    padding-left: unset;
+    margin-left: 266px;
+
+    &:hover {
+      background-color: $dark-mango;
+    }
+  }
+
+  .mobile-menu__tel:active .mobile-menu__tel-icon {
+    opacity: 0.3;
+  }
+
+  .mobile-menu__tel-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mobile-menu__email {
+    @include round-block(50px, 50px);
+    position: relative;
+    display: block;
+    background-color: $dark-yellow;
+    padding-left: unset;
+
+    &:hover {
+      background-color: $dark-mango;
+    }
+  }
+
+  .mobile-menu__email-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mobile-menu__email:active .mobile-menu__email-icon {
+    opacity: 0.3;
+  }
+
   .mobile-menu__close {
     display: none;
+  }
+
+  .mobile-menu__authorization {
+    order: 2;
+
+    &--form {
+      @include font-size(20px, 30px);
+      padding: 8px 11px 10px 7px;
+      min-width: 190px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }

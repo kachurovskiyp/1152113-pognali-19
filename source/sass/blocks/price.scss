@@ -11,6 +11,7 @@
   @include font-size(16px, 22px);
   padding-top: 20px;
   margin-bottom: 42px;
+  counter-reset: price-step;
 }
 
 .price__business-price-link {
@@ -40,6 +41,7 @@
 .price__item {
   padding: 21px 45px 0 9px;
   position: relative;
+  counter-increment: price-step;
 
   &::before {
     content: "";
@@ -57,7 +59,7 @@
     @include font-size(16px, 14px);
     @include round-block(34px, 34px);
     padding-top: 9px;
-    content: "1";
+    content: counter(price-step);
     display: block;
     position: absolute;
     top: 13px;
@@ -67,18 +69,25 @@
   }
 
   &:nth-child(2)::after {
-    content: "2";
+    content: counter(price-step);
     background-color: $dark-yellow;
   }
 
   &:nth-child(3)::after {
-    content: "3";
+    content: counter(price-step);
     background-color: $yellow;
   }
 }
 
 .price__number {
   margin: 0;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .price__tagline::after {
+    background: url("../../img/rates@2x.png") no-repeat center center;
+    background-size: 100%;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -181,7 +190,7 @@
       position: absolute;
       top: -21px;
       left: -41px;
-      background: $white url("../../img/business-blue.svg") no-repeat center center;
+      background: $white url("../img/business-blue.svg") no-repeat center center;
       background-size: 27%;
     }
   }
