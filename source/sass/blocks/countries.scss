@@ -6,14 +6,33 @@
   display: flex;
   justify-content: center;
   margin-top: -20px;
+
+  &--catalog {
+    margin: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin-bottom: -11px;
+  }
 }
 
 .countries__item:nth-child(2n) {
   margin: 0 20px;
 }
 
+.countries__item--catalog:nth-child(2n) {
+  margin: 0 0;
+  margin-bottom: 10px;
+}
+
 .countries__item {
   position: relative;
+
+  &--catalog {
+    display: flex;
+    margin-bottom: 9px;
+  }
 }
 
 .countries__item:hover .tooltip {
@@ -23,4 +42,10 @@
 .countries__country-flag {
   width: 35px;
   height: 25px;
+}
+
+.countries__item--catalog .countries__country-flag {
+  width: 26px;
+  height: 18px;
+  margin-right: 11px;
 }

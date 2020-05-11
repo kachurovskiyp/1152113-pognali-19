@@ -3,45 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Погнали</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="catalog-page">
-  <header class="catalog-header inner-page-header">
-    <a class="catalog-header__logo" href="index.html">
-      <img src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сайта 'Погнали'">
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<header class="inner-header">
+  <div class="inner-header__wrap">
+    <a class="inner-header__logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@1x.png 2x">
+        <img src="img/logo-mobile-white@1x.png" class="inner-header__logo-image" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+      </picture>
     </a>
-    <button type="button" class="catalog-header__menu-button" aria-label="Меню"></button>
+    <button type="button" class="menu-button inner-header__menu-button" aria-label="Меню"></button>
+    <a href="#" class="inner-header__authorization"><span class="inner-header__authorization-text">Авторизация</span></a>
+  </div>
 
-    <section class="mobile-menu">
-      <ul class="mobile-menu__item-list">
-        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
-        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
-        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="catalog.html">Попутчики</a></li>
-      </ul>
-      <a href="#" class="button mobile-menu__authorization">Авторизация</a>
-      <a class="mobile-menu__tel" href="tel:+88005558628">8 800 555-86-28</a>
-      <a class="mobile-menu__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--fb mobile-menu__social-item" target="_blank">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--vk mobile-menu__social-item" target="_blank">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--instagram mobile-menu__social-item" target="_blank">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-      </ul>
-    </section>
+  <section class="mobile-menu">
+    <ul class="mobile-menu__item-list">
+      <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
+      <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="catalog.html">Попутчики</a></li>
+    </ul>
+    <a href="#" class="button mobile-menu__authorizatio">Авторизация</a>
+    <a href="tel:+88005558628" class="mobile-menu__tel">
+      <span class="visually-hidden">Позвоните нам</span>
+      <svg class="mobile-menu__tel-icon" width="18" height="18">
+        <use xlink:href="#topmenu-phone"></use>
+      </svg>
+    </a>
+    <a href="#" class="mobile-menu__email">
+      <span class="visually-hidden">Напишите нам</span>
+      <svg class="mobile-menu__email-icon" width="18" height="14">
+        <use xlink:href="#topmenu-mail"></use>
+      </svg>
+    </a>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="#" class="social-list__link social-list__link--fb mobile-menu__social-item" target="_blank">
+          <span class="visually-hidden">Фейсбук</span>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link social-list__link--vk mobile-menu__social-item" target="_blank">
+          <span class="visually-hidden">Вконтакте</span>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link social-list__link--instagram mobile-menu__social-item" target="_blank">
+          <span class="visually-hidden">Инстаграм</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-    <p class="catalog-header__tagline page-title">Попутчики</p>
-  </header>
+  <p class="page-title inner-header__tagline">Попутчики</p>
+</header>
 
   <main>
     <h1 class="visually-hidden">Каталог попутчиков</h1>
@@ -243,17 +264,17 @@
         </fieldset>
 
         <fieldset class="filter__set">
-          <button class="filter__title-button" type="button">Музыка</button>
+          <button class="filter__title-button filter__title-button--opened" type="button">Музыка</button>
           <ul class="filter__list">
             <li class="filter__list-item">
-              <input class="filter__chekbox" type="checkbox" name="rok" id="rok">
+              <input class="filter__chekbox" type="checkbox" name="rok" id="rok" checked>
               <label class="filter__checkbox-label" for="rok">Тяжелый рок</label>
             </li>
-            <li>
+            <li class="filter__list-item">
               <input class="filter__chekbox" type="checkbox" name="rap" id="rap">
               <label class="filter__checkbox-label" for="rap">Русский рэп</label>
             </li>
-            <li>
+            <li class="filter__list-item">
               <input class="filter__chekbox" type="checkbox" name="dance" id="dance">
               <label class="filter__checkbox-label" for="dance">Евроденс</label>
             </li>
@@ -264,38 +285,48 @@
         </fieldset>
 
         <fieldset class="filter__set">
-          <button class="filter__title-button" type="button">Транспорт</button>
-          <ul class="transport-list transport-list--filter">
+          <button class="filter__title-button filter__title-button--opened" type="button">Транспорт</button>
+          <ul class="transport-list">
             <li class="transport-list__item">
-              <input type="checkbox" name="plane" id="plane" class="visually-hidden">
-              <label for="plane" class="transport-list__label transport-list__label--plane-filter transport-list__label--checked"><span class="visually-hidden">Самолет</span></label>
+              <span class="tooltip">Авиаперелет</span>
+              <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
+                <use xlink:href="#plane"></use>
+              </svg>
             </li>
-            <li class="transport-list__item transport-list__item--bus-filter">
-              <input type="checkbox" name="bus" id="bus" class="visually-hidden">
-              <label for="bus" class="transport-list__label transport-list__label--bus-filter transport-list__label--checked"><span class="visually-hidden">Автобус</span></label>
+            <li class="transport-list__item">
+              <span class="tooltip">Автотранспорт</span>
+              <svg class="transport-list__icon" width="17" height="21">
+                <use xlink:href="#bus"></use>
+              </svg>
             </li>
-            <li class="transport-list__item transport-list__item--bicykle-filter">
-              <input type="checkbox" name="bicykle" id="bicykle" class="visually-hidden">
-              <label for="bicykle" class="transport-list__label transport-list__label--bicykle-filter"><span class="visually-hidden">Велосипед</span></label>
+            <li class="transport-list__item">
+              <span class="tooltip">Велосипед</span>
+              <svg class="transport-list__icon" width="24" height="21">
+                <use xlink:href="#bike"></use>
+              </svg>
             </li>
-            <li class="transport-list__item transport-list__item--afoot-filter">
-              <input type="checkbox" name="afoot" id="afoot" class="visually-hidden">
-              <label for="afoot" class="transport-list__label transport-list__label--afoot-filter transport-list__label--checked"><span class="visually-hidden">Пешком</span></label>
+            <li class="transport-list__item">
+              <span class="tooltip">Пешком</span>
+              <svg class="transport-list__icon" width="20" height="21">
+                <use xlink:href="#run"></use>
+              </svg>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="filter__set">
-          <button class="filter__title-button" type="button">Левел</button>
-          <label for="level-min" class="visually-hidden">Уровень от:</label>
-          <input class="filter__level-min" type="text" id="level-min" value="30">
-          <label for="level-max" class="visually-hidden">Уровень до:</label>
-          <input class="filter__level-max" type="text" id="level-max" value="100">
-          <div class="range">
-            <div class="range__skale">
-              <div class="range__min"><p class="visually-hidden">Минимальная граница уровня</p></div>
-              <div class="range__max"><p class="visually-hidden">Максимальная граница уровня</p></div>
-            </div>
+          <button class="filter__title-button filter__title-button--opened" type="button">Левел</button>
+          <div class="filter__level-range-wrap">
+            <label for="level-min" class="visually-hidden">Уровень от:</label>
+            <input class="filter__level-min" type="text" id="level-min" value="30">
+            <label for="level-max" class="visually-hidden">Уровень до:</label>
+            <input class="filter__level-max" type="text" id="level-max" value="100">
+          </div>
+          <div class="filter__range">
+            <div class="filter__range-skale"></div>
+            <div class="filter__range-skale filter__range-skale--inside"></div>
+            <div class="filter__range-min"><p class="visually-hidden">Минимальная граница уровня</p></div>
+            <div class="filter__range-max"><p class="visually-hidden">Максимальная граница уровня</p></div>
           </div>
         </fieldset>
         <button class="filter__submit-button" type="submit">Показать</button>
@@ -305,12 +336,22 @@
     <section class="users-list">
       <h2 class="visually-hidden">Список пользователей</h2>
 
-      <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
-        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Таня Фирсова</h3></a>
-        <button type="button" class="user-card__like user-card__like--liked"></button>
+      <article class="user-card user-card--catalog">
+        <picture>
+          <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+          <img class="user-card__image user-card__image--catalog" src="img/firsova-desktop@1x.jpg" srcset="firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+        </picture>
+        <a href="#" class="user-card__user-link user-card__user-link--catalog">
+          <h3 class="user-card__name user-card__name--catalog">Таня <br class="user-card__name-br user-card__name-br--catalog">  Фирсова</h3>
+        </a>
         <p class="user-card__like-count">1,5 М</p>
-        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
+        <button type="button" class="user-card__like user-card__like--catalog user-card__like--liked">
+          <svg class="user-card__like-icon" width="18" height="15">
+            <use xlink:href="#heart-active"></use>
+          </svg>
+        </button>
+
+        <ul class="user-card__tags-list user-card__tags-list--catalog">
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">ЗОЖ</a></li>
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">ПП</a></li>
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">Фитнес</a></li>
@@ -319,19 +360,56 @@
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">смузи</a></li>
         </ul>
 
-        <p class="user-card__set-separator">хочет посетить:</p>
-        <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="img/sri-lanka.png" width="35" height="25" alt="флаг Шри-ланки">Шри-ланка</li>
-          <li class="countries__item"><img src="img/thailand.png" width="35" height="25" alt="флаг Таиланда">Таиланд</li>
-          <li class="countries__item"><img src="img/seychelles.png" width="35" height="25" alt="флаг Сейшел">Сейшелы</li>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">хочет посетить:</span>
+        </p>
+        <ul class="countries countries--catalog">
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-sri-lanka"></use>
+            </svg>
+            Шри-ланка
+          </li>
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+             <use xlink:href="#flag-thailand"></use>
+            </svg>
+          Таиланд
+          </li>
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-seychelles"></use>
+            </svg>
+            Сейшелы
+          </li>
         </ul>
 
         <p class="user-card__set-separator">транспорт:</p>
         <ul class="transport-list">
-          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
-          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
-          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Авиаперелет</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
+              <use xlink:href="#plane"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Автотранспорт</span>
+            <svg class="transport-list__icon" width="17" height="21">
+              <use xlink:href="#bus"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Велосипед</span>
+            <svg class="transport-list__icon" width="24" height="21">
+              <use xlink:href="#bike"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Пешком</span>
+            <svg class="transport-list__icon" width="20" height="21">
+              <use xlink:href="#run"></use>
+            </svg>
+          </li>
         </ul>
         <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">99</span></p>
         <a href="#" class="button user-card__call-link">Позвать!</a>
@@ -340,7 +418,11 @@
       <article class="user-card catalog-usercard">
         <img class="user-card__image user-card__image--catalog" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
         <a href="#" class="user-card__user-link"><h3 class="user-card__name">Петя Демин</h3></a>
-        <button type="button" class="user-card__like"></button>
+        <button type="button" class="user-card__like user-card__like--catalog">
+          <svg class="user-card__like-icon" width="18" height="15">
+            <use xlink:href="#heart-active"></use>
+          </svg>
+        </button>
         <p class="user-card_like-count">1500</p>
         <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
           <li class="user-card__tag"><a href="#" class="user-card__tag-link">бургер</a></li>

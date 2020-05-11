@@ -61,6 +61,12 @@
   }
 }
 
+.catalog-page .inner-header__tagline {
+  &::after {
+    width: 173px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .inner-header {
     @include round-bottom-corners(60px);

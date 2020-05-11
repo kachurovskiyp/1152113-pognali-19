@@ -6,6 +6,11 @@
   background-color: $absolute-white;
   position: relative;
   border-radius: 10px;
+
+  &--catalog {
+    padding: 14px 19px 1px 18px;
+    margin-bottom: 50px;
+  }
 }
 
 .user-card__image {
@@ -21,6 +26,19 @@
   position: relative;
   display: block;
   text-align: center;
+
+  &--catalog {
+    margin-top: -3px;
+    text-align: left;
+  }
+}
+
+.user-card__name-br {
+  display: none;
+
+  &--catalog {
+    display: inline;
+  }
 }
 
 .user-card__name {
@@ -31,6 +49,12 @@
   margin-bottom: 16px;
   text-align: center;
 
+  &--catalog {
+    margin-top: 0px;
+    padding-left: 7px;
+    text-align: left;
+  }
+
   &::before {
     @include round-block(5px, 5px);
     content: "";
@@ -39,6 +63,12 @@
     top: 18px;
     left: 52px;
     background-color: $light-red;
+  }
+
+  &--catalog::before {
+    top: 12px;
+    left: auto;
+    right: 3px;
   }
 
   &--online::before {
@@ -56,32 +86,82 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &--catalog {
+    width: 100%;
+    justify-content: flex-start;
+    margin: unset;
+  }
 }
 
 .user-card__tag {
   margin-right: 5px;
 }
 
-.user-card__tag-link::before {
-  content: "#";
+.user-card__tag-link{
+  &::before {
+    content: "#";
+  }
 }
 
 .user-card__like {
   @include round-block(31px, 31px);
   float: left;
-  background: url("../img/heart.svg") no-repeat center center $white-three;
-  background-size: 50%;
   border: none;
+  background-color: $white-three;
+  position: relative;
+
+  &--liked {
+    background-color: $white-grey;
+  }
+
+  &--catalog {
+    position: absolute;
+    top: 56px;
+    left: 67px;
+  }
 }
 
-.user-card__like--liked {
-  background: url("../img/heart-active.svg") no-repeat center center $white-grey;
-  background-size: 50%;
+.user-card__like-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: none;
+  stroke: $dark-blue;
+  opacity: 0.3;
+}
+
+.user-card__like--liked .user-card__like-icon {
+  fill: $tomato;
+  stroke: none;
+  opacity: 1;
+}
+
+.user-card__like-count {
+  @include font-bold($dark-blue-two);
+  @include font-size(14px, 21px);
+  display: block;
+  margin: -8px 0 16px 85px;
 }
 
 .user-card__set-separator {
   @include font($grey);
   @include font-size(15px, 18px);
+  padding-right: 9px;
+  padding-left: 9px;
+  background-color: $absolute-white;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid $grey;
+}
+
+.user-card__set-separator-text {
+  position: absolute;
+  top: -11px;
+  left: 11px;
+  padding: 0 5px;
+  background-color: $absolute-white;
 }
 
 .user-card__tag-link--catalog {

@@ -1,6 +1,8 @@
 .filter {
-  margin: 20px;
-  padding: 25px;
+  margin: 23px;
+  margin-top: 77px;
+  padding: 27px;
+  padding-top: 4px;
   background-color: $yellow;
   border-radius: 15px;
 }
@@ -8,10 +10,12 @@
 .filter__title {
   @include font-bold($dark-blue-three);
   @include font-size(22.5px, 22.5px);
+  margin-bottom: 23px;
 }
 
 .filter__set {
   width: 100%;
+  padding: 0;
   border: none;
   border-top: 1px solid $yellow-two;
   border-bottom: 1px solid $yellow-two;
@@ -23,24 +27,164 @@
   background-color: transparent;
   border: none;
   text-transform: uppercase;
+  text-align: left;
+  height: 40px;
+  width: 100%;
+  padding-left: 0px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 4px;
+    background: url("../img/dropdown.svg") no-repeat center center;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+  }
+
+  &--opened {
+    &::after {
+      transform:
+        rotate(180deg)
+        translateY(50%);
+    }
+  }
 }
 
 .filter__list {
   @include clear-list;
+  margin-bottom: 18px;
+}
+
+.filter__list input {
+  display: none;
 }
 
 .filter__checkbox-label {
   @include font($grey);
   @include font-size(15px, 15px);
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding-left: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background-color: $absolute-white;
+    opacity: 0.7;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 9px;
+    height: 9px;
+    background: url("../img/tick.svg") no-repeat center center;
+  }
+}
+
+.filter__chekbox:checked + .filter__checkbox-label::after {
+  display: block;
+}
+
+.filter__level-range-wrap {
+  display: flex;
+  position: relative;
+  margin-left: -2px;
+  padding-top: 2px;
+
+  &::before {
+    content: "";
+    display: block;
+    z-index: 3;
+    width: 16px;
+    height: 1px;
+    background-color: $steel-grey;
+    position: absolute;
+    right: 46%;
+    top: 17px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    z-index: 2;
+    width: 10px;
+    height: 11px;
+    background-color: $absolute-white;
+    position: absolute;
+    right: 48%;
+    top: 12px;
+  }
 }
 
 .filter__level-min,
 .filter__level-max {
   border: 1px solid $light-grey;
-  border-radius: 5px;
   width: 111px;
   height: 35px;
   text-align: center;
+}
+
+.filter__level-min {
+  @include round-leftside-corners(5px);
+}
+
+.filter__level-max {
+  @include round-rightside-corners(5px);
+  margin-left: -1px;
+}
+
+.filter__range {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  padding-top: 26px;
+  position: relative;
+}
+
+.filter__range-skale {
+  width: 100%;
+  height: 2px;
+  background-color: $dark-blue-three;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-1px);
+  opacity: 0.2;
+
+  &--inside {
+    width: 67%;
+    background-color: $dark-blue-three;
+    left: 68px;
+    opacity: 1;
+  }
+}
+
+.filter__range-min,
+.filter__range-max {
+  @include round-block(10px, 10px);
+  position: absolute;
+  top: 50%;
+  left: 65px;
+  transform: translateY(-50%);
+  background-color: $dark-blue-three;
+  opacity: 1;
+}
+
+.filter__range-max {
+  left: auto;
+  right: 1px;
 }
 
 .filter__submit-button {
@@ -53,4 +197,5 @@
   background-color: $absolute-white;
   border: none;
   border-radius: 20px;
+  margin-left: -6px;
 }
