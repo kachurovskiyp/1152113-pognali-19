@@ -5,6 +5,25 @@
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+
+  &--catalog {
+    margin-top: 14px;
+    margin-left: -2px;
+    position: relative;
+  }
+}
+
+.users-list__show-more-icon {
+  margin-right: 7px;
+  margin-top: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.users-list__nav-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 19px;
 }
 
 .users-list__prew,
@@ -13,9 +32,19 @@
   width: 135px;
   height: 50px;
   background-color: $absolute-white;
+  position: relative;
+}
+
+.users-list__prew-icon,
+.users-list__next-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .users-list__prew {
+  border-right: 1px solid $light-grey;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }

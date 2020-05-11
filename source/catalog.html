@@ -66,6 +66,15 @@
 
   <main>
     <h1 class="visually-hidden">Каталог попутчиков</h1>
+
+    <div class="filter-country__head">
+      <svg class="filter-country__icon" width="15" height="10">
+        <use xlink:href="#filter"></use>
+      </svg>
+      <h2 class="filter-country__title">Фильтрация по странам</h2>
+      <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
+    </div>
+
     <section class="filter-country">
       <h2 class="filter-country__title">Фильтрация по странам</h2>
       <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
@@ -372,7 +381,7 @@
           </li>
           <li class="countries__item countries__item--catalog">
             <svg class="countries__country-flag" width="35" height="25">
-             <use xlink:href="#flag-thailand"></use>
+              <use xlink:href="#flag-thailand"></use>
             </svg>
           Таиланд
           </li>
@@ -384,8 +393,10 @@
           </li>
         </ul>
 
-        <p class="user-card__set-separator">транспорт:</p>
-        <ul class="transport-list">
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">транспорт:</span>
+        </p>
+        <ul class="transport-list transport-list--user-form">
           <li class="transport-list__item transport-list__item--catalog">
             <span class="tooltip">Авиаперелет</span>
             <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
@@ -411,50 +422,116 @@
             </svg>
           </li>
         </ul>
-        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">99</span></p>
-        <a href="#" class="button user-card__call-link">Позвать!</a>
+
+        <div class="level level--catalog">
+              <svg class="level__scale-image level__scale-image--catalog level__scale-image--99" viewBox="0 0 100 100">
+                <circle cx="35" cy="35" r="30" fill="none"></circle>
+                <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+              </svg>
+              <span class="level__number level__number--catalog">99</span> level
+            </div>
+
+        <a href="#" class="button user-card__call-link user-card__call-link--catalog">Позвать!</a>
       </article>
 
-      <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
-        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Петя Демин</h3></a>
+      <article class="user-card user-card--catalog">
+        <picture>
+          <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+          <img class="user-card__image user-card__image--catalog" src="img/demin-desktop@1x.jpg" srcset="demin-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+        </picture>
+        <a href="#" class="user-card__user-link user-card__user-link--catalog">
+          <h3 class="user-card__name user-card__name--catalog">Петя <br class="user-card__name-br user-card__name-br--catalog">  Демин</h3>
+        </a>
+        <p class="user-card__like-count">1500</p>
         <button type="button" class="user-card__like user-card__like--catalog">
           <svg class="user-card__like-icon" width="18" height="15">
             <use xlink:href="#heart-active"></use>
           </svg>
         </button>
-        <p class="user-card_like-count">1500</p>
-        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">бургер</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">бар</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">футбол</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">концерт</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">крафт</a></li>
-        </ul>
-        <p class="user-card__set-separator">хочет посетить:</p>
-        <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="img/belgium.png" width="35" height="25" alt="флаг Бельгии">Бельгия</li>
-          <li class="countries__item"><img src="img/czech.png" width="35" height="25" alt="флаг Чехии">Чехия</li>
+
+        <ul class="user-card__tags-list user-card__tags-list--catalog">
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">бургер</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">бар</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">футбол</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">концерт</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">крафт</a></li>
         </ul>
 
-        <p class="user-card__set-separator">транспорт:</p>
-        <ul class="transport-list">
-          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
-          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
-          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">хочет посетить:</span>
+        </p>
+        <ul class="countries countries--catalog">
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-belgium"></use>
+            </svg>
+            Бельгия
+          </li>
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-czech"></use>
+            </svg>
+          Чехия
+          </li>
         </ul>
 
-        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">80</span></p>
-        <a href="#" class="button user-card__call-link">Позвать!</a>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">транспорт:</span>
+        </p>
+        <ul class="transport-list transport-list--user-form">
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Авиаперелет</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
+              <use xlink:href="#plane"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Автотранспорт</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="17" height="21">
+              <use xlink:href="#bus"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Велосипед</span>
+            <svg class="transport-list__icon" width="24" height="21">
+              <use xlink:href="#bike"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Пешком</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="20" height="21">
+              <use xlink:href="#run"></use>
+            </svg>
+          </li>
+        </ul>
+
+        <div class="level level--catalog">
+              <svg class="level__scale-image level__scale-image--catalog level__scale-image--80" viewBox="0 0 100 100">
+                <circle cx="35" cy="35" r="30" fill="none"></circle>
+                <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+              </svg>
+              <span class="level__number level__number--catalog">80</span> level
+            </div>
+
+        <a href="#" class="button user-card__call-link user-card__call-link--catalog">Позвать!</a>
       </article>
 
-      <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
-        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Марк Смолов</h3></a>
-        <button type="button" class="user-card__like"></button>
-        <p class="user-card_like-count">170</p>
-        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
+      <article class="user-card user-card--catalog">
+        <picture>
+          <source type="image/webp" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+          <img class="user-card__image user-card__image--catalog" src="img/smolov-desktop@1x.jpg" srcset="smolov-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+        </picture>
+        <a href="#" class="user-card__user-link user-card__user-link--catalog">
+          <h3 class="user-card__name user-card__name--catalog">Марк <br class="user-card__name-br user-card__name-br--catalog">  Смолов</h3>
+        </a>
+        <p class="user-card__like-count">170</p>
+        <button type="button" class="user-card__like user-card__like--catalog">
+          <svg class="user-card__like-icon" width="18" height="15">
+            <use xlink:href="#heart-active"></use>
+          </svg>
+        </button>
+
+        <ul class="user-card__tags-list user-card__tags-list--catalog">
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">рэп</a></li>
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">тату</a></li>
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">хайпбист</a></li>
@@ -462,82 +539,215 @@
           <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">суприм</a></li>
         </ul>
 
-        <p class="user-card__set-separator">хочет посетить:</p>
-        <ul class="countries catalog-countries">
-          <li class="countries__item"><img src="img/usa.png" width="35" height="25" alt="флаг США">США</li>
-          <li class="countries__item"><img src="img/australia.png" width="35" height="25" alt="флаг Австралии">Австралия</li>
-          <li class="countries__item"><img src="img/dominica.png" width="35" height="25" alt="флаг Доминика"> Доминика</li>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">хочет посетить:</span>
+        </p>
+        <ul class="countries countries--catalog">
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-usa"></use>
+            </svg>
+            США
+          </li>
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-australia"></use>
+            </svg>
+            Австралия
+          </li>
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-dominica"></use>
+            </svg>
+            Доминика
+          </li>
         </ul>
 
-        <p class="user-card__set-separator">транспорт:</p>
-        <ul class="transport-list">
-          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
-          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
-          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">транспорт:</span>
+        </p>
+        <ul class="transport-list transport-list--user-form">
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Авиаперелет</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
+              <use xlink:href="#plane"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Автотранспорт</span>
+            <svg class="transport-list__icon" width="17" height="21">
+              <use xlink:href="#bus"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Велосипед</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="24" height="21">
+              <use xlink:href="#bike"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Пешком</span>
+            <svg class="transport-list__icon" width="20" height="21">
+              <use xlink:href="#run"></use>
+            </svg>
+          </li>
         </ul>
-        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">25</span></p>
-        <a href="#" class="button user-card__call-link">Позвать!</a>
+
+        <div class="level level--catalog">
+              <svg class="level__scale-image level__scale-image--catalog level__scale-image--25" viewBox="0 0 100 100">
+                <circle cx="35" cy="35" r="30" fill="none"></circle>
+                <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+              </svg>
+              <span class="level__number level__number--catalog">25</span> level
+            </div>
+
+        <a href="#" class="button user-card__call-link user-card__call-link--catalog">Позвать!</a>
       </article>
 
-      <article class="user-card catalog-usercard">
-        <img class="user-card__image user-card__image--catalog" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
-        <a href="#" class="user-card__user-link"><h3 class="user-card__name">Лариса Роговая</h3></a>
-        <button type="button" class="user-card__like"></button>
-        <p class="user-card_like-count">23</p>
-        <ul class="user-card__tags-list catalog-usercard__tag-list"> <!-- символ # добавлю псевдоэлеметом -->
-          <li class="user-card__tag"><a href="#" class="user-card__tag-link">образование</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">карьера</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">учеба</a></li>
-            <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">линкендин</a></li>
+      <article class="user-card user-card--catalog">
+        <picture>
+          <source type="image/webp" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+          <img class="user-card__image user-card__image--catalog" src="img/rogovaya-desktop@1x.jpg" srcset="rogovaya-desktop@2x.jpg 2x" width="270" height="270" alt="Фото пользователя">
+        </picture>
+        <a href="#" class="user-card__user-link user-card__user-link--catalog">
+          <h3 class="user-card__name user-card__name--catalog user-card__name--online">Лариса <br class="user-card__name-br user-card__name-br--catalog">  Роговая</h3>
+        </a>
+        <p class="user-card__like-count">23</p>
+        <button type="button" class="user-card__like user-card__like--catalog">
+          <svg class="user-card__like-icon" width="18" height="15">
+            <use xlink:href="#heart-active"></use>
+          </svg>
+        </button>
+
+        <ul class="user-card__tags-list user-card__tags-list--catalog">
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">образование</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">карьера</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">учеба</a></li>
+          <li class="user-card__tag"><a href="#" class="user-card__tag-link user-card__tag-link--catalog">линкедин</a></li>
         </ul>
 
-        <p class="user-card__set-separator">хочет посетить:</p>
-        <ul class="countries catalog-countries">
-          <li class="countries__item">
-            <img src="img/uk.png" width="35" height="25" alt="флаг Великобритании">Великобритания</li>
-          <li class="countries__item"><img src="img/germany.png" width="35" height="25" alt="флаг Германии">Германия</li>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">хочет посетить:</span>
+        </p>
+        <ul class="countries countries--catalog">
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-united-kingdom"></use>
+            </svg>
+            Великобритания
+          </li>
+          <li class="countries__item countries__item--catalog">
+            <svg class="countries__country-flag" width="35" height="25">
+              <use xlink:href="#flag-germany"></use>
+            </svg>
+            Германия
+          </li>
         </ul>
 
-        <p class="user-card__set-separator">транспорт:</p>
-        <ul class="transport-list">
-          <li class="transport-list__item transport-list__item--plane"><span class="visually-hidden">Самолет</span></li>
-          <li class="transport-list__item transport-list__item--bus"><span class="visually-hidden">Автобус</span></li>
-          <li class="transport-list__item transport-list__item--bicykle"><span class="visually-hidden">Велосипед</span></li>
-          <li class="transport-list__item transport-list__item--afoot"><span class="visually-hidden">Пешком</span></li>
+        <p class="user-card__set-separator">
+          <span class="user-card__set-separator-text">транспорт:</span>
+        </p>
+        <ul class="transport-list transport-list--user-form">
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Авиаперелет</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
+              <use xlink:href="#plane"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Автотранспорт</span>
+            <svg class="transport-list__icon transport-list__icon--active" width="17" height="21">
+              <use xlink:href="#bus"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Велосипед</span>
+            <svg class="transport-list__icon" width="24" height="21">
+              <use xlink:href="#bike"></use>
+            </svg>
+          </li>
+          <li class="transport-list__item transport-list__item--catalog">
+            <span class="tooltip">Пешком</span>
+            <svg class="transport-list__icon" width="20" height="21">
+              <use xlink:href="#run"></use>
+            </svg>
+          </li>
         </ul>
 
-        <p class="user-card__level user-card__level--catalog">левел <span class="user-card__level-number user-card__level-number--catalog">50</span></p>
-        <a href="#" class="button user-card__call-link">Позвать!</a>
+        <div class="level level--catalog">
+              <svg class="level__scale-image level__scale-image--catalog level__scale-image--50" viewBox="0 0 100 100">
+                <circle cx="35" cy="35" r="30" fill="none"></circle>
+                <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+              </svg>
+              <span class="level__number level__number--catalog">50</span> level
+            </div>
+
+        <a href="#" class="button user-card__call-link user-card__call-link--catalog">Позвать!</a>
       </article>
-      <a href="#" class="users-list__show-more">Показать еще</a>
-      <a href="#" class="users-list__prew" aria-label="Предидущая страница">Пред</a>
-      <a href="#" class="users-list__next" aria-label="Следующая страница">След</a>
+
+      <a href="#" class="users-list__show-more users-list__show-more--catalog">
+        <svg class="users-list__show-more-icon" width="20" height="20">
+          <use xlink:href="#qty-plus"></use>
+        </svg>
+        Показать еще
+      </a>
+      <div class="users-list__nav-wrap">
+        <a href="#" class="users-list__prew" aria-label="Предидущая страница">
+          <svg class="users-list__prew-icon" width="12" height="14">
+            <use xlink:href="#triangle-arrow-left"></use>
+          </svg>
+        </a>
+        <a href="#" class="users-list__next" aria-label="Следующая страница">
+          <svg class="users-list__next-icon" width="12" height="14">
+            <use xlink:href="#triangle-arrow-right"></use>
+          </svg>
+        </a>
+      </div>
     </section>
   </main>
 
-    <footer class="footer footer--inner-page">
-      <a href="index.html" aria-label="ссылка на главную страницу сайта">
-        <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сайта">
+  <footer class="footer inner-page-footer">
+    <a href="index.html" class="footer__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@1x.png 2x">
+        <img src="img/logo-mobile-blue@1x.png" class="footer__logo-image" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+      </picture>
+    </a>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="#" class="social-list__link" target="_blank">
+          <svg class="social-list__social-icon" width="11" height="21">
+            <use xlink:href="#facebook"></use>
+          </svg>
+          <span class="visually-hidden">Фейсбук</span>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link" target="_blank">
+          <svg class="social-list__social-icon" width="30" height="16">
+            <use xlink:href="#vk"></use>
+          </svg>
+          <span class="visually-hidden">Вконтакте</span>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link" target="_blank">
+          <svg class="social-list__social-icon" width="23" height="23">
+            <use xlink:href="#instagram"></use>
+          </svg>
+          <span class="visually-hidden">Инстаграм</span>
+        </a>
+      </li>
+    </ul>
+    <p class="footer__copyright">Разработано
+      <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+        <span class="visually-hidden">HTML Academy</span>
+        <svg class="footer__copyright-logo" width="27" height="34">
+          <use xlink:href="#htmlacademy"></use>
+        </svg>
       </a>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--fb" target="_blank">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--vk" target="_blank">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="#" class="social-list__link social-list__link--instagram" target="_blank">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-      </ul>
-      <p class="footer__copyright">Разработано <a href="https://up.htmlacademy.ru/adaptive/19" target="_blank"><span class="visually-hidden">HTML Academy</span></a></p>
-    </footer>
+    </p>
+  </footer>
 </body>
 </html>

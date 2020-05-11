@@ -64,6 +64,10 @@
   margin-top: 3px;
   margin-left: -8px;
   margin-bottom: 18px;
+
+  &--user-form {
+    margin-left: 0;
+  }
 }
 
 .catalog-page .transport-list__icon {
@@ -72,12 +76,9 @@
 }
 
 .catalog-page .transport-list__item {
-  margin-right: -5px;
-}
-
-.catalog-page .transport-list__item {
   @include round-block(33px, 33px);
   background-color: $absolute-white;
+  margin-right: -5px;
 }
 
 @media (min-width: $tablet-width) {

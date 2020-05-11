@@ -21,6 +21,29 @@
     padding-top: 23px;
     padding-left: 33px;
   }
+
+  &--catalog {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 13px;
+    bottom: 60px;
+    z-index: 2;
+    background-color: transparent;
+    font-size: 0;
+
+    &::before {
+      @include font($grey);
+      @include font-size(15px, 18px);
+      content: "левел:";
+      width: 45px;
+      height: 9px;
+      position: absolute;
+      top: -29px;
+      left: 8px;
+      background-color: $absolute-white;
+    }
+  }
 }
 
 .level__number {
@@ -29,6 +52,11 @@
   display: block;
   position: relative;
   margin-bottom: 5px;
+
+  &--catalog {
+    @include font-size(24px, 18px);
+    color: $dark-blue-three;
+  }
 
   &::after {
     content: "";
@@ -61,6 +89,14 @@
   width: 60px;
   height: 60px;
 
+  &--25 {
+    stroke-dasharray: 50, 150;
+  }
+
+  &--50 {
+    stroke-dasharray: 87, 150;
+  }
+
   &--99 {
     stroke-dasharray: 170, 170;
   }
@@ -74,6 +110,13 @@
     left: 9px;
     width: 100px;
     height: 100px;
+  }
+
+  &--catalog {
+    top: -11px;
+    left: -1px;
+    width: 45px;
+    height: 44px;
   }
 }
 
