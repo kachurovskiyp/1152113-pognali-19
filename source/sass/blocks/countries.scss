@@ -49,3 +49,26 @@
   height: 18px;
   margin-right: 11px;
 }
+
+@media (min-width: $tablet-width) {
+  .countries {
+    &--catalog {
+      flex-direction: row;
+    }
+  }
+
+  .countries__item--catalog {
+    @include font-size(20px, 30px);
+    margin-right: 19px;
+  }
+
+  .countries__item--catalog:nth-child(2n) {
+    margin-right: 19px;
+  }
+
+  .countries__item--catalog .countries__country-flag {
+    width: 51px;
+    height: 25px;
+    margin-right: 3px;
+  }
+}

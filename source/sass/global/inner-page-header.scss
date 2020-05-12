@@ -117,22 +117,21 @@
     }
   }
 
-}
+  .inner-header__return {
+    @include font-bold($absolute-white);
+    @include font-size(20px, 24px);
+    text-transform: uppercase;
+    position: absolute;
+    right: 75px;
+    bottom: 84px;
+    z-index: 2;
+    display: block;
+  }
 
-.inner-header__return {
-  @include font-bold($absolute-white);
-  @include font-size(20px, 24px);
-  text-transform: uppercase;
-  position: absolute;
-  right: 75px;
-  bottom: 84px;
-  z-index: 2;
-  display: block;
-}
-
-.inner-header__return-icon {
-  fill: currentColor;
-  margin-left: 23px;
+  .inner-header__return-icon {
+    fill: currentColor;
+    margin-left: 23px;
+  }
 }
 
 @media (min-width: $desktop-width) {

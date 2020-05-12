@@ -130,6 +130,27 @@
       top: auto;
       left: auto;
     }
+
+    &--catalog {
+      @include font-bold($greyish-brown);
+      @include font-size(14px, 14px);
+      top: 175px;
+      left: auto;
+      right: 26px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .level__scale-image {
+    &--catalog {
+      width: 60px;
+      height: 60px;
+      top: -9px;
+      left: -5px;
+    }
   }
 }
 

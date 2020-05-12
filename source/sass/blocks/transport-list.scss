@@ -85,14 +85,30 @@
   .transport-list {
     margin-top: 5px;
     margin-bottom: 5px;
+
+    &--user-form {
+      flex-direction: column;
+      position: absolute;
+      top: 26px;
+      right: 40px;
+      margin-left: 0;
+    }
   }
 
   .catalog-page .transport-list {
     margin-left: -15px;
+
+    &--user-form {
+      margin-top: 10px;
+    }
   }
 
   .catalog-page .transport-list__item {
     @include round-block(43px, 43px);
+
+    &--catalog {
+      height: 31px;
+    }
   }
 
   .catalog-page .transport-list__icon {
@@ -105,5 +121,4 @@
       @include round-block(43px, 43px);
     }
   }
-
 }
