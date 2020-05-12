@@ -87,9 +87,23 @@
     margin-bottom: 5px;
   }
 
+  .catalog-page .transport-list {
+    margin-left: -15px;
+  }
+
+  .catalog-page .transport-list__item {
+    @include round-block(43px, 43px);
+  }
+
+  .catalog-page .transport-list__icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .transport-list__item {
     &--form {
       @include round-block(43px, 43px);
     }
   }
+
 }

@@ -62,16 +62,33 @@
   </section>
 
   <p class="page-title inner-header__tagline">Попутчики</p>
+  <a href="#" class="inner-header__return">
+    На главную
+    <svg class="inner-header__return-icon" width="32" height="16">
+      <use xlink:href="#return"></use>
+    </svg>
+  </a>
 </header>
 
   <main>
     <h1 class="visually-hidden">Каталог попутчиков</h1>
 
-    <div class="filter-country__head">
+    <div class="filter-country__head filter-country__head--mobile">
       <svg class="filter-country__icon" width="15" height="10">
         <use xlink:href="#filter"></use>
       </svg>
       <h2 class="filter-country__title">Фильтрация по странам</h2>
+      <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
+    </div>
+
+    <div class="filter-country__head filter-country__head--tablet">
+      <ul class="filter-country__region-list">
+        <li class="filter-country__region-item filter-country__region-item--active">Европа</li>
+        <li class="filter-country__region-item">Азия</li>
+        <li class="filter-country__region-item">Америка</li>
+        <li class="filter-country__region-item">Острова</li>
+      </ul>
+      <a href="#" class="filter-country__region-all">Показать все</a>
       <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
     </div>
 
@@ -268,13 +285,28 @@
     <section class="filter">
       <h2 class="filter__title">Подберите идеального попутчика</h2>
       <form class="filter__form" action="echo/htmlacademy.ru">
-        <fieldset class="filter__set">
-          <button class="filter__title-button" type="button">Хобби</button>
-        </fieldset>
 
-        <fieldset class="filter__set">
-          <button class="filter__title-button filter__title-button--opened" type="button">Музыка</button>
+        <div class="filter__set">
+          <button class="filter__title-button" type="button">Хобби</button>
           <ul class="filter__list">
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="gym" id="gym" checked>
+              <label class="filter__checkbox-label" for="gym">Спортзал</label>
+            </li>
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="hookah" id="hookah">
+              <label class="filter__checkbox-label" for="hookah">Кальян</label>
+            </li>
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="sofa" id="sofa">
+              <label class="filter__checkbox-label" for="sofa">Диван</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter__set">
+          <button class="filter__title-button filter__title-button--opened" type="button">Музыка</button>
+          <ul class="filter__list filter__list--opened">
             <li class="filter__list-item">
               <input class="filter__chekbox" type="checkbox" name="rok" id="rok" checked>
               <label class="filter__checkbox-label" for="rok">Тяжелый рок</label>
@@ -288,12 +320,27 @@
               <label class="filter__checkbox-label" for="dance">Евроденс</label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter__set">
-          <button class="filter__title-button" type="button">Еда</button>
-        </fieldset>
+        </div>
 
-        <fieldset class="filter__set">
+        <div class="filter__set">
+          <button class="filter__title-button" type="button">Еда</button>
+          <ul class="filter__list">
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="meat" id="meat" checked>
+              <label class="filter__checkbox-label" for="meat">Мясоед</label>
+            </li>
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="pp" id="pp">
+              <label class="filter__checkbox-label" for="pp">Сидит на ПП</label>
+            </li>
+            <li class="filter__list-item">
+              <input class="filter__chekbox" type="checkbox" name="vegan" id="vegan">
+              <label class="filter__checkbox-label" for="vegan">Веган-сыроед</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter__set filter__set--transport">
           <button class="filter__title-button filter__title-button--opened" type="button">Транспорт</button>
           <ul class="transport-list">
             <li class="transport-list__item">
@@ -321,9 +368,9 @@
               </svg>
             </li>
           </ul>
-        </fieldset>
+        </div>
 
-        <fieldset class="filter__set">
+        <div class="filter__set filter__set--range">
           <button class="filter__title-button filter__title-button--opened" type="button">Левел</button>
           <div class="filter__level-range-wrap">
             <label for="level-min" class="visually-hidden">Уровень от:</label>
@@ -337,7 +384,7 @@
             <div class="filter__range-min"><p class="visually-hidden">Минимальная граница уровня</p></div>
             <div class="filter__range-max"><p class="visually-hidden">Максимальная граница уровня</p></div>
           </div>
-        </fieldset>
+        </div>
         <button class="filter__submit-button" type="submit">Показать</button>
       </form>
     </section>

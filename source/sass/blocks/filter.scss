@@ -1,6 +1,8 @@
 .filter {
-  margin: 23px;
+  max-width: 270px;
+  margin: 0 auto;
   margin-top: 77px;
+  margin-bottom: 23px;
   padding: 27px;
   padding-top: 4px;
   background-color: $yellow;
@@ -56,6 +58,11 @@
 .filter__list {
   @include clear-list;
   margin-bottom: 18px;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .filter__list input {
@@ -198,4 +205,93 @@
   border: none;
   border-radius: 20px;
   margin-left: -6px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter {
+    max-width: 750px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .filter__title {
+    @include font-size(30px, 30px);
+    padding-left: 6px;
+    margin-bottom: 65px;
+  }
+
+  .filter__form {
+    padding-left: 7px;
+  }
+
+  .filter__set {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    border: none;
+
+    &--transport {
+      align-items: flex-start;
+    }
+
+    &--range {
+      justify-content: space-between;
+      margin-top: -15px;
+      margin-bottom: 85px;
+    }
+  }
+
+  .filter__title-button {
+    @include font-size(20px, 30px);
+    width: 130px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .filter__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .filter__checkbox-label {
+    @include font-size(20px, 20px);
+    padding-left: 33px;
+    min-width: 165px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .filter__level-range-wrap {
+    order: 3;
+  }
+
+  .filter__range {
+    order: 2;
+  }
+
+  .filter__level-min,
+  .filter__level-max {
+    width: 75px;
+    height: 46px;
+  }
+
+  .filter__submit-button {
+    @include font-size(20px, 30px);
+    width: 100%;
+    margin-bottom: 14px;
+  }
 }

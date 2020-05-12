@@ -1,10 +1,16 @@
 .filter-country__head {
+  display: none;
+  max-width: 350px;
   height: 22px;
-  display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 2px 26px;
+  margin: 0 auto;
   margin-bottom: -21px;
+
+  &--mobile {
+    display: flex;
+  }
 }
 
 .filter-country {
@@ -37,4 +43,47 @@
   height: 40px;
   background-color: $white-two;
   border-radius: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-country__head {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      @include font-bold($dark-blue);
+      @include font-size(20px, 24px);
+      text-transform: uppercase;
+      display: flex;
+      min-width: 688px;
+      padding-top: 57px;
+      margin-bottom: 128px;
+    }
+  }
+
+  .filter-country__region-list {
+    @include clear-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 5px;
+    margin-right: 45px;
+  }
+
+  .filter-country__region-item {
+    opacity: 0.3;
+    margin-right: 28px;
+
+    &--active {
+
+    }
+  }
+
+  .filter-country__button {
+    font-size: 48px;
+    margin-right: 6px;
+    align-self: center;
+  }
 }

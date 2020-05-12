@@ -67,6 +67,10 @@
   }
 }
 
+.inner-header__return {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .inner-header {
     @include round-bottom-corners(60px);
@@ -106,6 +110,29 @@
       left: 76px;
     }
   }
+
+  .catalog-page .inner-header__tagline {
+    &::after {
+      width: 285px;
+    }
+  }
+
+}
+
+.inner-header__return {
+  @include font-bold($absolute-white);
+  @include font-size(20px, 24px);
+  text-transform: uppercase;
+  position: absolute;
+  right: 75px;
+  bottom: 84px;
+  z-index: 2;
+  display: block;
+}
+
+.inner-header__return-icon {
+  fill: currentColor;
+  margin-left: 23px;
 }
 
 @media (min-width: $desktop-width) {
