@@ -122,3 +122,19 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .transport-list {
+
+    &--user-form {
+      flex-direction: row;
+      top: 191px;
+      right: 146px;
+    }
+  }
+
+  .catalog-page .transport-list__item--catalog {
+    margin: 0;
+    width: 34px;
+  }
+}

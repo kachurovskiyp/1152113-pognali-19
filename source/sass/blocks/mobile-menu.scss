@@ -103,6 +103,11 @@
     &--form {
       display: flex;
     }
+
+    &--catalog {
+      display: flex;
+      padding-top: 49px;
+    }
   }
 
   .mobile-menu__logo {
@@ -141,6 +146,10 @@
       padding-left: 107px;
       margin-top: 50px;
     }
+
+    &--catalog {
+      padding-left: 107px;
+    }
   }
 
   .mobile-menu__item-link {
@@ -154,6 +163,13 @@
   .mobile-menu__authorization {
     &--form {
       margin-top: 50px;
+    }
+  }
+
+  .mobile-menu__authorization {
+    &--catalog {
+      @include font-size(20px, 30px);
+      min-width: 189px;
     }
   }
 

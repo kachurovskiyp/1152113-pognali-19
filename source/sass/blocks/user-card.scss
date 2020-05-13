@@ -337,6 +337,15 @@
   .user-card {
     width: 285px;
     margin-right: 59px;
+
+    &--catalog {
+      width: auto;
+      min-width: unset;
+      max-width: 950px;
+      margin: unset;
+      margin-left: 60px;
+      padding: unset;
+    }
   }
 
   .user-card:last-child {
@@ -346,5 +355,56 @@
   .user-card__image {
     width: 285px;
     height: 285px;
+
+    &--catalog {
+      margin-left: 0;
+      border-radius: unset;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+  }
+
+  .user-card__name {
+    &--catalog {
+      margin-top: 45px;
+      padding-left: 50px;
+    }
+  }
+
+  .user-card__name--catalog::before {
+    right: auto;
+    left: 26px;
+  }
+
+  .user-card__tags-list {
+    &--catalog {
+      width: 35%;
+      padding-left: 60px;
+      padding-top: 0px;
+      padding-bottom: 141px;
+      margin-bottom: 18px;
+    }
+  }
+
+  .user-card__call-link--catalog {
+    top: 190px;
+    left: 340px;
+    padding: 10px 32px;
+  }
+
+  .user-card__like--catalog {
+    top: 192px;
+    left: 489px;
+    right: auto;
+  }
+
+  .user-card__like-count {
+    top: 208px;
+    right: auto;
+    left: 461px;
+  }
+
+  .user-card__set-separator {
+    display: none;
   }
 }

@@ -296,3 +296,12 @@
     margin-bottom: 14px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .filter {
+    max-width: 285px;
+    margin: unset;
+    margin-right: 60px;
+    float: right;
+  }
+}

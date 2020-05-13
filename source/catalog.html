@@ -11,7 +11,7 @@
   <include src="build/img/sprite.svg"></include>
 </div>
 <header class="inner-header">
-  <div class="inner-header__wrap">
+  <div class="inner-header__wrap inner-header__wrap--catalog">
     <a class="inner-header__logo" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
@@ -23,13 +23,13 @@
     <a href="#" class="inner-header__authorization"><span class="inner-header__authorization-text">Авторизация</span></a>
   </div>
 
-  <section class="mobile-menu">
-    <ul class="mobile-menu__item-list">
+  <section class="mobile-menu mobile-menu--catalog">
+    <ul class="mobile-menu__item-list mobile-menu__item-list--catalog">
       <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
       <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
       <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="catalog.html">Попутчики</a></li>
     </ul>
-    <a href="#" class="button mobile-menu__authorizatio">Авторизация</a>
+    <a href="#" class="button mobile-menu__authorization mobile-menu__authorization--catalog">Авторизация</a>
     <a href="tel:+88005558628" class="mobile-menu__tel">
       <span class="visually-hidden">Позвоните нам</span>
       <svg class="mobile-menu__tel-icon" width="18" height="18">
@@ -61,10 +61,10 @@
     </ul>
   </section>
 
-  <p class="page-title inner-header__tagline">Попутчики</p>
+  <p class="page-title inner-header__tagline inner-header__tagline--catalog">Попутчики</p>
   <a href="#" class="inner-header__return">
     На главную
-    <svg class="inner-header__return-icon" width="32" height="16">
+    <svg class="inner-header__return-icon" width="32" height="16.1">
       <use xlink:href="#return"></use>
     </svg>
   </a>
@@ -73,15 +73,12 @@
   <main>
     <h1 class="visually-hidden">Каталог попутчиков</h1>
 
-    <div class="filter-country__head filter-country__head--mobile">
+    <div class="filter-country__head">
       <svg class="filter-country__icon" width="15" height="10">
         <use xlink:href="#filter"></use>
       </svg>
       <h2 class="filter-country__title">Фильтрация по странам</h2>
-      <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
-    </div>
 
-    <div class="filter-country__head filter-country__head--tablet">
       <ul class="filter-country__region-list">
         <li class="filter-country__region-item filter-country__region-item--active">Европа</li>
         <li class="filter-country__region-item">Азия</li>
@@ -89,9 +86,332 @@
         <li class="filter-country__region-item">Острова</li>
       </ul>
       <a href="#" class="filter-country__region-all">Показать все</a>
+      <a href="#" class="filter-country__region-close">Свернуть
+        <svg class="filter-country__close-icon" width="18.6" height="18.6">
+          <use xlink:href="#close"></use>
+        </svg>
+      </a>
       <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
     </div>
-
+    <div class="filter-country__list-wrap">
+      <table class="filter-country__list">
+          <tr>
+            <th>А</th>
+            <th>Б</th>
+            <th>В</th>
+            <th>Г</th>
+            <th>Д</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Австралия</li>
+                <li>Австрия</li>
+                <li>Азербайджан</li>
+                <li>Албания</li>
+                <li>Алжир</li>
+                <li>Ангола</li>
+                <li>Андорра</li>
+                <li>Антигуа и Барбуда</li>
+                <li>Аргентина</li>
+                <li>Армения</li>
+                <li>Афганистан</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Багамские Острова</li>
+                <li>Бангладеш</li>
+                <li>Барбадос</li>
+                <li>Бахрейн</li>
+                <li>Белоруссия</li>
+                <li>Белиз</li>
+                <li>Бельгия</li>
+                <li>Бенин</li>
+                <li>Болгария</li>
+                <li>Боливия</li>
+                <li>Босния и Герцеговина</li>
+                <li>Ботсвана</li>
+                <li>Бразилия</li>
+                <li>Бруней</li>
+                <li>Буркина-Фасо</li>
+                <li>Бурунди</li>
+                <li>Бутан</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Вануату</li>
+                <li>Великобритания</li>
+                <li>Венгрия</li>
+                <li>Венесуэла</li>
+                <li>Восточный Тимор</li>
+                <li>Вьетнам</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Габон</li>
+                <li>Гаити</li>
+                <li>Гайана</li>
+                <li>Гамбия</li>
+                <li>Гана</li>
+                <li>Гватемала</li>
+                <li>Гвинея</li>
+                <li>Гвинея-Бисау</li>
+                <li>Германия</li>
+                <li>Гондурас</li>
+                <li>Гренада</li>
+                <li>Греция</li>
+                <li>Грузия</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Дания</li>
+                <li>Джибути</li>
+                <li>Доминика</li>
+                <li>Доминикана</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Е</th>
+            <th>З</th>
+            <th>И</th>
+            <th>К</th>
+            <th>Л</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Египет</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Замбия</li>
+                <li>Зимбабве</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Израиль</li>
+                <li>Индия</li>
+                <li>Индонезия</li>
+                <li>Иордания</li>
+                <li>Ирак</li>
+                <li>Иран</li>
+                <li>Ирландия</li>
+                <li>Исландия</li>
+                <li>Испания</li>
+                <li>Италия</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Кабо-Верде</li>
+                <li>Казахстан</li>
+                <li>Камбоджа</li>
+                <li>Камерун</li>
+                <li>Канада</li>
+                <li>Катар</li>
+                <li>Кения</li>
+                <li>Кипр</li>
+                <li>Киргизия</li>
+                <li>Кирибати</li>
+                <li>Китай</li>
+                <li>Колумбия</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Лаос</li>
+                <li>Латвия</li>
+                <li>Лесото</li>
+                <li>Либерия</li>
+                <li>Ливан</li>
+                <li>Ливия</li>
+                <li>Литва</li>
+                <li>Лихтенштейн</li>
+                <li>Люксембург</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>М</th>
+            <th>Н</th>
+            <th>О</th>
+            <th>П</th>
+            <th>Р</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Маврикий</li>
+                <li>Мавритания</li>
+                <li>Мадагаскар</li>
+                <li>Малави</li>
+                <li>Малайзия</li>
+                <li>Мали</li>
+                <li>Мальдивы</li>
+                <li>Мальта</li>
+                <li>Марокко</li>
+                <li>Мексика</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Намибия</li>
+                <li>Науру</li>
+                <li>Непал</li>
+                <li>Нигер</li>
+                <li>Нигерия</li>
+                <li>Нидерланды</li>
+                <li>Никарагуа</li>
+                <li>Новая Зеландия</li>
+                <li>Норвегия</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ОАЭ</li>
+                <li>Оман</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Пакистан</li>
+                <li>Палау</li>
+                <li>Панама</li>
+                <li>Папуа — Новая Гвинея</li>
+                <li>Парагвай</li>
+                <li>Перу</li>
+                <li>Польша</li>
+                <li>Португалия</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Руанда</li>
+                <li>Румыния</li>
+                <li>Россия</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>С</th>
+            <th>Т</th>
+            <th>У</th>
+            <th>Ф</th>
+            <th>Х</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Сальвадор</li>
+                <li>Самоа</li>
+                <li>Сан-Марино</li>
+                <li>Саудовская Аравия</li>
+                <li>Сейшелы</li>
+                <li>Сенегал</li>
+                <li>Сербия</li>
+                <li>Сингапур</li>
+                <li>Сирия</li>
+                <li>Словакия</li>
+                <li>Словения</li>
+                <li>США</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Таджикистан</li>
+                <li>Таиланд</li>
+                <li>Танзания</li>
+                <li>Того</li>
+                <li>Тонга</li>
+                <li>Тринидад и Тобаго</li>
+                <li>Тувалу</li>
+                <li>Тунис</li>
+                <li>Туркмения</li>
+                <li>Турция</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Уганда</li>
+                <li>Узбекистан</li>
+                <li>Украина</li>
+                <li>Уругвай</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Фиджи</li>
+                <li>Филиппины</li>
+                <li>Финляндия</li>
+                <li>Франция</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Хорватия</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Ч</th>
+            <th>Ш</th>
+            <th>Э</th>
+            <th>Ю</th>
+            <th>Я</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Чад</li>
+                <li>Черногория</li>
+                <li>Чехия</li>
+                <li>Чили</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Швейцария</li>
+                <li>Швеция</li>
+                <li>Шри-Ланка</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Эквадор</li>
+                <li>Эритрея</li>
+                <li>Эсватини</li>
+                <li>Эстония</li>
+                <li>Эфиопия</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>ЮАР</li>
+                <li>Южный Судан</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Ямайка</li>
+                <li>Япония</li>
+              </ul>
+            </td>
+          </tr>
+      </table>
+      <a href="#" class="filter-country__list-collapse">
+        <svg class="filter-country__close-icon filter-country__close-icon--collapse" width="18.6" height="18.6">
+          <use xlink:href="#close"></use>
+        </svg>
+        Свернуть
+      </a>
+    </div>
     <section class="filter-country">
       <h2 class="filter-country__title">Фильтрация по странам</h2>
       <button class="filter-country__button" type="button" aria-label="открыть фильтр по странам">...</button>
@@ -522,7 +842,7 @@
           </li>
         </ul>
 
-        <p class="user-card__set-separator user-card__set-separator--transport">
+        <p class="user-card__set-separator ">
           <span class="user-card__set-separator-text">транспорт:</span>
         </p>
         <ul class="transport-list transport-list--user-form">
@@ -610,7 +930,7 @@
           </li>
         </ul>
 
-        <p class="user-card__set-separator user-card__set-separator--transport">
+        <p class="user-card__set-separator">
           <span class="user-card__set-separator-text">транспорт:</span>
         </p>
         <ul class="transport-list transport-list--user-form">
@@ -691,7 +1011,7 @@
           </li>
         </ul>
 
-        <p class="user-card__set-separator user-card__set-separator--transport">
+        <p class="user-card__set-separator">
           <span class="user-card__set-separator-text">транспорт:</span>
         </p>
         <ul class="transport-list transport-list--user-form">
@@ -739,12 +1059,6 @@
         Показать еще
       </a>
       <div class="users-list__nav-wrap">
-        <ul class="users-list__page-list">
-          <li class="users-list__page-list-item">1</li>
-          <li class="users-list__page-list-item">2</li>
-          <li class="users-list__page-list-item">3</li>
-          <li class="users-list__page-list-item">4</li>
-        </ul>
         <a href="#" class="users-list__prew" aria-label="Предидущая страница">
           <svg class="users-list__prew-icon" width="12" height="14">
             <use xlink:href="#triangle-arrow-left"></use>
@@ -764,7 +1078,7 @@
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@1x.png 2x">
-        <img src="img/logo-mobile-blue@1x.png" class="footer__logo-image--catalog" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
+        <img src="img/logo-mobile-blue@1x.png" class="footer__logo-image" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сайта 'Погнали'">
       </picture>
     </a>
     <ul class="social-list">

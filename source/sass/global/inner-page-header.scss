@@ -156,6 +156,10 @@
     &--form {
       float: left;
     }
+
+    &--catalog {
+      float: left;
+    }
   }
 
   .inner-header__tagline {
@@ -164,8 +168,17 @@
       margin-top: 54px;
     }
 
+    &--catalog {
+      margin-left: 127px;
+      margin-top: 51px;
+    }
+
     &::after {
       left: 128px;
     }
+  }
+
+  .inner-header__return {
+    right: 124px;
   }
 }
