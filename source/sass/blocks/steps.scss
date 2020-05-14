@@ -100,7 +100,21 @@
     }
 
     &:nth-child(2n) {
-      margin-left: -6px;
+      margin-left: -16px;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0;
+      width: 51%;
+    }
+
+    &:nth-child(3) {
+      border-bottom-right-radius: 0;
+      width: 51%;
+    }
+
+    &:nth-child(2) {
+      margin-left: -15px;
     }
   }
 }

@@ -106,3 +106,23 @@
     border: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .users-list__nav-wrap {
+    margin: 68px 0 78px 60px;
+    max-width: 945px;
+  }
+
+  .users-list__show-more {
+    &--catalog {
+      width: 300px;
+      margin-top: 50px;
+      margin-left: 348px;
+    }
+  }
+
+  .users-list__next,
+  .users-list__prew {
+    width: 40px;
+  }
+}

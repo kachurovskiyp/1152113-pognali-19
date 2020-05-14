@@ -28,9 +28,9 @@
   @include font-size(16px, 22px);
   position: relative;
   display: block;
-  margin: 0 auto;
   margin-bottom: 20px;
-  padding-left: 72px;
+  margin-left: 10px;
+  padding-left: 62px;
   text-transform: uppercase;
   color: $yellow;
 }
@@ -65,10 +65,10 @@
   @include font-bold($dark-blue);
   @include font-size(16px, 22px);
   position: relative;
-  margin: 0 auto;
+  margin-left: 14px;
   text-transform: uppercase;
   font-style: normal;
-  padding: 25px 40px 25px 86px;
+  padding: 25px 40px 25px 73px;
 }
 
 .contacts__map-link {
@@ -92,17 +92,44 @@
     display: none;
   }
 
+  .contacts__icon-wrap {
+    width: 67px;
+    height: 67px;
+  }
+
   .contacts__tel,
   .contacts__email {
     @include font-size(28px, 28px);
     margin-bottom: 38px;
+    padding-left: 90px;
+  }
+
+  .contacts__wrapper {
+    @include round-bottom-corners(55px);
+    margin-top: -1px;
   }
 
   .contacts__address {
     @include font-size(28px, 28px);
     margin-top: 43px;
+    margin-left: 65px;
     margin-bottom: 39px;
-    padding-left: 168px;
+    padding-left: 102px;
+  }
+
+  .contacts__tel svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .contacts__email svg {
+    width: 27px;
+    height: 19px;
+  }
+
+  .contacts__address svg {
+    width: 21px;
+    height: 31px;
   }
 
   .contacts__address br {
@@ -124,7 +151,7 @@
   .contacts__container {
     margin-top: 62px;
     margin-bottom: 59px;
-    padding-left: 79px;
+    margin-left: 51px;
   }
 
   .contacts__bottom-wrapper {

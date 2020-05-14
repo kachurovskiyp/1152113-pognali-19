@@ -62,3 +62,9 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .inner-page-footer .social-list {
+    margin-top: 13px;
+  }
+}

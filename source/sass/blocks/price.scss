@@ -92,6 +92,7 @@
 
 @media (min-width: $tablet-width) {
   .price {
+    @include round-bottom-corners(55px);
     margin-top: -30px;
     padding: 89px 0 58px 15px;
   }

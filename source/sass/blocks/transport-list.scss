@@ -1,6 +1,7 @@
 .transport-list {
   @include clear-list;
-  margin-top: 13px;
+  margin-top: 12px;
+  margin-left: -6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -125,7 +126,6 @@
 
 @media (min-width: $tablet-width) {
   .transport-list {
-
     &--user-form {
       flex-direction: row;
       top: 191px;

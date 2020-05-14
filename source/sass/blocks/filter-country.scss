@@ -57,6 +57,10 @@
   display: none;
 }
 
+.filter-country__list-collapse {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .filter-country__head {
     @include font-bold($dark-blue);
@@ -72,13 +76,6 @@
   .filter-country__title {
     display: none;
   }
-
-
-
-  .filter-country__region-list {
-    display: flex;
-  }
-
 
   .filter-country__region-list {
     @include clear-list;
@@ -123,13 +120,13 @@
     display: block;
   }
 
-  .filter-country__icon{
+  .filter-country__icon {
     width: 23px;
     height: 15px;
     margin-right: 20px;
   }
 
-  .filter-country__title{
+  .filter-country__title {
     margin-right: 32px;
   }
 
@@ -156,7 +153,7 @@
     margin: 0 auto;
   }
 
-  .filter-country__list th{
+  .filter-country__list th {
     @include font-bold($dark-blue);
     @include font-size(60px, 24px);
     width: 250px;

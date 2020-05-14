@@ -1,6 +1,6 @@
 .user-card {
   width: 270px;
-  padding-bottom: 18px;
+  padding-bottom: 16px;
   margin: 0 auto;
   margin-bottom: 9px;
   background-color: $absolute-white;
@@ -209,7 +209,7 @@
 @media (min-width: $tablet-width) {
   .user-card {
     width: 285px;
-    margin-right: 7%;
+    margin: unset;
 
     &--catalog {
       min-width: 688px;
@@ -380,9 +380,9 @@
     &--catalog {
       width: 35%;
       padding-left: 60px;
-      padding-top: 0px;
+      padding-top: 0;
       padding-bottom: 141px;
-      margin-bottom: 18px;
+      margin-bottom: 32px;
     }
   }
 

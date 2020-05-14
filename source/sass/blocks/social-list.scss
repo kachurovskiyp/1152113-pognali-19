@@ -7,7 +7,7 @@
 }
 
 .social-list__link {
-  @include round-block(40px, 40px);
+  @include round-block(45px, 45px);
   display: block;
   position: relative;
   background-color: $yellow;
@@ -25,8 +25,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .social-list {
+    padding: 0 0 0;
+    margin-top: -9px;
+    margin-left: -10px;
+  }
+
   .inner-page-footer .social-list {
     margin-left: -11px;
+  }
+
+  .social-list__link {
+    width: 60px;
+    height: 60px;
   }
 }
 

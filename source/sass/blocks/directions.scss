@@ -100,6 +100,7 @@
   }
 
   .directions {
+    @include round-bottom-corners(52px);
     background-color: $white-three;
     padding-bottom: 80px;
   }

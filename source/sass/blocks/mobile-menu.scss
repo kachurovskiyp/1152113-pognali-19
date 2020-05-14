@@ -167,9 +167,21 @@
   }
 
   .mobile-menu__authorization {
+    order: 2;
+
+    &--form {
+      @include font-size(20px, 30px);
+      padding: 8px 11px 10px 7px;
+      min-width: 190px;
+    }
+
     &--catalog {
       @include font-size(20px, 30px);
       min-width: 189px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
@@ -223,19 +235,5 @@
 
   .mobile-menu__close {
     display: none;
-  }
-
-  .mobile-menu__authorization {
-    order: 2;
-
-    &--form {
-      @include font-size(20px, 30px);
-      padding: 8px 11px 10px 7px;
-      min-width: 190px;
-    }
-
-    &::after {
-      display: none;
-    }
   }
 }

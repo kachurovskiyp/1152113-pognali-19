@@ -47,8 +47,10 @@
 
 @media (min-width: $tablet-width) {
   .travelers {
+    @include round-bottom-corners(55px);
     padding: 35px;
-    padding-top: 123px;
+    padding-top: 145px;
+    margin-top: -43px;
   }
 
   .travelers__head-wrap {
@@ -83,18 +85,19 @@
   .travelers__main-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-evenly;
   }
 
   .travelers__show-all {
     @include font-size(24px, 24px);
-    width: 94%;
-    margin: 71px 0 54px 40px;
+    width: 616px;
+    margin: 80px 0 56px 40px;
     padding: 28px 32px;
     border-radius: 15px;
 
     &::after {
-      right: 24px;
+      right: 26px;
+      top: 34px;
     }
   }
 }
