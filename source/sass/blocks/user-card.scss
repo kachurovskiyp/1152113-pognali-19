@@ -213,9 +213,8 @@
 
     &--catalog {
       min-width: 688px;
-      margin: 0 auto;
-      margin-bottom: 34px;
-      padding-top: 38px;
+      margin: 0 auto 42px;
+      padding-top: 31px;
     }
   }
 
@@ -274,17 +273,17 @@
     &--catalog {
       width: 50px;
       height: 50px;
-      top: 177px;
+      top: 172px;
       left: auto;
-      right: 234px;
+      right: 235px;
     }
   }
 
   .user-card__like-count {
     @include font-size(20px, 30px);
     position: absolute;
-    top: 195px;
-    right: 179px;
+    top: 189px;
+    left: 375px;
   }
 
   .user-card__set-separator {
@@ -307,7 +306,7 @@
 
 
     &--catalog {
-      width: 50%;
+      max-width: 280px;
       padding-left: 34px;
     }
   }
@@ -322,14 +321,17 @@
     }
   }
 
-  .user-card__call-link--catalog {
-    @include font-size(20px, 30px);
-    position: absolute;
-    top: 181px;
-    left: 254px;
-    padding: 6px 32px;
-    height: 50px;
-    width: auto;
+  .user-card__call-link {
+    &--catalog {
+      @include font-size(20px, 30px);
+      height: auto;
+      width: auto;
+      position: absolute;
+      top: 173px;
+      left: 254px;
+      padding: 9px 32px;
+      border-radius: 25px;
+    }
   }
 }
 
@@ -339,11 +341,12 @@
     margin-right: 59px;
 
     &--catalog {
+      min-height: 285px;
+      margin: unset;
+      margin-bottom: 33px;
       width: auto;
       min-width: unset;
       max-width: 950px;
-      margin: unset;
-      margin-left: 60px;
       padding: unset;
     }
   }
@@ -359,8 +362,8 @@
     &--catalog {
       margin-left: 0;
       border-radius: unset;
-      border-top-left-radius: 25px;
-      border-bottom-left-radius: 25px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
     }
   }
 
@@ -381,7 +384,7 @@
       width: 35%;
       padding-left: 60px;
       padding-top: 0;
-      padding-bottom: 141px;
+      padding-bottom: 118px;
       margin-bottom: 32px;
     }
   }

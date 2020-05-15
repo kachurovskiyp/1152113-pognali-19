@@ -17,8 +17,9 @@
   }
 }
 
-.countries__item:nth-child(2n) {
-  margin: 0 20px;
+.countries__item {
+  margin-right: 11px;
+  margin-left: 7px;
 }
 
 .countries__item--catalog:nth-child(2n) {

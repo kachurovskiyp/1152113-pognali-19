@@ -59,6 +59,8 @@
 
 .country__visits-icon {
   opacity: 0.2;
+  width: 15px;
+  height: 10px;
 }
 
 @media (min-width: $tablet-width) {
@@ -73,6 +75,7 @@
 
   .country__image {
     @include round-rightside-corners(15px);
+    height: 100%;
   }
 
   .country__title {
@@ -113,6 +116,10 @@
     position: static;
     display: block;
     margin-top: 17px;
+  }
+
+  .country__visits-icon {
+    margin-right: 9px;
   }
 }
 

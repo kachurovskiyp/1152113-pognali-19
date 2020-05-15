@@ -79,6 +79,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .directions {
+    background: url(../img/flags-back@1x.png) no-repeat 440px 110px;
+  }
+
   .directions__form {
     max-width: 850px;
 
@@ -151,6 +155,12 @@
 
     &::after {
       right: 25px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .directions {
+      background: url(../img/flags-back@2x.png) no-repeat 440px 110px;
     }
   }
 }

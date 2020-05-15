@@ -171,10 +171,15 @@
     display: flex;
     justify-content: flex-start;
     min-height: 750px;
-    padding: 49px 61px 49px 64px;
+    padding: 49px 43px 49px 61px;
     background:
-      url("../img/traveller-illustration-desktop@1x.png") no-repeat 60% bottom,
-      url("../img/globe-back-tablet@1x.jpg") no-repeat left 100% #182044;
+      url("../img/traveller-illustration-desktop@1x.png") no-repeat 61% bottom,
+      url("../img/globe-back-tablet@1x.jpg") no-repeat -146px 100% #182044;
+  }
+
+  .header__logo img {
+    width: 200px;
+    height: 50px;
   }
 
   .header__feedback,

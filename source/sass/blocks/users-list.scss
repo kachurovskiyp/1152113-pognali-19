@@ -61,7 +61,7 @@
 @media (min-width: $tablet-width) {
   .users-list__show-more--catalog {
     @include font-size(20px, 30px);
-    margin-top: 36px;
+    margin-top: -9px;
     margin-left: -4px;
   }
 
@@ -108,17 +108,28 @@
 }
 
 @media (min-width: $desktop-width) {
+  .users-list {
+    padding-left: 12px;
+  }
+
   .users-list__nav-wrap {
-    margin: 68px 0 78px 60px;
+    margin: 68px 0 78px 0px;
     max-width: 945px;
   }
 
   .users-list__show-more {
     &--catalog {
       width: 300px;
-      margin-top: 50px;
-      margin-left: 348px;
+      margin-top: 64px;
+      margin-left: 312px;
+      position: relative;
     }
+  }
+
+  .users-list__show-more--catalog svg {
+    position: absolute;
+    top: -25%;
+    left: 34px;
   }
 
   .users-list__next,
