@@ -161,9 +161,9 @@
 
 @media (min-width: $desktop-width) {
   .contacts__container {
-    width: 1057px;
-    margin-left: 160px;
-    margin-top: 76px;
+    padding-left: 163px;
+    padding-right: 215px;
+    margin-top: 79px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -171,6 +171,7 @@
 
   .contacts__wrapper {
     padding: 28px 14px 77px 14px;
+    margin-top: -4px;
   }
 
   .contacts__bottom-wrapper {
@@ -188,6 +189,7 @@
   .contacts__tel,
   .contacts__email {
     margin: 0;
+    padding-left: 117px;
   }
 
   .contacts__email {
@@ -196,11 +198,36 @@
 
   .contacts__address {
     margin-top: 50px;
-    padding-left: 370px;
+    padding-left: 339px;
+  }
+
+  .contacts__address svg {
+    width: 28px;
+    height: 43px;
+  }
+
+  .contacts__icon-wrap {
+    width: 90px;
+    height: 90px;
+
+    &--location {
+      left: 219px;
+    }
+  }
+
+  .contacts__tel svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contacts__email svg {
+    width: 36px;
+    height: 26px;
   }
 
   .contacts__map-link {
-    margin-right: 135px;
     width: 323px;
+    margin-left: 108px;
+    margin-right: 130px;
   }
 }

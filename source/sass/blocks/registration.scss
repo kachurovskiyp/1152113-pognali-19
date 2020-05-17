@@ -104,6 +104,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .registration {
+    position: relative;
+    z-index: -5;
+  }
+
   .registration__tagline {
     margin: 0;
     padding: 0;

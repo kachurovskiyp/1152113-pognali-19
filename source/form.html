@@ -85,41 +85,52 @@
 
         <section class="tags tags--form">
           <h3 class="tags__title">Тэги</h3>
-          <ul class="tags__tags-list"> <!-- символ # добавлен псевдоэлеметом -->
-            <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">бургер</a></li>
-            <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">бар</a></li>
-            <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">футбол</a></li>
-            <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">концерт</a></li>
-            <li class="tags__tag-item tags__tag-item--form"><a href="#" class="tags__tag-link">крафт</a></li>
-          </ul>
+          <label for="tags" class="visually-hidden">Ваши тэги</label>
+          <textarea class="tags__tags-area" name="tags" id="tags" cols="45" rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
         </section>
 
         <section class="form-transport">
           <h3 class="form-transport__title">Транспорт</h3>
           <ul class="transport-list">
             <li class="transport-list__item transport-list__item--form">
+              <label>
+                <input type="checkbox" name="plane" id="choose-plane" class="visually-hidden transport-list__choose-transport">
+                <svg class="transport-list__icon" width="19" height="21">
+                  <use xlink:href="#plane"></use>
+                </svg>
+                <span class="visually-hidden">Выбрать самолет</span>
+              </label>
               <span class="tooltip">Авиаперелет</span>
-              <svg class="transport-list__icon transport-list__icon--active" width="19" height="21">
-                <use xlink:href="#plane"></use>
-              </svg>
             </li>
             <li class="transport-list__item transport-list__item--form">
+              <label>
+                <input type="checkbox" name="bus" id="choose-bus" class="visually-hidden transport-list__choose-transport">
+                <svg class="transport-list__icon" width="17" height="21">
+                  <use xlink:href="#bus"></use>
+                </svg>
+                <span class="visually-hidden">Выбрать автотранспорт</span>
+              </label>
               <span class="tooltip">Автотранспорт</span>
-              <svg class="transport-list__icon" width="17" height="21">
-                <use xlink:href="#bus"></use>
-              </svg>
             </li>
             <li class="transport-list__item transport-list__item--form">
+              <label>
+                <input type="checkbox" name="bike" id="choose-bike" class="visually-hidden transport-list__choose-transport">
+                <svg class="transport-list__icon" width="24" height="21">
+                  <use xlink:href="#bike"></use>
+                </svg>
+                <span class="visually-hidden">Выбрать велосипед</span>
+              </label>
               <span class="tooltip">Велосипед</span>
-              <svg class="transport-list__icon" width="24" height="21">
-                <use xlink:href="#bike"></use>
-              </svg>
             </li>
             <li class="transport-list__item transport-list__item--form">
+              <label>
+                <input type="checkbox" name="foot" id="choose-foot" class="visually-hidden transport-list__choose-transport">
+                <svg class="transport-list__icon" width="20" height="21">
+                  <use xlink:href="#run"></use>
+                </svg>
+                <span class="visually-hidden">Выбрать пеший</span>
+              </label>
               <span class="tooltip">Пешком</span>
-              <svg class="transport-list__icon" width="20" height="21">
-                <use xlink:href="#run"></use>
-              </svg>
             </li>
           </ul>
         </section>

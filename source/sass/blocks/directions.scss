@@ -80,7 +80,10 @@
 
 @media (min-width: $tablet-width) {
   .directions {
-    background: url(../img/flags-back@1x.png) no-repeat 440px 110px;
+    @include round-bottom-corners(52px);
+    padding-bottom: 80px;
+    background: url("../img/flags-back@1x.png") no-repeat 440px 110px;
+    background-color: $white-three;
   }
 
   .directions__form {
@@ -101,12 +104,6 @@
       padding-bottom: 80px;
       justify-content: space-between;
     }
-  }
-
-  .directions {
-    @include round-bottom-corners(52px);
-    background-color: $white-three;
-    padding-bottom: 80px;
   }
 
   .directions__user-image {
@@ -160,7 +157,8 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .directions {
-      background: url(../img/flags-back@2x.png) no-repeat 440px 110px;
+      background: url("../img/flags-back@2x.png") no-repeat 440px 110px;
+      background-size: 37.5%;
     }
   }
 }
@@ -173,12 +171,14 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    z-index: 2;
+    z-index: -1;
+    background-position: 1091px 110px;
 
     &--form {
       display: block;
       padding-top: 37px;
       padding-bottom: 115px;
+      background-image: none;
     }
   }
 
@@ -244,7 +244,7 @@
   .directions__show-all {
     position: absolute;
     right: 311px;
-    bottom: 146px;
+    bottom: 151px;
     min-width: 263px;
     padding: 21px;
     padding-left: 30px;

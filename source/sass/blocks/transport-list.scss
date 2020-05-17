@@ -18,6 +18,16 @@
   }
 }
 
+.transport-list__item--form label {
+  @include round-block(40px, 40px);
+  display: block;
+}
+
+.transport-list__choose-transport:checked + .transport-list__icon {
+  opacity: 1;
+  fill: $dark-blue;
+}
+
 .transport-list__item:hover .tooltip {
   display: block;
 }
@@ -97,11 +107,6 @@
     }
   }
 
-   .catalog-page .transport-list__item--catalog {
-    margin: 0;
-    width: 34px;
-  }
-
   .filter__set--transport .transport-list {
     margin: unset;
   }
@@ -110,6 +115,8 @@
     @include round-block(43px, 43px);
 
     &--catalog {
+      margin: 0;
+      width: 34px;
       height: 31px;
     }
   }

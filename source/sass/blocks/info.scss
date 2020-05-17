@@ -1,6 +1,6 @@
 .info {
   padding: 20px 58px 60px 49px;
-  background: url("../img/about-mobile@1x.png") no-repeat center top $dark-blue;
+  background: url("../img/about-mobile@1x.png") no-repeat center 9px $dark-blue;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   position: relative;
@@ -84,7 +84,7 @@
     background: url("../img/about-tablet@1x.png") no-repeat 90% 203px #192144;
     background-size: 581px;
     position: relative;
-    z-index: 3;
+    z-index: 0;
   }
 
   .info__article br {

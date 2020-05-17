@@ -11,6 +11,7 @@
     max-width: 390px;
     margin: 0 auto;
     margin-top: 30px;
+    padding-bottom: 0;
   }
 }
 
@@ -25,6 +26,11 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: $white-three;
+}
+
+.tags__tags-area {
+  border: 0;
+  background-color: transparent;
 }
 
 .tags__tags-list {
@@ -55,6 +61,7 @@
       margin: unset;
       margin-top: 55px;
       margin-left: 12px;
+      padding-bottom: 0;
     }
   }
 

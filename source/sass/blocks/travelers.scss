@@ -4,8 +4,8 @@
   padding: 26px;
   padding-top: 70px;
   background:
-    url("../img/smolov-back-desktop@1x.png") no-repeat 200px 20px,
-    url("../img/rogovaya-back-mobile@1x.png") no-repeat 0 150px $dark-blue;
+    url("../img/smolov-back-desktop@1x.png") no-repeat 152px 60px,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat -10px 332px $dark-blue;
   color: $absolute-white;
   position: relative;
   z-index: 2;
@@ -45,12 +45,27 @@
   padding-left: 22px;
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .travelers {
+    background-image:
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+    background-size: 45%, 22%;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .travelers {
     @include round-bottom-corners(55px);
     padding: 35px;
     padding-top: 145px;
     margin-top: -43px;
+    background:
+      url("../img/smolov-back-desktop@1x.png") no-repeat 152px 60px,
+      url("../img/rogovaya-back-mobile@1x.png") no-repeat -10px 332px,
+      url("../img/smolov-back-desktop@1x.png") no-repeat 40px 471px,
+      url("../img/rogovaya-back-mobile@1x.png") no-repeat 407px 127px $dark-blue;
+    background-size: 18%, 12%, 18.5%, 37%;
   }
 
   .travelers__head-wrap {
@@ -100,6 +115,17 @@
       top: 34px;
     }
   }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .travelers {
+      background:
+        url("../img/smolov-back-desktop@2x.png") no-repeat 152px 60px,
+        url("../img/rogovaya-back-mobile@2x.png") no-repeat -10px 332px,
+        url("../img/smolov-back-desktop@2x.png") no-repeat 40px 471px,
+        url("../img/rogovaya-back-mobile@2x.png") no-repeat 407px 127px $dark-blue;
+      background-size: 18%, 12%, 18.5%, 37%;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -107,15 +133,15 @@
     position: relative;
     min-height: 790px;
     padding-left: 91px;
-    padding-top: 107px;
-    z-index: 1;
+    padding-top: 125px;
+    z-index: -2;
   }
 
   .travelers__main-wrap {
     position: absolute;
-    top: 153px;
+    top: 171px;
     right: auto;
-    left: 712px;
+    left: 752px;
   }
 
   .travelers__title {

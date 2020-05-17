@@ -5,7 +5,7 @@
 
   background:
     url("../img/traveller-illustration-mobile@1x.png") no-repeat 61% 223px,
-    url("../img/globe-back-mobile@1x.jpg") no-repeat left center $dark-blue-two;
+    url("../img/globe-back-mobile@1x.jpg") no-repeat left 0 $dark-blue-two;
 
   background-size:
     auto,
@@ -166,6 +166,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
+    @include round-bottom-corners(40px);
     position: relative;
     z-index: 1;
     display: flex;
@@ -173,7 +174,7 @@
     min-height: 750px;
     padding: 49px 43px 49px 61px;
     background:
-      url("../img/traveller-illustration-desktop@1x.png") no-repeat 61% bottom,
+      url("../img/traveller-illustration-desktop@1x.png") no-repeat 60% bottom,
       url("../img/globe-back-tablet@1x.jpg") no-repeat -146px 100% #182044;
   }
 
@@ -201,7 +202,7 @@
   .header__contact-wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 288px;
+    width: 324px;
   }
 
   .header__tagline {
