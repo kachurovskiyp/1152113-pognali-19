@@ -1,7 +1,7 @@
 
 .mobile-menu {
   display: none;
-  z-index: 1;
+  z-index: 4;
   position: absolute;
   top: 0;
   left: 0;
@@ -9,6 +9,11 @@
   width: 100%;
   background-color: $absolute-white;
   padding: 25px;
+  padding-top: 13px;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .mobile-menu__close {
@@ -25,7 +30,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 7px;
+    top: -4px;
     left: -3px;
     width: 25px;
     height: 3px;
@@ -80,14 +85,119 @@
   display: block;
   text-transform: uppercase;
   padding-left: 61px;
+  position: relative;
+}
+
+.mobile-menu__tel-icon-wrap {
+  @include round-block(45px, 45px);
+  display: inline-block;
+  background-color: $dark-blue-grey-two;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.mobile-menu__tel-icon {
+  fill: $yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .mobile-menu__tel {
   margin-bottom: 23px;
 }
 
+.mobile-menu__social {
+  @include clear-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 43px;
+  margin-left: 33px;
+}
+
 .mobile-menu__social-item {
   background-color: transparent;
+  margin-right: 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .mobile-menu {
+    padding-top: 45px;
+    padding-left: 40px;
+    min-height: 910px;
+    z-index: 8;
+  }
+
+  .mobile-menu__logo {
+    width: 166px;
+  }
+
+  .mobile-menu__close {
+    top: 68px;
+    right: 370px;
+  }
+
+  .mobile-menu__authorization {
+    @include font-size(20px, 30px);
+    width: 188px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  .mobile-menu__item-list {
+    text-align: left;
+    padding-left: 56px;
+    margin-top: 86px;
+  }
+
+  .mobile-menu__item-list a {
+    @include font-size(60px, 71px);
+  }
+
+  .mobile-menu__user-navigation {
+    margin-top: 162px;
+    margin-left: 58px;
+  }
+
+  .mobile-menu__tel-icon-wrap {
+    width: 67px;
+    height: 67px;
+  }
+
+  .mobile-menu__tel-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .mobile-menu__tel {
+    margin-bottom: 38px;
+  }
+
+  .mobile-menu__tel,
+  .mobile-menu__email {
+    @include font-size(28px, 28px);
+    padding-left: 90px;
+  }
+
+  .mobile-menu__social {
+    justify-content: flex-start;
+    padding-left: 44px;
+    margin-top: 146px;
+  }
+
+  .mobile-menu__social-item {
+    margin-right: 35px;
+  }
+
+  .mobile-menu__social-item svg {
+    width: 25px;
+    height: 26px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -108,17 +218,6 @@
       display: flex;
       padding-top: 49px;
     }
-  }
-
-  .mobile-menu__logo {
-    display: none;
-  }
-
-  .inner-header__logo-image {
-    width: 200px;
-    height: 52px;
-    margin-left: 21px;
-    margin-top: 4px;
   }
 
   .mobile-menu__item-list {
