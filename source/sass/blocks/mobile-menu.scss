@@ -220,6 +220,12 @@
     }
   }
 
+  .mobile-menu__logo,
+  .mobile-menu__user-navigation,
+  .mobile-menu__social {
+    display: none;
+  }
+
   .mobile-menu__item-list {
     @include font-medium;
     @include font-size(20px, 30px);
@@ -252,9 +258,12 @@
   }
 
   .mobile-menu__item-link {
+    margin-right: 33px;
+  }
+
+  .mobile-menu__item-list a {
     @include font-medium;
     @include font-size(20px, 30px);
-    margin-right: 33px;
   }
 
   .mobile-menu__tel,

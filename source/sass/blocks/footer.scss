@@ -44,6 +44,7 @@
 
 @media (min-width: $tablet-width) {
   .footer {
+    @include round-top-corners(55px);
     padding: 40px;
     padding-top: 58px;
     min-height: 170px;

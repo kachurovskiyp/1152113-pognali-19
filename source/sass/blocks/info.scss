@@ -1,8 +1,7 @@
 .info {
+  @include round-bottom-corners(35px);
   padding: 20px 58px 60px 49px;
   background: url("../img/about-mobile@1x.png") no-repeat center 9px $dark-blue;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
   position: relative;
   z-index: 6;
 }
@@ -79,8 +78,7 @@
   .info {
     min-height: 750px;
     margin-top: 0;
-    padding: 210px 130px;
-    padding-bottom: 168px;
+    padding: 210px 130px 165px;
     background: url("../img/about-tablet@1x.png") no-repeat 90% 203px #192144;
     background-size: 581px;
     position: relative;

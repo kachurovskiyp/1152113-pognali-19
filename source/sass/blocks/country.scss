@@ -71,6 +71,7 @@
     flex-direction: row-reverse;
     z-index: 2;
     border-radius: 15px;
+    margin-bottom: 12px;
   }
 
   .country__image {
@@ -124,6 +125,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .country {
+    margin-bottom: 8px;
+  }
+
   .country__link {
     padding: 22px 10px 25px 34px;
     margin-right: 0;

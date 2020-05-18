@@ -166,8 +166,8 @@
 @media (min-width: $desktop-width) {
   .directions {
     margin-top: -30px;
-    padding-top: 147px;
-    padding-bottom: 66px;
+    padding-top: 152px;
+    padding-bottom: 65px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -243,14 +243,15 @@
 
   .directions__show-all {
     position: absolute;
-    right: 311px;
-    bottom: 151px;
-    min-width: 263px;
-    padding: 21px;
-    padding-left: 30px;
+    right: 305px;
+    bottom: 139px;
+    min-width: 269px;
+    padding: 29px;
+    border-radius: 20px;
 
     &::after {
-      right: 19px;
+      right: 25px;
+      top: 34px;
     }
   }
 }
