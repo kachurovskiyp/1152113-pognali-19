@@ -20,8 +20,7 @@
   position: relative;
   padding: 21px 25px;
   max-width: 450px;
-  margin: 0 auto;
-  margin-bottom: 7px;
+  margin: 0 auto 12px;
   border-radius: 10px;
   background-color: $absolute-white;
 
@@ -168,7 +167,8 @@
   text-align: center;
   text-transform: uppercase;
   border-radius: 30px;
-  padding: 15px;
+  padding: 12px 15px;
+  margin-top: 16px;
 
   &::after {
     display: none;
@@ -216,6 +216,39 @@
   &--add {
     background-color: $white-three;
   }
+
+  &--active {
+    background-color: $dark-blue-three;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &--active a {
+    color: $absolute-white;
+  }
+
+  &--active .add-plan__choose-button {
+    background-color: $dark-blue-three;
+  }
+
+  &--active::before {
+    display: none;
+  }
+}
+
+.add-plan__close-button-icon {
+  display: none;
+}
+
+.add-plan__choose-country--active .add-plan__choose-button-icon {
+  display: none;
+}
+
+.add-plan__choose-country--active .add-plan__close-button-icon {
+  display: block;
+  fill: $absolute-white;
+  width: 9px;
+  height: 9px;
 }
 
 .add-plan__choose-link {
@@ -258,6 +291,10 @@
 
 .add-plan__empty .add-plan__add-button {
   background-color: $white-three;
+}
+
+.add-plan__empty .add-plan__del-country {
+  display: none;
 }
 
 .add-plan__country-flag {
@@ -337,7 +374,20 @@
 }
 
 .add-plan__choose-country-popup {
+  @include round-bottom-corners(10px);
   display: none;
+  width: 220px;
+  position: absolute;
+  top: 334px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background-color: $absolute-white;
+  border: 1px solid $light-grey;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .add-plan__add-link {
@@ -408,8 +458,8 @@
   background-color: transparent;
   text-transform: uppercase;
   text-align: center;
-  padding: 13px;
-  margin-bottom: -16px;
+  padding: 15px;
+  margin-bottom: -22px;
 
   &::after {
     display: none;
@@ -462,6 +512,7 @@
 
     &--3 {
       margin-top: 50px;
+      padding-bottom: 47px;
     }
   }
 
@@ -555,8 +606,8 @@
     text-transform: none;
     text-align: left;
     border-radius: 20px;
-    margin-top: 41px;
-    padding: 29px 34px;
+    margin-top: 45px;
+    padding: 28px 34px;
     width: 55%;
 
     &::after {
@@ -609,6 +660,25 @@
       right: -27px;
       opacity: 0.5;
     }
+  }
+
+  .add-plan__choose-country-popup {
+    top: 251px;
+    left: 0;
+    transform: unset;
+    width: 575px;
+    padding-left: 30px;
+    padding-top: 35px;
+    border: unset;
+
+    &--opened {
+      display: flex;
+    }
+  }
+
+  .add-plan__choose-country--active .add-plan__choose-link {
+    background-color: $dark-blue-three;
+    color: $absolute-white;
   }
 
   .add-plan__add-button,
@@ -700,8 +770,8 @@
     @include font-size(24px, 24px);
     text-transform: none;
     position: absolute;
-    right: 29px;
-    bottom: 89px;
+    right: 27px;
+    bottom: 92px;
 
     &::before {
       content: "";
@@ -792,11 +862,12 @@
   .add-plan__step {
     border-radius: 65px;
     padding-bottom: 110px;
+    margin-bottom: 45px;
 
     &--3 {
       margin-top: 42px;
       margin-bottom: 62px;
-      padding: 48px 50px 99px 160px;
+      padding: 43px 50px 99px 160px;
     }
   }
 
@@ -838,7 +909,7 @@
 
   .add-plan__step-number {
     margin-left: 119px;
-    margin-top: 51px;
+    margin-top: 49px;
     display: inline-block;
     float: left;
 
@@ -849,8 +920,8 @@
   }
 
   .add-plan__step-title {
-    margin-top: 50px;
-    margin-left: 230px;
+    margin-top: 48px;
+    margin-left: 232px;
 
     &--step3 {
       margin-left: 113px;
@@ -924,7 +995,7 @@
   }
 
   .add-plan__next-step {
-    margin-top: 56px;
+    margin-top: 58px;
     width: 23%;
     margin-left: 120px;
     padding: 25px 34px;
@@ -970,7 +1041,7 @@
 
   .add-plan__prew-step {
     right: 151px;
-    bottom: 135px;
+    bottom: 145px;
   }
 
   .add-plan__country-plan-wrap {

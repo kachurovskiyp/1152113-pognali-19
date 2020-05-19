@@ -18,6 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 18px;
 }
 
 .social-list--mobile-menu {
@@ -44,5 +45,10 @@
 @media (min-width: $desktop-width) {
   .social-list {
     display: none;
+  }
+
+  .social-list__social-icon {
+    width: 29px;
+    height: 26px;
   }
 }

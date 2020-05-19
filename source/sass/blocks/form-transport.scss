@@ -1,8 +1,7 @@
 .form-transport {
   position: relative;
   max-width: 390px;
-  margin: 0 auto;
-  margin-top: 24px;
+  margin: 27px auto 0;
   padding-bottom: 15px;
   border: 1px solid $light-grey;
   border-radius: 15px;
@@ -28,7 +27,7 @@
 @media (min-width: $tablet-width) {
   .form-transport {
     position: absolute;
-    top: 74px;
+    top: 67px;
     left: 50%;
     transform: translateX(-50%);
     width: 308px;
@@ -40,7 +39,8 @@
     @include font-size(20px, 18px);
     letter-spacing: 2px;
     top: auto;
-    bottom: -25px;
+    bottom: -29px;
+    transform: translateX(-50%);
   }
 }
 

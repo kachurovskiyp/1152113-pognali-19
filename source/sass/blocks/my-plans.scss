@@ -88,7 +88,8 @@
 @media (min-width: $tablet-width) {
   .my-plans {
     &--form {
-      padding: 8px 73px 100px 73px;
+      padding: 11px 73px 100px;
+      margin-top: -36px;
     }
   }
 
@@ -183,6 +184,10 @@
     padding-right: 60px;
     padding-bottom: 110px;
     counter-reset: plan-count;
+
+    &--form {
+      padding-top: 8px;
+    }
   }
 
   .my-plans__title {

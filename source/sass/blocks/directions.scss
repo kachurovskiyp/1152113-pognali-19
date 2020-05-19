@@ -82,7 +82,6 @@
   .directions {
     @include round-bottom-corners(52px);
     padding-bottom: 80px;
-    background: url("../img/flags-back@1x.png") no-repeat 440px 110px;
     background-color: $white-three;
   }
 
@@ -93,15 +92,15 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      width: 620px;
+      padding-top: 95px;
     }
   }
 
   .directions__wrapper {
-    padding: 21px 20px 45px 62px;
+    padding: unset;
 
     &--form {
-      padding-top: 90px;
-      padding-bottom: 80px;
       justify-content: space-between;
     }
   }
@@ -111,7 +110,8 @@
       width: 94px;
       height: 94px;
       border-radius: 10px;
-      margin: 4px 47px 0 67%;
+      margin: unset;
+      margin-left: auto;
     }
   }
 
@@ -120,7 +120,7 @@
     letter-spacing: 2px;
     margin-top: 55px;
     width: 90%;
-    margin-left: -44px;
+    margin-left: 0;
     padding: 18px 0;
     border-radius: 10px;
   }
@@ -203,8 +203,8 @@
   .directions__form {
     &--form {
       position: absolute;
-      top: -196px;
-      right: 154px;
+      top: -293px;
+      right: 62px;
     }
   }
 
@@ -223,11 +223,13 @@
 
   .directions__change-image {
     &--form {
-      width: 190px;
+      width: 192px;
       position: absolute;
-      bottom: -47px;
-      right: 0;
+      bottom: -49px;
+      right: 93px;
       padding: 15px 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 

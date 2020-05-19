@@ -141,6 +141,20 @@
     }
   }
 
+  .inner-header__container {
+    max-width: 1330px;
+    margin: 0 auto;
+  }
+
+  .inner-header__logo {
+    margin-left: -9px;
+  }
+
+  .inner-header__logo-image {
+    width: 200px;
+    height: 57px;
+  }
+
   .inner-header__menu-button {
     display: none;
   }
@@ -164,8 +178,8 @@
 
   .inner-header__tagline {
     &--form {
-      margin-left: 126px;
-      margin-top: 54px;
+      margin-left: 71px;
+      margin-top: 76px;
     }
 
     &--catalog {

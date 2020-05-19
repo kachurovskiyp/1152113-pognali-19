@@ -3,15 +3,14 @@
   margin-top: 30px;
   padding: 20px;
   border: 1px solid $light-grey;
-  border-radius: 15px;
+  border-radius: 10px;
 
   &--form {
-    padding: 22px 25px;
+    padding: 19px 26px 0;
     line-height: 23px;
     max-width: 390px;
     margin: 0 auto;
     margin-top: 30px;
-    padding-bottom: 0;
   }
 }
 
@@ -31,6 +30,9 @@
 .tags__tags-area {
   border: 0;
   background-color: transparent;
+  height: 59px;
+  width: 240px;
+  line-height: 22px;
 }
 
 .tags__tags-list {
@@ -55,13 +57,10 @@
   .tags {
     &--form {
       @include font-size(20px, 24px);
-      padding: 33px 39px;
+      padding: 28px 39px 0;
       line-height: 23px;
       max-width: 620px;
-      margin: unset;
-      margin-top: 55px;
-      margin-left: 12px;
-      padding-bottom: 0;
+      margin: 55px auto 0;
     }
   }
 
@@ -74,6 +73,10 @@
 
   .tags__tag-item--form {
     margin-left: 0;
+  }
+
+  .tags__tags-area {
+    width: 530px;
   }
 }
 

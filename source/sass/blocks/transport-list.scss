@@ -134,6 +134,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .transport-list {
+    margin-top: 9px;
+    margin-left: 2px;
+  }
+
   .catalog-page .transport-list--desktop {
     margin-left: -41px;
     margin-top: 12px;

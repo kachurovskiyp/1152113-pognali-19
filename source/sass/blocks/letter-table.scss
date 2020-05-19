@@ -4,6 +4,10 @@
   text-transform: uppercase;
   text-align: center;
   border-collapse: collapse;
+
+  &--form {
+    width: 219px;
+  }
 }
 
 .letter-table__label {
