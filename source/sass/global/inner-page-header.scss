@@ -173,6 +173,7 @@
 
     &--catalog {
       float: left;
+      margin-left: 55px;
     }
   }
 
@@ -184,7 +185,7 @@
 
     &--catalog {
       margin-left: 127px;
-      margin-top: 51px;
+      margin-top: 78px;
     }
 
     &::after {
@@ -193,6 +194,6 @@
   }
 
   .inner-header__return {
-    right: 106px;
+    right: 123px;
   }
 }

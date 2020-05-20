@@ -276,6 +276,8 @@
 
   .mobile-menu__authorization {
     order: 2;
+    top: 49px;
+    right: 58px;
 
     &--form {
       @include font-size(20px, 30px);

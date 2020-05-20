@@ -8,12 +8,16 @@
   &--form {
     width: 219px;
   }
+
+  &--mobile-filter td {
+    width: 44px;
+  }
 }
 
 .letter-table__label {
   display: block;
   width: 45px;
-  height: 45px;
+  height: 43px;
   background-color: $absolute-white;
   padding-top: 12px;
   border: 1px solid $light-grey;
@@ -28,4 +32,28 @@ input[type="radio"]:checked + .letter-table__label {
 input[type="radio"]:checked + .letter-table__label--form {
   background-color: $white-three;
   color: $dark-blue-three;
+}
+
+@media (min-width: $tablet-width) {
+  .letter-table {
+    border: none;
+  }
+
+  .letter-table__label {
+    @include font-size(60px, 24px);
+    border: none;
+    background-color: transparent;
+    opacity: 0.2;
+  }
+
+  .letter-table--mobile-filter td {
+    width: 77px;
+    height: 82px;
+  }
+
+  input[type="radio"]:checked + .letter-table__label {
+    background-color: transparent;
+    color: $dark-blue-three;
+    opacity: 1;
+  }
 }

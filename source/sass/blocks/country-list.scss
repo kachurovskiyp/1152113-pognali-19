@@ -1,6 +1,10 @@
 .country-list {
   @include clear-list;
-  padding: 15px 20px;
+  padding: 10px 0;
+}
+
+.country-list__country-item {
+  margin-bottom: -8px;
 }
 
 .country-list__label {
@@ -12,5 +16,18 @@
   .country-list {
     width: max-content;
     padding-top: 0;
+  }
+
+  .choise-country .country-list {
+    margin-left: 63px;
+    margin-top: 10px;
+  }
+
+  .choise-country .country-list__country-item {
+    margin-bottom: -2px;
+  }
+
+  .choise-country .country-list__label {
+    @include font-size(20px, 30px);
   }
 }

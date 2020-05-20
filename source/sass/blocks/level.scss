@@ -36,11 +36,11 @@
       @include font($grey);
       @include font-size(15px, 18px);
       content: "левел:";
-      width: 45px;
-      height: 9px;
+      width: 41px;
+      height: 19px;
       position: absolute;
       top: -29px;
-      left: 8px;
+      left: 10px;
       background-color: $absolute-white;
     }
   }

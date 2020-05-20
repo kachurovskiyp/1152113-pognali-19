@@ -109,6 +109,7 @@
 
   .filter__set--transport .transport-list {
     margin: unset;
+    margin-left: -10px;
   }
 
   .catalog-page .transport-list__item {
@@ -118,6 +119,13 @@
       margin: 0;
       width: 34px;
       height: 31px;
+    }
+  }
+
+  .catalog-page .transport-list {
+    &--user-form {
+      margin-right: 1px;
+      margin-top: 6px;
     }
   }
 
@@ -140,7 +148,6 @@
   }
 
   .catalog-page .transport-list--desktop {
-    margin-left: -41px;
-    margin-top: 12px;
+    margin: 9px 0 22px -48px;
   }
 }
