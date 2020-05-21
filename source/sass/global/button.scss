@@ -18,4 +18,12 @@
     bottom: auto;
     right: 15px;
   }
+
+  &:hover {
+    background-color: $dark-yellow;
+  }
+
+  &:active {
+    color: $dark-slate-blue;
+  }
 }

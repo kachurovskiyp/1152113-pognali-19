@@ -85,14 +85,37 @@
   .tags {
     &--form {
       max-width: unset;
-      width: 730px;
+      width: auto;
+      height: auto;
       margin-top: 68px;
       margin-left: 123px;
+      padding: 0;
+      border: none;
       border-radius: 10px;
     }
   }
 
+  .tags__tags-area {
+    width: 730px;
+    height: 96px;
+    margin: 0;
+    padding-top: 33px;
+    padding-left: 39px;
+    border: 1px solid $light-grey;
+    border-radius: 10px;
+
+    &:hover {
+      border-color: $cloudy-blue-two;
+    }
+
+    &:focus {
+      border-color: $dark-blue-two;
+      outline: none;
+    }
+  }
+
   .tags__title {
-    left: 64px;
+    left: 65px;
+    top: 64px;
   }
 }

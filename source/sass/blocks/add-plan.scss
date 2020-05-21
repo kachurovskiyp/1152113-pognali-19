@@ -108,6 +108,15 @@
   text-align: center;
   border: 1px solid $light-grey;
   border-radius: 5px;
+
+  &:hover {
+    border-color: $bluey-grey;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $dark-blue-two;
+  }
 }
 
 .add-plan__down,
@@ -153,6 +162,14 @@
     top: 2px;
     left: -27px;
     background: url("../img/tick.svg") no-repeat center center;
+  }
+
+  &:hover::before {
+    border-color: $bluey-grey;
+  }
+
+  &:active::before {
+    background-color: $pale-grey-three;
   }
 }
 
@@ -216,6 +233,20 @@
 
   &--add {
     background-color: $white-three;
+    border: none;
+  }
+
+  &--add:hover {
+    background-color: $light-grey;
+  }
+
+  &--add:hover .add-plan__add-button {
+    background-color: $light-grey;
+  }
+
+  &--add:active {
+    background-color: $light-grey;
+    opacity: 0.3;
   }
 
   &--active {
@@ -234,6 +265,10 @@
 
   &--active::before {
     display: none;
+  }
+
+  &:hover {
+    border-color: $bluey-grey;
   }
 }
 
@@ -350,11 +385,20 @@
 }
 
 .add-plan__del-country-icon {
-  fill: $light-grey;
+  fill: $black;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.05;
+  }
 }
 
 .add-plan__country-plan {
-  @include font($grey);
+  @include font($greyish-brown);
   @include font-size(16px, 22px);
   width: 100%;
   padding: 10px;
@@ -363,6 +407,20 @@
   border: 1px solid $light-grey;
   border-radius: 5px;
   position: relative;
+
+  &:hover {
+    border-color: $bluey-grey;
+  }
+
+  &:focus {
+    color: $grey;
+    border-color: $dark-blue-two;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $greyish-brown;
+  }
 }
 
 .add-plan__decoration-line {
@@ -461,6 +519,15 @@
   text-align: center;
   padding: 15px;
   margin-bottom: -22px;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::after {
     display: none;
@@ -761,7 +828,7 @@
 
     &::before {
       @include round-block(15px, 15px);
-      right: -35px;
+      right: -54px;
       top: 24px;
       background-color: $absolute-white;
       z-index: 1;
@@ -1017,6 +1084,7 @@
     &::after {
       top: -233px;
       right: -47px;
+      height: 262px;
     }
   }
 

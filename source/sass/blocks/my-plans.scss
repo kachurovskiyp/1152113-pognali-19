@@ -71,13 +71,22 @@
 }
 
 .my-plans__change-link {
-  @include font-medium($black-opacity);
+  @include font-medium($black);
   @include font-size(14px, 18px);
   text-transform: uppercase;
+  opacity: 0.3;
 
   &--form {
     padding-left: 7px;
     letter-spacing: 1.4px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 
