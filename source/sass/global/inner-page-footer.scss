@@ -1,5 +1,5 @@
 .inner-page-footer {
-  margin-top: -30px;
+  margin-top: -35px;
 }
 
 .inner-page-footer .footer__logo {
@@ -12,6 +12,10 @@
   height: 42px;
 }
 
+.catalog-page .inner-page-footer {
+  margin-top: 50px;
+}
+
 @media (min-width: $tablet-width) {
   .inner-page-footer {
     padding-top: 34px;
@@ -19,13 +23,31 @@
     border-radius: 60px;
   }
 
+  .form-page .inner-page-footer {
+    margin-top: -50px;
+  }
+
   .inner-page-footer .footer__logo {
     margin-top: 24px;
   }
 
   .inner-page-footer .footer__logo-image {
-    width: 166px;
-    height: 42px;
+    width: 163px;
+    height: 41px;
+    margin-top: 0;
+    margin-left: 2px;
+
+    &--catalog {
+      width: 166px;
+      height: 42px;
+      margin-top: -2px;
+      margin-right: 35px;
+    }
+  }
+
+  .inner-page-footer .social-list {
+    display: flex;
+    margin-left: -11px;
   }
 
   .inner-page-footer .social-list__link {
@@ -40,14 +62,22 @@
 
 @media (min-width: $tablet-width) {
   .inner-page-footer .social-list {
-    display: flex;
-    margin-left: -48px;
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-page .inner-page-footer {
+    margin-top: -57px;
   }
 
   .inner-page-footer .footer__logo-image {
     width: 200px;
-    height: 52px;
-    margin-top: -8px;
-    margin-left: 2px;
+    height: 60px;
+    margin-top: -13px;
+  }
+
+  .inner-page-footer .social-list {
+    margin-left: -45px;
   }
 }

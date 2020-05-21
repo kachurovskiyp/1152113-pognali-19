@@ -82,13 +82,14 @@
 @media (min-width: $tablet-width) {
   .calendar {
     margin-top: -53px;
+    padding-left: 3px;
   }
 
   .calendar__month {
     @include font-size(36px, 36px);
     padding: 25px 0;
     margin-left: 6px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   .calendar__prew svg,
@@ -107,14 +108,12 @@
     right: 3px;
   }
 
-  .calendar__days {
-    margin-left: 0 auto;
-  }
-
   .calendar__day-of-week {
     @include font-medium($dark-slate-blue);
     @include font-size(20px, 18px);
     padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
     text-transform: none;
 
     &--weekend {
@@ -133,9 +132,8 @@
   .calendar__day-number {
     @include font-size(20px, 18px);
     letter-spacing: 2px;
-    width: 77px;
-    height: 70px;
-    padding: 10px 25px;
+    height: 69px;
+    padding: 0 25px;
   }
 }
 

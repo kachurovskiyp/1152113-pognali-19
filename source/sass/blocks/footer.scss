@@ -11,7 +11,7 @@
 .footer__logo {
   display: block;
   text-align: center;
-  margin-bottom: 29px;
+  margin-bottom: 15px;
 }
 
 .footer__copyright {
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-top: 57px;
+  margin-top: 51px;
 }
 
 .footer__copyright-link {
@@ -44,12 +44,17 @@
 
 @media (min-width: $tablet-width) {
   .footer {
+    @include round-top-corners(55px);
     padding: 40px;
     padding-top: 58px;
     min-height: 170px;
     display: flex;
     justify-content: space-between;
     margin-top: -100px;
+  }
+
+  .footer__logo img {
+    width: 165px;
   }
 
   .footer__copyright {
@@ -71,5 +76,18 @@
   .footer {
     margin-top: -161px;
     padding: 59px;
+  }
+
+  .footer__logo {
+    margin-top: -10px;
+  }
+
+  .footer__logo img {
+    width: 200px;
+  }
+
+  .footer .social-list {
+    display: flex;
+    margin-left: -47px;
   }
 }

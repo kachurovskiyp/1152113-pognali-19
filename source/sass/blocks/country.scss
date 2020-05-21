@@ -59,20 +59,23 @@
 
 .country__visits-icon {
   opacity: 0.2;
+  width: 15px;
+  height: 10px;
 }
 
 @media (min-width: $tablet-width) {
   .country {
     width: 100%;
-    margin-bottom: 11px;
     display: flex;
     flex-direction: row-reverse;
     z-index: 2;
     border-radius: 15px;
+    margin-bottom: 12px;
   }
 
   .country__image {
     @include round-rightside-corners(15px);
+    height: 100%;
   }
 
   .country__title {
@@ -114,9 +117,17 @@
     display: block;
     margin-top: 17px;
   }
+
+  .country__visits-icon {
+    margin-right: 9px;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .country {
+    margin-bottom: 8px;
+  }
+
   .country__link {
     padding: 22px 10px 25px 34px;
     margin-right: 0;

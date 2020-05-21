@@ -5,6 +5,25 @@
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+
+  &--catalog {
+    margin-top: 14px;
+    margin-left: -2px;
+    position: relative;
+  }
+}
+
+.users-list__show-more-icon {
+  margin-right: 7px;
+  margin-top: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.users-list__nav-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 19px;
 }
 
 .users-list__prew,
@@ -13,9 +32,19 @@
   width: 135px;
   height: 50px;
   background-color: $absolute-white;
+  position: relative;
+}
+
+.users-list__prew-icon,
+.users-list__next-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .users-list__prew {
+  border-right: 1px solid $light-grey;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -23,4 +52,84 @@
 .users-list__next {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.users-list__page-list {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .users-list__show-more--catalog {
+    @include font-size(20px, 30px);
+    margin-top: -9px;
+    margin-left: -4px;
+  }
+
+  .users-list__show-more-icon {
+    width: 27px;
+    height: 27px;
+    margin-right: 15px;
+    margin-top: 7px;
+  }
+
+  .users-list__nav-wrap {
+    margin: 45px auto 63px;
+    max-width: 688px;
+    min-height: 100px;
+    padding: 0 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $absolute-white;
+    border-radius: 20px;
+  }
+
+  .users-list__page-list {
+    @include font-bold($dark-blue-two);
+    @include font-size(20px, 30px);
+    @include clear-list;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  .users-list__page-list-item {
+    @include round-block(50px, 50px);
+    background-color: $yellow;
+    text-align: center;
+    padding-top: 11px;
+  }
+
+  .users-list__next,
+  .users-list__prew {
+    width: 35px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .users-list__nav-wrap {
+    margin: 68px 0 78px 0;
+    max-width: 945px;
+  }
+
+  .users-list__show-more {
+    &--catalog {
+      width: 300px;
+      margin-top: 64px;
+      margin-left: 312px;
+      position: relative;
+    }
+  }
+
+  .users-list__show-more--catalog svg {
+    position: absolute;
+    top: -25%;
+    left: 34px;
+  }
+
+  .users-list__next,
+  .users-list__prew {
+    width: 40px;
+  }
 }

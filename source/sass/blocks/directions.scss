@@ -79,6 +79,12 @@
 }
 
 @media (min-width: $tablet-width) {
+  .directions {
+    @include round-bottom-corners(52px);
+    padding-bottom: 80px;
+    background-color: $white-three;
+  }
+
   .directions__form {
     max-width: 850px;
 
@@ -86,22 +92,17 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      width: 620px;
+      padding-top: 95px;
     }
   }
 
   .directions__wrapper {
-    padding: 21px 20px 45px 62px;
+    padding: unset;
 
     &--form {
-      padding-top: 90px;
-      padding-bottom: 80px;
       justify-content: space-between;
     }
-  }
-
-  .directions {
-    background-color: $white-three;
-    padding-bottom: 80px;
   }
 
   .directions__user-image {
@@ -109,7 +110,8 @@
       width: 94px;
       height: 94px;
       border-radius: 10px;
-      margin: 4px 47px 0 67%;
+      margin: unset;
+      margin-left: auto;
     }
   }
 
@@ -118,7 +120,7 @@
     letter-spacing: 2px;
     margin-top: 55px;
     width: 90%;
-    margin-left: -44px;
+    margin-left: 0;
     padding: 18px 0;
     border-radius: 10px;
   }
@@ -152,22 +154,31 @@
       right: 25px;
     }
   }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .directions {
+      background: url("../img/flags-back@2x.png") no-repeat 440px 110px;
+      background-size: 37.5%;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .directions {
     margin-top: -30px;
-    padding-top: 147px;
-    padding-bottom: 66px;
+    padding-top: 152px;
+    padding-bottom: 65px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    z-index: 2;
+    z-index: -1;
+    background-position: 1091px 110px;
 
     &--form {
       display: block;
       padding-top: 37px;
       padding-bottom: 115px;
+      background-image: none;
     }
   }
 
@@ -192,8 +203,8 @@
   .directions__form {
     &--form {
       position: absolute;
-      top: -196px;
-      right: 154px;
+      top: -293px;
+      right: 62px;
     }
   }
 
@@ -212,11 +223,13 @@
 
   .directions__change-image {
     &--form {
-      width: 190px;
+      width: 192px;
       position: absolute;
-      bottom: -47px;
-      right: 0;
+      bottom: -49px;
+      right: 93px;
       padding: 15px 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 
@@ -232,14 +245,15 @@
 
   .directions__show-all {
     position: absolute;
-    right: 311px;
-    bottom: 146px;
-    min-width: 263px;
-    padding: 21px;
-    padding-left: 30px;
+    right: 305px;
+    bottom: 139px;
+    min-width: 269px;
+    padding: 29px;
+    border-radius: 20px;
 
     &::after {
-      right: 19px;
+      right: 25px;
+      top: 34px;
     }
   }
 }

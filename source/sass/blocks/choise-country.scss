@@ -4,6 +4,11 @@
 
 .choise-country__land-list {
   @include clear-list;
+  margin: 22px 0 15px;
+}
+
+.choise-country__land-item {
+  margin-bottom: -2px;
 }
 
 .choise-country__land-label {
@@ -14,4 +19,13 @@
 
 input[type="radio"]:checked + .choise-country__land-label {
   color: $dark-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .choise-country {
+    padding: unset;
+    padding-top: 2px;
+    margin-left: 39px;
+    display: flex;
+  }
 }

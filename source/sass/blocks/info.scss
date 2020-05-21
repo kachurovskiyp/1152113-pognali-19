@@ -1,8 +1,7 @@
 .info {
+  @include round-bottom-corners(35px);
   padding: 20px 58px 60px 49px;
-  background: url("../img/about-mobile@1x.png") no-repeat center top $dark-blue;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  background: url("../img/about-mobile@1x.png") no-repeat center 9px $dark-blue;
   position: relative;
   z-index: 6;
 }
@@ -33,7 +32,8 @@
     padding: 238px 380px 90px 73px;
     background: url("../img/about-tablet@1x.png") no-repeat 98% 76% $dark-blue;
     background-size: 374px;
-
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
     margin-top: -140px;
   }
 
@@ -78,12 +78,11 @@
   .info {
     min-height: 750px;
     margin-top: 0;
-    padding: 210px 130px;
-    padding-bottom: 168px;
+    padding: 210px 130px 165px;
     background: url("../img/about-tablet@1x.png") no-repeat 90% 203px #192144;
     background-size: 581px;
     position: relative;
-    z-index: 3;
+    z-index: 0;
   }
 
   .info__article br {
