@@ -18,9 +18,9 @@
 
 @media (min-width: $tablet-width) {
   .inner-page-footer {
+    @include round-top-corners(60px);
     padding-top: 34px;
     margin-top: -57px;
-    border-radius: 60px;
   }
 
   .form-page .inner-page-footer {
@@ -48,6 +48,7 @@
   .inner-page-footer .social-list {
     display: flex;
     margin-left: -11px;
+    margin-top: 13px;
   }
 
   .inner-page-footer .social-list__link {
@@ -57,12 +58,6 @@
 
   .inner-page-footer .footer__copyright {
     margin-top: 24px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .inner-page-footer .social-list {
-    margin-top: 13px;
   }
 }
 

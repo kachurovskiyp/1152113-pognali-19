@@ -106,13 +106,13 @@
   .travelers__show-all {
     @include font-size(24px, 24px);
     width: 616px;
-    margin: 80px 0 56px 40px;
+    margin: 80px auto 40px;
     padding: 28px 32px;
     border-radius: 15px;
 
     &::after {
       right: 26px;
-      top: 34px;
+      top: 31px;
     }
   }
 

@@ -26,6 +26,7 @@
 
   &--3 {
     padding: 25px;
+    padding-top: 23px;
     position: relative;
   }
 }
@@ -358,7 +359,7 @@
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border: 1px solid $light-grey;
   border-radius: 5px;
   position: relative;
@@ -513,6 +514,7 @@
     &--3 {
       margin-top: 50px;
       padding-bottom: 47px;
+      padding-top: 43px;
     }
   }
 
@@ -812,7 +814,7 @@
     width: 95%;
     height: 142px;
     padding: 15px;
-    margin: 16px 0 40px 2px;
+    margin: 16px 0 45px 2px;
     padding-right: 35px;
 
     &::after {

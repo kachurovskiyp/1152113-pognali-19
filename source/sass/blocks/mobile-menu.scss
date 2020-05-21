@@ -283,8 +283,8 @@
       @include font-size(20px, 30px);
       padding: 8px 11px 10px 7px;
       min-width: 190px;
-      margin-right: 17px;
-      margin-top: 11px;
+      margin-right: 0;
+      margin-top: 0;
     }
 
     &--catalog {
@@ -304,7 +304,7 @@
     background-color: $color-mango;
     text-align: center;
     padding-left: unset;
-    margin-left: 266px;
+    margin-left: auto;
 
     &:hover {
       background-color: $dark-mango;
@@ -328,6 +328,7 @@
     display: block;
     background-color: $dark-yellow;
     padding-left: unset;
+    margin-right: 194px;
 
     &:hover {
       background-color: $dark-mango;

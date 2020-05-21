@@ -93,12 +93,14 @@
       flex-wrap: wrap;
       align-items: center;
       width: 620px;
-      padding-top: 95px;
+      padding-top: 73px;
+      margin: 0 auto;
     }
   }
 
   .directions__wrapper {
     padding: unset;
+    padding-top: 21px;
 
     &--form {
       justify-content: space-between;
@@ -119,7 +121,7 @@
     @include font-size(20px, 18px);
     letter-spacing: 2px;
     margin-top: 55px;
-    width: 90%;
+    width: 100%;
     margin-left: 0;
     padding: 18px 0;
     border-radius: 10px;
@@ -138,6 +140,7 @@
   }
 
   .directions__country-wrapper {
+    margin-top: 106px;
     margin-bottom: 56px;
     padding-left: 63px;
     padding-right: 65px;
@@ -203,7 +206,7 @@
   .directions__form {
     &--form {
       position: absolute;
-      top: -293px;
+      top: -270px;
       right: 62px;
     }
   }
