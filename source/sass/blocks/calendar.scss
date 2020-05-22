@@ -84,6 +84,7 @@
 
   &:hover {
     border: 2px solid $orange-red;
+    padding: 2px;
   }
 
   &:focus {
@@ -188,6 +189,10 @@
         top: 6px;
         left: 37px;
       }
+    }
+
+    &:hover {
+      height: 67px;
     }
 
     &--april {

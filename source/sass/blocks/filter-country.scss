@@ -5,17 +5,21 @@
   padding-left: 31px;
 
   &--head {
+    @include round-bottom-corners(20px);
     display: flex;
     max-width: 350px;
-    height: 22px;
+    height: 72px;
     justify-content: space-between;
     align-items: baseline;
-    padding: 2px 26px;
-    margin: 0 auto;
-    margin-bottom: -21px;
+    padding: 31px 26px;
+    margin: -30px auto -41px;
   }
 
   &--opened {
+    display: block;
+  }
+
+  &--opened + .filter-country {
     display: block;
   }
 }

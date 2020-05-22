@@ -1,6 +1,6 @@
 var filterButton = document.querySelector(".filter-country__button");
 var filter = document.querySelector(".filter-country__list-wrap");
-var filterClose = document.querySelector(".filter-country__close-icon--collapse");
+var filterClose = document.querySelector(".filter-country__close");
 
 filterButton.addEventListener("click", function(evt) {
   evt.preventDefault();
