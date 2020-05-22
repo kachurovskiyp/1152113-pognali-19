@@ -28,6 +28,7 @@
 
   &:hover .tooltip {
     display: block;
+    z-index: 5;
   }
 
   &:hover .transport-list__icon {
@@ -45,6 +46,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.15;
+
+  &--active {
+    fill: $dark-blue-three;
+    opacity: 1;
+  }
 }
 
 .transport-list__choose-transport {
@@ -141,7 +147,7 @@
 @media (min-width: $desktop-width) {
   .transport-list {
     margin-top: 9px;
-    margin-left: 2px;
+    margin-left: -10px;
   }
 
   .catalog-page .transport-list--desktop {

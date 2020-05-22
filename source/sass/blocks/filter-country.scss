@@ -167,6 +167,14 @@
       padding-left: 23px;
       margin-bottom: 11px;
     }
+
+    &--opened .filter-country__list {
+      display: table;
+    }
+
+    &--opened .filter-country__list-collapse {
+      display: block;
+    }
   }
 
   .filter-country__region-all {

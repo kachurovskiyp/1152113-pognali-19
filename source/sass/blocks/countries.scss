@@ -30,10 +30,10 @@
     display: flex;
     margin-bottom: 9px;
   }
-}
 
-.countries__item:hover .tooltip {
-  display: block;
+  &:hover .tooltip {
+    display: block;
+  }
 }
 
 .countries__country-flag {
@@ -71,11 +71,19 @@
 }
 
 @media (min-width: $desktop-width) {
-  .countries--catalog {
-    flex-direction: column;
-    position: absolute;
-    top: 48px;
-    left: 657px;
+  .countries {
+    margin: -23px 0 4px 10px;
+
+    &--catalog {
+      flex-direction: column;
+      position: absolute;
+      top: 48px;
+      left: 657px;
+    }
+  }
+
+  .countries__item {
+    margin-right: 19px;
   }
 
   .countries__item--catalog .countries__country-flag {

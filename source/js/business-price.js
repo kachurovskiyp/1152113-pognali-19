@@ -1,4 +1,3 @@
-console.log('test');
 var priceBlockLink = document.querySelector(".price__business-price-link");
 var priceBlock = document.querySelector(".business-price");
 var priceBlockClose = document.querySelector(".business-price__close");

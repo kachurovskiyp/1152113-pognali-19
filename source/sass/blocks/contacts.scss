@@ -5,7 +5,7 @@
   padding-bottom: 20px;
   background-color: $yellow;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .contacts__wrapper {
@@ -33,6 +33,14 @@
   padding-left: 62px;
   text-transform: uppercase;
   color: $yellow;
+
+  &:hover {
+    color: $color-light-mango;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__icon-wrap {
@@ -178,6 +186,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center;
     padding-bottom: 0;
   }
 
@@ -229,5 +238,23 @@
     width: 323px;
     margin-left: 108px;
     margin-right: 130px;
+
+    &:hover {
+      background-color: $dark-blue;
+      color: $absolute-white;
+    }
+
+    &::after {
+      right: 25px;
+      top: 30px;
+    }
+
+    &:hover::after {
+      border-left-color: $absolute-white;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

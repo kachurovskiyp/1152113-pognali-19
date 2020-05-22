@@ -25,6 +25,7 @@
       </div>
 
       <section class="mobile-menu mobile-menu--form">
+        <button type="button" class="mobile-menu__close"><span class="visually-hidden">Закрыть меню</span></button>
         <ul class="mobile-menu__item-list mobile-menu__item-list--form">
           <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
           <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
@@ -704,7 +705,9 @@
               </svg>
             </div>
           </div>
-          <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий"></textarea>
+          <div class="add-plan__country-plan-wrong add-plan__country-plan-wrong--error">
+            <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий"></textarea>
+          </div>
 
           <div class="add-plan__country-plan-wrap">
             <label for="country-plan" class="add-plan__country-plan-title">Чехия</label>
@@ -714,7 +717,9 @@
               </svg>
             </div>
           </div>
-          <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          <div class="add-plan__country-plan-wrong">
+            <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          </div>
 
           <button class="button add-plan__submit" type="submit">Отправить</button>
           <a href="#step2" class="button add-plan__prew-step">На шаг назад</a>
@@ -766,6 +771,6 @@
       </a>
     </p>
   </footer>
-  <!-- <script src="js/form-filter.js"></script> -->
+  <script src="js/mobile-menu.js"></script>
 </body>
 </html>

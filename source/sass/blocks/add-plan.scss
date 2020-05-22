@@ -397,6 +397,34 @@
   }
 }
 
+.add-plan__country-plan-wrong {
+  position: relative;
+
+  &::after {
+    @include font(red);
+    @include font-size(15px, 16px);
+    @include round-bottom-corners(5px);
+    display: none;
+    content: "Это поле должно быть заполнено";
+    width: 99%;
+    height: 35px;
+    position: absolute;
+    left: 1px;
+    bottom: 32px;
+    padding-top: 10px;
+    padding-left: 3px;
+    background-color: $very-light-pink;
+  }
+
+  &--error::after {
+    display: block;
+  }
+
+  &--error textarea {
+    border-color: red;
+  }
+}
+
 .add-plan__country-plan {
   @include font($greyish-brown);
   @include font-size(16px, 22px);
@@ -895,6 +923,19 @@
     }
   }
 
+  .add-plan__country-plan-wrong {
+    &::after {
+      width: 94.7%;
+      height: 40px;
+      font-size: 17px;
+      left: 3px;
+      bottom: 52px;
+      padding-top: 10px;
+      padding-left: 6px;
+    }
+  }
+
+
   .add-plan__submit {
     @include font-size(24px, 24px);
     text-transform: none;
@@ -1121,6 +1162,18 @@
   .add-plan__country-plan {
     padding: 22px 35px 15px 23px;
     width: 65.5%;
+  }
+
+  .add-plan__country-plan-wrong {
+    &::after {
+      @include font-size(20px, 24px);
+      width: 65.3%;
+      height: 57px;
+      left: 3px;
+      bottom: 52px;
+      padding-top: 18px;
+      padding-left: 11px;
+    }
   }
 
   .add-plan__submit {

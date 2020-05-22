@@ -11,6 +11,14 @@
   display: block;
   position: relative;
   background-color: $yellow;
+
+  &:hover {
+    background-color: $dark-yellow;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .social-list__social-icon {
