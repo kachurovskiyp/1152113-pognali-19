@@ -21,6 +21,14 @@
   justify-content: space-between;
   margin: 0;
   margin-top: 51px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright-link {

@@ -26,6 +26,7 @@
 
   &--3 {
     padding: 25px;
+    padding-top: 23px;
     position: relative;
   }
 }
@@ -107,6 +108,15 @@
   text-align: center;
   border: 1px solid $light-grey;
   border-radius: 5px;
+
+  &:hover {
+    border-color: $bluey-grey;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $dark-blue-two;
+  }
 }
 
 .add-plan__down,
@@ -152,6 +162,14 @@
     top: 2px;
     left: -27px;
     background: url("../img/tick.svg") no-repeat center center;
+  }
+
+  &:hover::before {
+    border-color: $bluey-grey;
+  }
+
+  &:active::before {
+    background-color: $pale-grey-three;
   }
 }
 
@@ -215,6 +233,20 @@
 
   &--add {
     background-color: $white-three;
+    border: none;
+  }
+
+  &--add:hover {
+    background-color: $light-grey;
+  }
+
+  &--add:hover .add-plan__add-button {
+    background-color: $light-grey;
+  }
+
+  &--add:active {
+    background-color: $light-grey;
+    opacity: 0.3;
   }
 
   &--active {
@@ -233,6 +265,10 @@
 
   &--active::before {
     display: none;
+  }
+
+  &:hover {
+    border-color: $bluey-grey;
   }
 }
 
@@ -349,26 +385,77 @@
 }
 
 .add-plan__del-country-icon {
-  fill: $light-grey;
+  fill: $black;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.05;
+  }
+}
+
+.add-plan__country-plan-wrong {
+  position: relative;
+
+  &::after {
+    @include font(red);
+    @include font-size(15px, 16px);
+    @include round-bottom-corners(5px);
+    display: none;
+    content: "Это поле должно быть заполнено";
+    width: 99%;
+    height: 35px;
+    position: absolute;
+    left: 1px;
+    bottom: 32px;
+    padding-top: 10px;
+    padding-left: 3px;
+    background-color: $very-light-pink;
+  }
+
+  &--error::after {
+    display: block;
+  }
+
+  &--error textarea {
+    border-color: red;
+  }
 }
 
 .add-plan__country-plan {
-  @include font($grey);
+  @include font($greyish-brown);
   @include font-size(16px, 22px);
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border: 1px solid $light-grey;
   border-radius: 5px;
   position: relative;
+
+  &:hover {
+    border-color: $bluey-grey;
+  }
+
+  &:focus {
+    color: $grey;
+    border-color: $dark-blue-two;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $greyish-brown;
+  }
 }
 
 .add-plan__decoration-line {
   position: absolute;
   top: 9px;
   left: -13px;
-  height: 281px;
+  height: 287px;
   width: 2px;
   background-color: $dark-blue-three;
 }
@@ -461,6 +548,15 @@
   padding: 15px;
   margin-bottom: -22px;
 
+  &:hover {
+    background-color: transparent;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     display: none;
   }
@@ -513,6 +609,7 @@
     &--3 {
       margin-top: 50px;
       padding-bottom: 47px;
+      padding-top: 43px;
     }
   }
 
@@ -759,7 +856,7 @@
 
     &::before {
       @include round-block(15px, 15px);
-      right: -35px;
+      right: -54px;
       top: 24px;
       background-color: $absolute-white;
       z-index: 1;
@@ -812,7 +909,7 @@
     width: 95%;
     height: 142px;
     padding: 15px;
-    margin: 16px 0 40px 2px;
+    margin: 16px 0 45px 2px;
     padding-right: 35px;
 
     &::after {
@@ -825,6 +922,19 @@
       content: "";
     }
   }
+
+  .add-plan__country-plan-wrong {
+    &::after {
+      width: 94.7%;
+      height: 40px;
+      font-size: 17px;
+      left: 3px;
+      bottom: 52px;
+      padding-top: 10px;
+      padding-left: 6px;
+    }
+  }
+
 
   .add-plan__submit {
     @include font-size(24px, 24px);
@@ -1015,6 +1125,7 @@
     &::after {
       top: -233px;
       right: -47px;
+      height: 262px;
     }
   }
 
@@ -1051,6 +1162,18 @@
   .add-plan__country-plan {
     padding: 22px 35px 15px 23px;
     width: 65.5%;
+  }
+
+  .add-plan__country-plan-wrong {
+    &::after {
+      @include font-size(20px, 24px);
+      width: 65.3%;
+      height: 57px;
+      left: 3px;
+      bottom: 52px;
+      padding-top: 18px;
+      padding-left: 11px;
+    }
   }
 
   .add-plan__submit {

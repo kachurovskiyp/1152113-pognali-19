@@ -23,9 +23,17 @@
   left: -5px;
 }
 
-.calendar__prew svg,
-.calendar__next svg {
+.calendar__prew-icon,
+.calendar__next-icon {
   opacity: 0.3;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__next {
@@ -63,20 +71,26 @@
   padding: 6px;
   background-color: $white-three;
   border: 1px solid $light-grey;
-}
 
-.calendar__day-number--disabled {
-  color: $greyish-brown;
-  background-color: transparent;
-}
+  &--disabled {
+    color: $greyish-brown;
+    background-color: transparent;
+  }
 
-.calendar__day-number--checked {
-  color: $absolute-white;
-  background-color: $dark-blue-three;
-}
+  &--checked {
+    color: $absolute-white;
+    background-color: $dark-blue-three;
+  }
 
-.calendar__day-number--active {
-  border: 2px solid $orange-red;
+  &:hover {
+    border: 2px solid $orange-red;
+    padding: 2px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $orange-red;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -175,6 +189,10 @@
         top: 6px;
         left: 37px;
       }
+    }
+
+    &:hover {
+      height: 67px;
     }
 
     &--april {

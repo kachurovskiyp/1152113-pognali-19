@@ -1,11 +1,11 @@
 .business-price {
   display: none;
   position: absolute;
-  top: 4px;
+  top: 48px;
   left: 50%;
   transform: translateX(-50%);
   width: 270px;
-  min-height: 440px;
+  min-height: 395px;
   background-color: $absolute-white;
   border-radius: 20px;
 
@@ -36,7 +36,7 @@
   display: block;
   width: 100%;
   min-height: 60px;
-  margin-top: 52px;
+  margin-top: -16px;
   padding-top: 9px;
   text-transform: uppercase;
   text-align: center;

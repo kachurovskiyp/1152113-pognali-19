@@ -16,25 +16,28 @@
     @include round-block(33px, 33px);
     background-color: $absolute-white;
   }
-}
 
-.transport-list__item--form label {
-  @include round-block(40px, 40px);
-  display: block;
-}
+  &--form label {
+    @include round-block(40px, 40px);
+    display: block;
+  }
 
-.transport-list__choose-transport:checked + .transport-list__icon {
-  opacity: 1;
-  fill: $dark-blue;
-}
+  &:active {
+    background-color: $pale-grey-three;
+  }
 
-.transport-list__item:hover .tooltip {
-  display: block;
-}
+  &:hover .tooltip {
+    display: block;
+    z-index: 5;
+  }
 
-.transport-list__label {
-  @include round-block(30px, 30px);
-  display: block;
+  &:hover .transport-list__icon {
+    opacity: 0.3;
+  }
+
+  &:active .transport-list__icon {
+    opacity: 0.1;
+  }
 }
 
 .transport-list__icon {
@@ -43,31 +46,31 @@
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.15;
+
+  &--active {
+    fill: $dark-blue-three;
+    opacity: 1;
+  }
 }
 
-.transport-list__icon--active {
-  opacity: 1;
-  fill: $dark-blue;
+.transport-list__choose-transport {
+  &:checked + .transport-list__icon {
+    opacity: 1;
+    fill: $dark-blue;
+  }
+
+  &:checked:hover + .transport-list__icon {
+    opacity: 0.7;
+  }
+
+  &:checked:active + .transport-list__icon {
+    opacity: 0.3;
+  }
 }
 
-.transport-list__label--plane-filter {
-  background: url("../img/plane.svg") no-repeat center center $absolute-white;
-  background-size: 50%;
-}
-
-.transport-list__label--bus-filter {
-  background: url("../img/bus.svg") no-repeat center center $absolute-white;
-  background-size: 50%;
-}
-
-.transport-list__label--bicykle-filter {
-  background: url("../img/bike.svg") no-repeat center center $absolute-white;
-  background-size: 60%;
-}
-
-.transport-list__label--afoot-filter {
-  background: url("../img/run.svg") no-repeat center center $absolute-white;
-  background-size: 60%;
+.transport-list__label {
+  @include round-block(30px, 30px);
+  display: block;
 }
 
 .catalog-page .transport-list {
@@ -144,7 +147,7 @@
 @media (min-width: $desktop-width) {
   .transport-list {
     margin-top: 9px;
-    margin-left: 2px;
+    margin-left: -10px;
   }
 
   .catalog-page .transport-list--desktop {

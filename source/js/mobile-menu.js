@@ -1,5 +1,4 @@
-console.log('test');
-var menuButton = document.querySelector(".header__menu-button");
+var menuButton = document.querySelector(".menu-button");
 var closeButton = document.querySelector(".mobile-menu__close");
 var menu = document.querySelector(".mobile-menu");
 

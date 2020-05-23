@@ -7,6 +7,7 @@
   background-color: $dark-blue;
   margin-top: -25px;
   min-height: 280px;
+  z-index: 2;
 }
 
 .registration__tagline {
@@ -22,25 +23,59 @@
 .registration__link {
   color: $yellow;
   text-decoration: underline;
+
+  &:hover {
+    color: $color-light-mango;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .registration_email-input {
   width: 100%;
   padding: 22px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
+  height: 81px;
+
+  &::placeholder {
+    @include font-bold($greyish-brown);
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: $white-three;
+  }
+
+  &:hover::placeholder {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    background-color: transparent;
+    border: 3px solid $absolute-white;
+    color: $absolute-white;
+  }
+
+  &--error {
+    background-color: $very-light-pink;
+    color: red;
+  }
 }
 
 .registration__continue {
   border-radius: unset;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   margin-left: -15px;
   border: none;
   width: 62px;
 
   &::after {
     bottom: 20px;
+    top: 33px;
   }
 }
 
@@ -49,10 +84,6 @@
   @include font-size(24px, 24px);
   text-align: left;
   display: none;
-}
-
-.registration_email-input::placeholder {
-  @include font-bold($greyish-brown);
 }
 
 .registration__input-wrapper {
@@ -106,7 +137,6 @@
 @media (min-width: $desktop-width) {
   .registration {
     position: relative;
-    z-index: -5;
     padding-top: 90px;
   }
 

@@ -63,6 +63,14 @@
   @include font-size(30px, 36px);
   text-align: center;
   text-transform: uppercase;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .mobile-menu__authorization {
@@ -212,6 +220,7 @@
 
     &--form {
       display: flex;
+      position: relative;
     }
 
     &--catalog {
@@ -229,6 +238,7 @@
   .mobile-menu__item-list {
     @include font-medium;
     @include font-size(20px, 30px);
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin: unset;
@@ -240,8 +250,8 @@
       width: 60px;
       height: 2px;
       position: absolute;
-      left: 298px;
-      top: 74px;
+      left: 5px;
+      top: 24px;
       display: block;
       background-color: $absolute-white;
       z-index: 2;
@@ -276,15 +286,15 @@
 
   .mobile-menu__authorization {
     order: 2;
-    top: 49px;
-    right: 58px;
+    top: 51px;
+    right: 3px;
 
     &--form {
       @include font-size(20px, 30px);
       padding: 8px 11px 10px 7px;
       min-width: 190px;
-      margin-right: 17px;
-      margin-top: 11px;
+      margin-right: 0;
+      margin-top: 0;
     }
 
     &--catalog {
@@ -304,11 +314,16 @@
     background-color: $color-mango;
     text-align: center;
     padding-left: unset;
-    margin-left: 266px;
+    margin-left: auto;
 
     &:hover {
       background-color: $dark-mango;
     }
+  }
+
+  .mobile-menu__tel--form .mobile-menu__tel-icon {
+    width: 17px;
+    height: 20px;
   }
 
   .mobile-menu__tel:active .mobile-menu__tel-icon {
@@ -328,6 +343,7 @@
     display: block;
     background-color: $dark-yellow;
     padding-left: unset;
+    margin-right: 194px;
 
     &:hover {
       background-color: $dark-mango;
