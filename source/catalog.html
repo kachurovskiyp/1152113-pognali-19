@@ -5,6 +5,9 @@
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="/fonts/bloggersans.woff2" as="font">
+  <script src="js/picturefill.js" async></script>
 </head>
 <body class="catalog-page">
 <div style="display:none">
@@ -23,7 +26,7 @@
     <a href="#" class="inner-header__authorization"><span class="inner-header__authorization-text">Авторизация</span></a>
   </div>
 
-  <section class="mobile-menu mobile-menu--catalog">
+  <section class="mobile-menu mobile-menu--catalog mobile-menu--no-js">
     <ul class="mobile-menu__item-list mobile-menu__item-list--catalog">
       <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
       <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="form.html">Направления</a></li>
@@ -1119,14 +1122,14 @@
         </a>
       </li>
     </ul>
-    <p class="footer__copyright">Разработано
-      <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+    <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+      <p class="footer__copyright">Разработано
         <span class="visually-hidden">HTML Academy</span>
         <svg class="footer__copyright-logo" width="27" height="34">
           <use xlink:href="#htmlacademy"></use>
         </svg>
-      </a>
-    </p>
+      </p>
+    </a>
   </footer>
   <script src="js/filter-country.js"></script>
 </body>

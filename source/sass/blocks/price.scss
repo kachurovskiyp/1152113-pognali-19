@@ -43,7 +43,7 @@
     position: absolute;
     top: -3px;
     right: -14px;
-    background: url("../../img/rates@1x.png") no-repeat center center;
+    background: url("../img/rates@1x.png") no-repeat center center;
     background-size: 100%;
   }
 }
@@ -95,7 +95,7 @@
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .price__tagline::after {
-    background: url("../../img/rates@2x.png") no-repeat center center;
+    background: url("../img/rates@2x.png") no-repeat center center;
     background-size: 100%;
   }
 }

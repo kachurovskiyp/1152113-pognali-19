@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Project: Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="/fonts/bloggersans.woff2" as="font">
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -23,7 +26,7 @@
         <button type="button" class="menu-button header__menu-button" aria-label="Меню"></button>
       </div>
 
-      <nav class="mobile-menu">
+      <nav class="mobile-menu mobile-menu--no-js">
         <a>
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
@@ -483,14 +486,14 @@
           </a>
         </li>
       </ul>
-      <p class="footer__copyright">Разработано
-        <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+      <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+        <p class="footer__copyright">Разработано
           <span class="visually-hidden">HTML Academy</span>
           <svg class="footer__copyright-logo" width="27" height="34">
             <use xlink:href="#htmlacademy"></use>
           </svg>
-        </a>
-      </p>
+        </p>
+      </a>
     </footer>
     <script src="js/mobile-menu.js"></script>
     <script src="js/business-price.js"></script>

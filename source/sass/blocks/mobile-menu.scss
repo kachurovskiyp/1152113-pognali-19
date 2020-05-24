@@ -14,6 +14,11 @@
   &--opened {
     display: block;
   }
+
+  &--no-js {
+    position: static;
+    display: block;
+  }
 }
 
 .mobile-menu__close {

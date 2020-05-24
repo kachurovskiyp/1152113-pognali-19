@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Form</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="/fonts/bloggersans.woff2" as="font">
+  <script src="js/picturefill.js" async></script>
 </head>
 <body class="form-page">
   <div style="display:none">
@@ -24,7 +27,7 @@
         <a href="#" class="inner-header__authorization"><span class="inner-header__authorization-text">Авторизация</span></a>
       </div>
 
-      <section class="mobile-menu mobile-menu--form">
+      <section class="mobile-menu mobile-menu--form mobile-menu--no-js">
         <button type="button" class="mobile-menu__close"><span class="visually-hidden">Закрыть меню</span></button>
         <ul class="mobile-menu__item-list mobile-menu__item-list--form">
           <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">О сервисе</a></li>
@@ -706,7 +709,7 @@
             </div>
           </div>
           <div class="add-plan__country-plan-wrong add-plan__country-plan-wrong--error">
-            <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий"></textarea>
+            <textarea class="add-plan__country-plan" name="country-plan" cols="27" rows="9" placeholder="План действий"></textarea>
           </div>
 
           <div class="add-plan__country-plan-wrap">
@@ -718,7 +721,7 @@
             </div>
           </div>
           <div class="add-plan__country-plan-wrong">
-            <textarea class="add-plan__country-plan" name="country-plan" id="country-plan" cols="27" rows="9" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <textarea class="add-plan__country-plan" name="country-plan" cols="27" rows="9" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
           </div>
 
           <button class="button add-plan__submit" type="submit">Отправить</button>
@@ -762,14 +765,14 @@
         </a>
       </li>
     </ul>
-    <p class="footer__copyright">Разработано
-      <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+    <a href="https://up.htmlacademy.ru/adaptive/19" class="footer__copyright-link" target="_blank">
+      <p class="footer__copyright">Разработано
         <span class="visually-hidden">HTML Academy</span>
         <svg class="footer__copyright-logo" width="27" height="34">
           <use xlink:href="#htmlacademy"></use>
         </svg>
-      </a>
-    </p>
+      </p>
+    </a>
   </footer>
   <script src="js/mobile-menu.js"></script>
 </body>
